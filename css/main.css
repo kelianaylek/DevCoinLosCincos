@@ -1,0 +1,44 @@
+/*Partie background diagonale et choix*/
+
+#background {
+    background-image: linear-gradient(298deg, rgb(0, 204, 203) 49%, rgb(116, 208, 241) 45%);
+    min-height: 90vh;
+}
+
+#background>div:first-child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 40vh;
+}
+
+#background>div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35vh;
+    color: white;
+}
+
+#background>div:last-child a {
+    color: white;
+}
+
+
+/*Présentation loscincos*/
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+article section div:first-child {
+    display: block;
+    color: black;
+}
+
+article section {
+    background-color: #CAF0FF;
+    padding: 30px;
+    margin-top: 5vh;
+}
