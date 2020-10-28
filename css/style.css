@@ -1,2 +1,6 @@
-@import url("nav.css");
+@import url("../css/nav.css");
 @import url("footer.css");
+* {
+    margin: 0;
+    padding: 0;
+}
