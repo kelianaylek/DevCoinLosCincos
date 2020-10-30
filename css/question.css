@@ -1,0 +1,72 @@
+main {
+    display: block;
+}
+
+.questionPage {
+    background-color: #fff;
+    color: #000;
+}
+
+.questionPage .blockQuestion {
+    border: 2px solid #CAF0FF;
+    padding: 10px 20px 10px 20px;
+}
+
+.questionPage article section {
+    border: none;
+}
+
+.blockQuestion .introBlockQuestion {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.blockQuestion .introBlockQuestion div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.blockQuestion .introBlockQuestion div:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.blockQuestion .introBlockQuestion div:first-child p {
+    margin-left: 20px;
+}
+
+.blockQuestion .introBlockQuestion div:first-child div i {
+    margin-left: px;
+}
+
+.blockQuestion .introBlockQuestion>div:last-child i {
+    margin-left: 20px;
+}
+
+.blockQuestion .descriptionBlockQuestion {
+    margin-bottom: 10px;
+}
+
+.blockQuestion .codeBlockQuestion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blockQuestion .codeBlockQuestion>div {
+    width: calc((100% - 80px)/3);
+}
+
+.blockQuestion .codeBlockQuestion>div button {
+    padding: 4px;
+    outline: none;
+    border: 1px solid #000;
+}
+
+.blockQuestion .codeBlockQuestion>div textarea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid #000;
+    overflow: auto;
+    outline: none;
+}
