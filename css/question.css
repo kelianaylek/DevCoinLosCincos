@@ -7,66 +7,112 @@ main {
     color: #000;
 }
 
-.questionPage .blockQuestion {
+.questionPage .blockQuestion,
+.questionPage .blockAnswers,
+.questionPage .blockResponse {
     border: 2px solid #CAF0FF;
     padding: 10px 20px 10px 20px;
+    margin-bottom: 20px;
 }
 
 .questionPage article section {
     border: none;
 }
 
-.blockQuestion .introBlockQuestion {
+.blockQuestion .introBlockQuestion,
+.blockAnswers .introBlockQuestion {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-.blockQuestion .introBlockQuestion div:first-child {
+.blockQuestion .introBlockQuestion div:first-child,
+.blockAnswers .introBlockQuestion div:first-child {
     display: flex;
     align-items: center;
 }
 
-.blockQuestion .introBlockQuestion div:last-child {
+.blockQuestion .introBlockQuestion div:last-child,
+.blockAnswers .introBlockQuestion div:last-child {
     display: flex;
     align-items: center;
 }
 
-.blockQuestion .introBlockQuestion div:first-child p {
+.blockQuestion .introBlockQuestion div:first-child p,
+.blockAnswers .introBlockQuestion div:first-child p {
     margin-left: 20px;
 }
 
 .blockQuestion .introBlockQuestion div:first-child div i {
-    margin-left: px;
+    margin-left: 5px;
 }
 
 .blockQuestion .introBlockQuestion>div:last-child i {
     margin-left: 20px;
 }
 
-.blockQuestion .descriptionBlockQuestion {
+.blockQuestion .descriptionBlockQuestion,
+.blockAnswers .descriptionBlockQuestion {
     margin-bottom: 10px;
 }
 
-.blockQuestion .codeBlockQuestion {
+.blockQuestion .codeBlockQuestion,
+.blockAnswers .codeBlockQuestion {
     display: flex;
     justify-content: space-between;
 }
 
-.blockQuestion .codeBlockQuestion>div {
+.blockQuestion .codeBlockQuestion>div,
+.blockAnswers .codeBlockQuestion>div {
     width: calc((100% - 80px)/3);
 }
 
-.blockQuestion .codeBlockQuestion>div button {
+.blockQuestion .codeBlockQuestion>div button,
+.blockAnswers .codeBlockQuestion>div button {
     padding: 4px;
     outline: none;
     border: 1px solid #000;
 }
 
-.blockQuestion .codeBlockQuestion>div textarea {
-    width: 100%;
-    resize: vertical;
-    border: 1px solid #000;
+.blockQuestion .codeBlockQuestion>div code,
+.blockAnswers .codeBlockQuestion>div code {
+    height: 300px;
     overflow: auto;
+    resize: vertical;
+    position: relative;
+}
+
+.blockAnswers .introBlockQuestion>div:last-child i {
+    margin-left: 5px;
+}
+
+.blockResponse form>input {
+    width: 100%;
+    padding: 5px 0px 60px 0px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
     outline: none;
+}
+
+.blockResponse button {
+    margin-right: 10px;
+    outline: none;
+    border: 1px solid #000;
+}
+
+.blockResponse button,
+.blockResponse form div input {
+    margin-right: 10px;
+    outline: none;
+    border: 1px solid #000;
+    padding: 4px 6px;
+}
+
+.blockResponse form>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blockResponse form div input {
+    margin-right: 0;
 }
