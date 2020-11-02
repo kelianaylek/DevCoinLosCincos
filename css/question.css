@@ -62,10 +62,24 @@ main {
     justify-content: space-between;
 }
 
+
+/* Différents examples de tailles des blocks de code */
+
 .blockQuestion .codeBlockQuestion>div,
 .blockAnswers .codeBlockQuestion>div {
-    width: calc((100% - 80px)/3);
+    width: calc((100% - 40px)/3);
 }
+
+article .blockAnswers:nth-child(2) .codeBlockQuestion>div {
+    width: calc((100% - 30px)/2);
+}
+
+article .blockAnswers:last-child .codeBlockQuestion>div {
+    width: calc((100% - 20px));
+}
+
+
+/* --------------------------------------------------------------- */
 
 .blockQuestion .codeBlockQuestion>div button,
 .blockAnswers .codeBlockQuestion>div button {
@@ -85,6 +99,66 @@ main {
 .blockAnswers .introBlockQuestion>div:last-child i {
     margin-left: 5px;
 }
+
+
+/* Colorer les différences entre le code du problèmes et les codes des réponses. */
+
+
+/* A enlever après, juste a montrer pour le visuel */
+
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(20),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(21),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(22),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(23),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(24),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(25),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(26),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(27),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(28),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(29),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(30),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(31),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(32),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(33) {
+    background-color: #fff;
+}
+
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(20),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(21),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(22),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(23),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(24),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(25),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(26),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(27),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(28),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(29),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(30),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(31),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(32),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(33) {
+    background-color: #fff;
+}
+
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(20),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(21),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(22),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(23),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(24),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(25),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(26),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(27),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(28),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(29),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(30),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(31),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(32),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(33) {
+    background-color: #fff;
+}
+
+
+/* ----------------------------------------------------------------- */
 
 .blockResponse form>input {
     width: 100%;
