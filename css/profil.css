@@ -20,10 +20,6 @@
     padding-top: 30px;
 }
 
-.Partleft p {
-    text-align: center;
-}
-
 .pseudo {
     color: #61B0FF;
     font-size: 30px;
@@ -31,10 +27,36 @@
     text-align: center;
 }
 
+.annee {
+    padding: 15px 15px;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
 .container .Partleft div:last-child {
     background-color: #61B0FF;
     margin-top: 15px;
     color: white;
+}
+
+.discord {
+    padding-top: 15px;
+}
+
+.discord p {
+    font-size: 20px;
+}
+
+.discord a {
+    color: white;
+    padding-left: 15px;
+    padding-top: 3px;
+}
+
+.compte a {
+    color: white;
+    padding-left: 15px;
+    padding-top: 3px;
 }
 
 
@@ -70,11 +92,11 @@
     padding-left: 20px;
 }
 
-.partright .Succès {
+.partright .Succes {
     margin-top: 15px;
 }
 
-.Succès p {
+.Succes p:first-child {
     font-size: 20px;
     padding-left: 20px;
 }
@@ -127,4 +149,31 @@
 
 .languages .php {
     display: flex;
+}
+
+.Succes div:first-child {
+    display: flex;
+}
+
+.Succes div:first-child a {
+    color: white;
+    margin-top: 4px;
+    padding-left: 20px;
+}
+
+.Succes p {
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.Succes .heart {
+    display: flex;
+}
+
+.Succes .comment {
+    display: flex;
+}
+
+.Succes {
+    justify-content: space-between;
 }
