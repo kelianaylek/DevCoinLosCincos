@@ -1,4 +1,4 @@
-footer {
+.footerDesktop {
     margin-top: 20vh;
     background-color: #61B0FF;
     color: #fff;
@@ -8,8 +8,39 @@ footer {
     justify-content: space-between;
 }
 
-footer a {
+.footerDesktop a {
     text-decoration: none;
     color: #fff;
     padding: 0px 10px;
+}
+
+.footerMobile {
+    display: none;
+}
+
+
+/* @media screen and (min-width: 640px) and (max-width: 1224px) {} */
+
+@media screen and (min-width: 0px) and (max-width: 640px) {
+    .footerDesktop {
+        display: none;
+    }
+    .footerMobile {
+        margin-top: 20vh;
+        background-color: #61B0FF;
+        color: #fff;
+        font-size: 20px;
+        display: flex;
+        padding: 10px;
+        justify-content: space-evenly;
+    }
+    .footerMobile a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0px 10px;
+        display: block;
+    }
+    .footerMobile div {
+        text-align: center;
+    }
 }
