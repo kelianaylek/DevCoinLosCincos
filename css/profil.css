@@ -1,0 +1,130 @@
+/*PARTIE GAUCHE*/
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#cercle {
+    margin: 10px;
+    width: 200px;
+    background: #61B0FF;
+    height: 200px;
+    text-align: center;
+    border-radius: 100px;
+    line-height: 190px;
+    color: white;
+}
+
+.Partleft {
+    padding-top: 30px;
+}
+
+.Partleft p {
+    text-align: center;
+}
+
+.pseudo {
+    color: #61B0FF;
+    font-size: 30px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.container .Partleft div:last-child {
+    background-color: #61B0FF;
+    margin-top: 15px;
+    color: white;
+}
+
+
+/*PARTIE DROITE*/
+
+.partright {
+    width: 60%;
+    padding-top: 30px;
+}
+
+.partright section {
+    background-color: #61B0FF;
+    color: white;
+    padding: 15px 15px;
+}
+
+.partright section .propos p:first-child {
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.partright section .propos p:last-child {
+    padding-left: 20px;
+}
+
+.partright .languages {
+    margin-top: 15px;
+}
+
+.languages p {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.partright .Succès {
+    margin-top: 15px;
+}
+
+.Succès p {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.partright .Sesquestions {
+    margin-top: 15px;
+}
+
+.Sesquestions p:first-child {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.Sesquestions .probleme {
+    padding-top: 15px;
+}
+
+.Sesquestions .probleme p {
+    font-size: 25px;
+    border: solid 1px;
+    width: 40%;
+    padding: 5px 10px;
+}
+
+.discord {
+    display: flex;
+}
+
+.compte {
+    display: flex;
+}
+
+.languages div:first-child {
+    display: flex;
+}
+
+.languages div:first-child a {
+    color: white;
+    margin-top: 4px;
+    padding-left: 10px;
+}
+
+.languages .css {
+    display: flex;
+}
+
+.languages .js {
+    display: flex;
+}
+
+.languages .php {
+    display: flex;
+}
