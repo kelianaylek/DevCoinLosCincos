@@ -1,219 +1,303 @@
-/*PARTIE GAUCHE*/
-
-.container {
-    display: flex;
-    justify-content: space-around;
-}
-
-#cercle {
-    margin: 10px;
-    width: 200px;
-    background: #61B0FF;
-    height: 200px;
-    text-align: center;
-    border-radius: 100px;
-    line-height: 190px;
-    color: white;
-}
-
-.Partleft {
-    padding-top: 30px;
-}
-
-.pseudo {
-    color: #61B0FF;
-    font-size: 30px;
-    padding-top: 15px;
-    text-align: center;
-}
-
-.annee {
-    padding: 15px 15px;
-    font-size: 20px;
-    padding-left: 30px;
-}
-
-.container .Partleft div:last-child {
-    background-color: #61B0FF;
-    margin-top: 15px;
-    color: white;
-}
-
-.discord {
-    padding-top: 15px;
-}
-
-.discord p {
-    font-size: 20px;
-}
-
-.discord a {
-    color: white;
-    padding-left: 15px;
-    padding-top: 3px;
-}
-
-.compte a {
-    color: white;
-    padding-left: 15px;
-    padding-top: 3px;
-}
-
-
-/*PARTIE DROITE*/
-
-.partright {
-    width: 60%;
-    padding-top: 30px;
-}
-
-.partright section {
-    background-color: #61B0FF;
-    color: white;
-    padding: 15px 15px;
-}
-
-.partright section .propos p:first-child {
-    font-size: 20px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-}
-
-.partright section .propos p:last-child {
-    padding-left: 20px;
-}
-
-.partright .languages {
-    margin-top: 15px;
-}
-
-.languages p {
-    font-size: 20px;
-    padding-left: 20px;
-}
-
-.partright .Succes {
-    margin-top: 15px;
-}
-
-.Succes p:first-child {
-    font-size: 20px;
-    padding-left: 20px;
-}
-
-.partright .Sesquestions {
-    margin-top: 15px;
-    padding-left: 35px;
-}
-
-.Sesquestions .probleme {
-    padding-top: 15px;
-    display: flex;
-}
-
-.Sesquestions .probleme p {
-    font-size: 25px;
-    border: solid 1px;
-    padding: 5px 10px;
-    padding-right: 100px;
-}
-
-.discord {
-    display: flex;
-}
-
-.compte {
-    display: flex;
-}
-
-.languages div:first-child {
-    display: flex;
-}
-
-.languages div:first-child a {
-    color: white;
-    margin-top: 4px;
-    padding-left: 10px;
-}
-
-.languages .css {
-    display: flex;
-}
-
-.languages .js {
-    display: flex;
-}
-
-.languages .php {
-    display: flex;
-}
-
-.Succes div:first-child {
-    display: flex;
-}
-
-.Succes div:first-child p:first-child {
-    padding-left: 20px;
-}
-
-.Succes div:first-child a {
-    color: white;
-    margin-top: 4px;
-    padding-left: 20px;
-}
-
-.Succes p {
-    font-size: 20px;
-    padding-left: 5px;
-}
-
-.Succes .heart {
-    display: flex;
-}
-
-.Succes .comment {
-    display: flex;
-}
-
-.Succes {
-    justify-content: space-between;
-}
-
-.like {
-    display: flex;
-    margin-top: 15px;
-    padding-left: 20px;
-    background-color: white;
-    color: #61B0FF;
-    padding: 10px;
-    margin-left: 15px;
-}
-
-.like a {
-    color: #61B0FF;
-    padding-right: 10px;
-}
-
-.flex {
-    display: flex;
-}
-
-.size {
-    font-size: 20px;
-}
-
-.resolu {
-    display: flex;
-    margin-top: 15px;
-    padding-left: 20px;
-    background-color: white;
-    color: #61B0FF;
-    padding: 10px;
-    margin-left: 15px;
-}
-
-.resolu a {
-    color: #61B0FF;
-    padding-left: 10px;
-    padding-top: 3px;
-}
+        /*PARTIE GAUCHE*/
+        
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        #cercle {
+            margin: 10px;
+            width: 200px;
+            background: #61B0FF;
+            height: 200px;
+            text-align: center;
+            border-radius: 100px;
+            line-height: 190px;
+            color: white;
+        }
+        
+        .Partleft {
+            padding-top: 30px;
+        }
+        
+        .pseudo {
+            color: #61B0FF;
+            font-size: 30px;
+            padding-top: 15px;
+            text-align: center;
+        }
+        
+        .annee {
+            padding: 15px 15px;
+            font-size: 20px;
+            padding-left: 30px;
+            background-color: #61B0FF;
+            margin-top: 15px;
+            color: white;
+        }
+        
+        .annee p {
+            padding-bottom: 10px;
+            padding-left: 15px;
+            color: white;
+        }
+        
+        .discord p {
+            font-size: 20px;
+        }
+        
+        .discord a {
+            color: white;
+            padding-left: 15px;
+        }
+        
+        .compte a {
+            color: white;
+            padding-left: 15px;
+        }
+        
+        button {
+            background-color: #61B0FF;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 8px 82px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 30px;
+        }
+        /*PARTIE DROITE*/
+        
+        .partright {
+            width: 60%;
+            padding-top: 30px;
+        }
+        
+        .partright section {
+            background-color: #61B0FF;
+            color: white;
+            padding: 15px 15px;
+        }
+        
+        .partright section .propos p:first-child {
+            font-size: 20px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+        }
+        
+        .partright section .propos p:last-child {
+            padding-left: 20px;
+        }
+        
+        .partright .languages {
+            margin-top: 15px;
+        }
+        
+        .languages p {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        
+        .partright .Succes {
+            margin-top: 15px;
+        }
+        
+        .Succes p:first-child {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        
+        .partright .Sesquestions {
+            margin-top: 15px;
+            padding-left: 35px;
+        }
+        
+        .Sesquestions .probleme {
+            padding-top: 15px;
+            display: flex;
+        }
+        
+        .Sesquestions .probleme p {
+            font-size: 25px;
+            border: solid 1px;
+            padding: 5px 10px;
+            padding-right: 100px;
+        }
+        
+        .discord {
+            display: flex;
+        }
+        
+        .compte {
+            display: flex;
+        }
+        
+        .languages div:first-child {
+            display: flex;
+        }
+        
+        .languages div:first-child a {
+            color: white;
+            margin-top: 4px;
+            padding-left: 10px;
+        }
+        
+        .languages .css {
+            display: flex;
+        }
+        
+        .languages .js {
+            display: flex;
+        }
+        
+        .languages .php {
+            display: flex;
+        }
+        
+        .Succes div:first-child {
+            display: flex;
+        }
+        
+        .Succes div:first-child p:first-child {
+            padding-left: 20px;
+        }
+        
+        .Succes div:first-child a {
+            color: white;
+            margin-top: 4px;
+            padding-left: 20px;
+        }
+        
+        .Succes p {
+            font-size: 20px;
+            padding-left: 5px;
+        }
+        
+        .Succes .heart {
+            display: flex;
+        }
+        
+        .Succes .comment {
+            display: flex;
+        }
+        
+        .Succes {
+            justify-content: space-between;
+        }
+        
+        .like {
+            display: flex;
+            margin-top: 15px;
+            padding-left: 20px;
+            background-color: white;
+            color: #61B0FF;
+            padding: 10px;
+            margin-left: 15px;
+        }
+        
+        .like a {
+            color: #61B0FF;
+            padding-right: 10px;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .size {
+            font-size: 20px;
+        }
+        
+        .resolu {
+            display: flex;
+            margin-top: 15px;
+            padding-left: 20px;
+            background-color: white;
+            color: #61B0FF;
+            padding: 10px;
+            margin-left: 15px;
+        }
+        
+        .resolu a {
+            color: #61B0FF;
+            padding-left: 10px;
+            padding-top: 3px;
+        }
+        
+        .hf {
+            background-color: #61B0FF;
+            margin-top: 30px;
+            padding: 30px;
+            justify-content: space-around;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hf .parse {
+            display: flex;
+        }
+        
+        .hf div:first-child div:last-child {
+            align-items: center;
+            display: flex;
+            color: white;
+        }
+        
+        .hf div:first-child div:last-child p {
+            padding-left: 15px;
+        }
+        
+        .half-circle {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border-top: 12px solid transparent;
+            border-left: 12px solid white;
+            border-right: 12px solid white;
+            border-bottom: 12px solid white;
+            transform: rotate(-45deg);
+        }
+        
+        .defis ul li {
+            list-style: none;
+            color: white;
+            padding: 5px;
+        }
+        
+        .defis ul li:first-child p:first-child {
+            font-size: 20px;
+        }
+        
+        .icons {
+            display: flex;
+        }
+        
+        .icons div {
+            padding-right: 20px;
+            padding-top: 15px;
+            color: white;
+        }
+        
+        .icons div a {
+            color: white;
+        }
+        
+        .icons div p {
+            padding-top: 10px;
+        }
+        
+        .badges p:first-child {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .parsecirlce {
+            font-size: 20px;
+            color: white;
+        }
+        
+        .parsecirlce p {
+            align-items: flex-start;
+        }
