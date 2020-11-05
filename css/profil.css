@@ -301,3 +301,197 @@
         .parsecirlce p {
             align-items: flex-start;
         }
+        /*DISPLAY NONE*/
+        
+        .partleftmobile {
+            display: none;
+        }
+        
+        .buttonmobile {
+            display: none;
+        }
+        
+        .partright .propos a {
+            display: none;
+        }
+        
+        .languagessuccesmobile {
+            display: none;
+        }
+        
+        .hfmobile {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                display: block;
+            }
+            .pseudo {
+                color: #61B0FF;
+                font-size: 30px;
+                padding-top: 15px;
+                text-align: start;
+                padding-left: 70px;
+            }
+            .annee {
+                padding: 15px 15px;
+                font-size: 20px;
+                padding-left: 30px;
+                background-color: #61B0FF;
+                margin-top: 15px;
+                color: white;
+                width: 25%;
+            }
+            .partright {
+                width: 100%;
+                padding-top: 30px;
+            }
+            .partleftmobile {
+                display: flex;
+                justify-content: space-around;
+            }
+            .buttonmobile {
+                display: flex;
+                justify-content: space-around;
+            }
+            /*DISPLAY*/
+            .partleftmobile {
+                display: flex;
+            }
+            .Partleft {
+                display: none;
+            }
+            .buttonmobile {
+                display: flex;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            #cercle {
+                margin: 0px;
+                margin-top: 30px;
+                width: 100px;
+                background: #61B0FF;
+                height: 100px;
+                text-align: center;
+                border-radius: 100px;
+                color: white;
+            }
+            .annee {
+                padding: 15px 15px;
+                font-size: 20px;
+                padding-left: 30px;
+                background-color: #61B0FF;
+                margin-top: 15px;
+                color: white;
+                width: 50%;
+            }
+            button {
+                background-color: #61B0FF;
+                border: none;
+                color: white;
+                padding: 8px 42px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-top: 30px;
+            }
+            .propos p {
+                padding-bottom: 20px;
+            }
+            .partright .propos a {
+                color: white;
+                margin: auto;
+            }
+            .languagessuccesmobile {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            .languagesmobile {
+                margin-right: 10px;
+            }
+            .languagesmobile .html {
+                display: flex;
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            .languagesmobile .html a {
+                margin-left: 10px;
+                color: white;
+            }
+            .languagesmobile .css {
+                display: flex;
+                padding-bottom: 10px;
+            }
+            .languagesmobile .css a {
+                margin-left: 10px;
+                color: white;
+            }
+            .languagesmobile .js {
+                display: flex;
+                padding-bottom: 10px;
+            }
+            .languagesmobile .js a {
+                margin-left: 10px;
+                color: white;
+            }
+            .languagesmobile .php {
+                display: flex;
+                padding-bottom: 10px;
+            }
+            .languagesmobile .php a {
+                margin-left: 10px;
+                color: white;
+            }
+            .Succesmobile .trophy {
+                display: flex;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .Succesmobile .trophy a {
+                color: white;
+                padding-right: 10px;
+            }
+            .Succesmobile .heart {
+                display: flex;
+                padding-bottom: 10px;
+            }
+            .Succesmobile .heart a {
+                color: white;
+                padding-right: 10px;
+            }
+            .Succesmobile .comment {
+                display: flex;
+            }
+            .Succesmobile .comment a {
+                color: white;
+                padding-right: 10px;
+            }
+            .partright section {
+                background-color: #61B0FF;
+                color: white;
+                padding: 10px 45px;
+            }
+            /*DISPLAY*/
+            .partright .propos a {
+                display: table;
+            }
+            .languagessuccesmobile {
+                display: flex;
+            }
+            .languages {
+                display: none;
+            }
+            .Succes {
+                display: none;
+            }
+            .hfmobile {
+                display: block;
+            }
+            .hfweb {
+                display: none;
+            }
+        }
