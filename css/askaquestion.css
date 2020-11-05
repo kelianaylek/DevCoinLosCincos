@@ -1,0 +1,112 @@
+.EBdiv {
+    background-color: #61B0FF;
+    width: 90%;
+    margin-top: 15vh;
+}
+
+.Emaindiv {
+    justify-content: center;
+    display: flex;
+}
+
+.Easktitre {
+    margin-top: 5vh;
+    margin-left: 5vh;
+    border: 1px solid white;
+    width: 50vh;
+    height: 3vh;
+}
+
+.Easktitre h2 {
+    color: white;
+    font-size: 2.5vh;
+    padding-left: 1vh;
+}
+
+.Easktext {
+    margin-top: 5vh;
+    margin-left: 5vh;
+    font-size: 2.5vh;
+    text-align: left;
+    border: 1px solid white;
+    width: 80%;
+    height: 21.5vh;
+}
+
+.Easktext p {
+    padding-top: 2vh;
+    padding-left: 2vh;
+    padding-bottom: 2vh;
+    color: white;
+    width: 95%;
+}
+
+.Easkbtn {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #61B0FF;
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 13vh;
+    height: 4vh;
+    text-align: center;
+    margin-left: 5vh;
+}
+
+.Easkbtn a {
+    color: white;
+    text-decoration: none;
+}
+
+.Egroupbtn {
+    margin-top: 5vh;
+}
+
+.Ebtnsend {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #CAF0FF;
+    width: 27vh;
+    height: 4vh;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+    align-self: center;
+}
+
+.Ebtnsend a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.3vh;
+}
+
+.Ecbtn {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 567px) {
+    .EBdiv {
+        background-color: #CAF0FF;
+        margin-bottom: 10vh;
+        justify-content: center;
+    }
+    .Ebtnsend {
+        background-color: #61B0FF;
+        height: 6vh;
+        border-radius: 30px;
+    }
+    .Easkbtn {
+        width: 12vh;
+        height: 5vh;
+        border: none;
+        border-radius: 30px;
+    }
+    .Easktext {
+        height: 52vh;
+        align-items: center;
+        display: flex;
+    }
+}
