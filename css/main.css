@@ -40,7 +40,7 @@ article section div:first-child {
 article section {
     background-color: #CAF0FF;
     padding: 30px;
-    margin-top: 5vh;
+    margin-top: 35px;
 }
 
 article section h3 {
@@ -105,4 +105,107 @@ article section h3 {
     padding-left: 110px;
     padding-top: 50px;
     color: white;
+}
+
+.footer>div:last-child p {
+    color: white;
+    font-size: 25px;
+}
+
+
+/*DISPLAY NONE*/
+
+#backgroundmobile {
+    display: none;
+}
+
+.maincontainer section div:first-child a {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .footer h4 {
+        font-size: 25px;
+    }
+    .footer .menu li a {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+    }
+    .footer>div:last-child {
+        padding-left: 10px;
+        padding-top: 50px;
+        color: white;
+    }
+    .fa-3x {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer h4 {
+        font-size: 25px;
+        justify-content: center;
+        display: flex;
+        padding-bottom: 30px;
+    }
+    .footer .menu li a {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        justify-content: center;
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .footer>div:last-child p {
+        color: white;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    .footer>div:first-child {
+        justify-content: space-around;
+        display: block;
+        color: white;
+        padding-top: 100px;
+        margin-top: 40px;
+        padding-bottom: 25px;
+    }
+    .rs {
+        justify-content: center;
+        display: grid;
+        margin: auto;
+    }
+    .footer .rs a {
+        color: white;
+        padding: 40px;
+        padding-bottom: 20px;
+    }
+    #background {
+        display: none;
+    }
+    #backgroundmobile div:first-child button {
+        display: block;
+        margin: auto;
+        background-color: #61B0FF;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: 35px;
+        border-radius: 30px;
+        width: 32vh;
+    }
+    /*DISPLAY*/
+    #backgroundmobile {
+        display: block;
+    }
+    .maincontainer section div:first-child a {
+        display: block;
+        padding-left: 120px;
+        color: white;
+        padding-top: 20px;
+    }
 }
