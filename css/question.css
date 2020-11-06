@@ -1,0 +1,295 @@
+main {
+    display: block;
+}
+
+.questionPage {
+    background-color: #fff;
+    color: #000;
+}
+
+.questionPage .blockQuestion,
+.questionPage .blockAnswers,
+.questionPage .blockResponse {
+    border: 2px solid #CAF0FF;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 20px;
+}
+
+.questionPage article section {
+    border: none;
+}
+
+.blockQuestion .introBlockQuestion,
+.blockAnswers .introBlockQuestion {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.blockQuestion .introBlockQuestion div:first-child,
+.blockAnswers .introBlockQuestion div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.blockQuestion .introBlockQuestion div:last-child,
+.blockAnswers .introBlockQuestion div:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.blockQuestion .introBlockQuestion div:first-child p,
+.blockAnswers .introBlockQuestion div:first-child p {
+    margin-left: 20px;
+}
+
+.blockQuestion .introBlockQuestion div:first-child div i {
+    margin-left: 5px;
+}
+
+.blockQuestion .introBlockQuestion>div:last-child i {
+    margin-left: 20px;
+}
+
+.blockQuestion .descriptionBlockQuestion,
+.blockAnswers .descriptionBlockQuestion {
+    margin-bottom: 10px;
+}
+
+.blockQuestion .codeBlockQuestion,
+.blockAnswers .codeBlockQuestion {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Différents examples de tailles des blocks de code */
+
+.blockQuestion .codeBlockQuestion>div,
+.blockAnswers .codeBlockQuestion>div {
+    width: calc((100% - 40px)/3);
+}
+
+article .blockAnswers:nth-child(2) .codeBlockQuestion>div {
+    width: calc((100% - 30px)/2);
+}
+
+article .blockAnswers:last-child .codeBlockQuestion>div {
+    width: calc((100% - 20px));
+}
+
+
+/* --------------------------------------------------------------- */
+
+.blockQuestion .codeBlockQuestion>div button,
+.blockAnswers .codeBlockQuestion>div button {
+    padding: 4px;
+    outline: none;
+    border: 1px solid #000;
+}
+
+.blockQuestion .codeBlockQuestion>div code,
+.blockAnswers .codeBlockQuestion>div code {
+    height: 300px;
+    overflow: auto;
+    resize: vertical;
+    position: relative;
+}
+
+.blockAnswers .introBlockQuestion>div:last-child i {
+    margin-left: 5px;
+}
+
+
+/* Scrollbar du site */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: orange;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 20px;
+    border: 3px solid red;
+}
+
+
+/* Colorer les différences entre le code du problèmes et les codes des réponses. */
+
+
+/* A enlever après, juste a montrer pour le visuel */
+
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(20),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(21),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(22),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(23),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(24),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(25),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(26),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(27),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(28),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(29),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(30),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(31),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(32),
+.blockAnswers .codeBlockQuestion>div:first-child code>span:nth-child(33) {
+    background-color: #fff;
+}
+
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(20),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(21),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(22),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(23),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(24),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(25),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(26),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(27),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(28),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(29),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(30),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(31),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(32),
+.blockAnswers .codeBlockQuestion>div:nth-child(2) code>span:nth-child(33) {
+    background-color: #fff;
+}
+
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(20),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(21),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(22),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(23),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(24),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(25),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(26),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(27),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(28),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(29),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(30),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(31),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(32),
+.blockAnswers .codeBlockQuestion>div:last-child code>span:nth-child(33) {
+    background-color: #fff;
+}
+
+
+/* ----------------------------------------------------------------- */
+
+.blockResponse form>input {
+    width: 100%;
+    padding: 5px 0px 60px 0px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    outline: none;
+}
+
+.blockResponse button {
+    margin-right: 10px;
+    outline: none;
+    border: 1px solid #000;
+}
+
+.blockResponse button,
+.blockResponse form div input {
+    margin-right: 10px;
+    outline: none;
+    border: 1px solid #000;
+    padding: 4px 6px;
+}
+
+.blockResponse form>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blockResponse form div input {
+    margin-right: 0;
+}
+
+.blockQuestionMobile {
+    display: none;
+}
+
+.blockAnswersMobile {
+    display: none;
+}
+
+
+/* ------------------------------------------ */
+
+
+/* Responsive Tablette */
+
+@media screen and (max-width:768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+/* Responsive Mobile */
+
+@media screen and (max-width:576px) {
+    .blockQuestion {
+        display: none;
+    }
+    .blockQuestionMobile {
+        display: block;
+    }
+    .blockQuestionMobile .introBlockQuestion {
+        display: block;
+    }
+    .blockQuestionMobile .introBlockQuestion>div {
+        display: flex;
+        justify-content: space-between;
+    }
+    .blockQuestion .introBlockQuestion div:first-child p {
+        margin-left: 0;
+    }
+    .blockQuestionMobile .introBlockQuestion>div div:nth-child(2) i {
+        margin-left: 10px;
+    }
+    .blockQuestionMobile .introBlockQuestion>div:first-child {
+        margin-bottom: 10px;
+    }
+    .blockQuestionMobile .codeBlockQuestion>div {
+        width: auto;
+    }
+    /* ---------------- */
+    .blockAnswers {
+        display: none;
+    }
+    .blockAnswersMobile {
+        display: block;
+    }
+    .blockAnswers .introBlockQuestion {
+        display: block;
+    }
+    .blockAnswersMobile .introBlockQuestion>div {
+        display: flex;
+        justify-content: space-between;
+    }
+    .blockAnswersMobile .introBlockQuestion div:first-child {
+        margin-bottom: 10px;
+    }
+    .blockAnswersMobile .introBlockQuestion div:first-child p {
+        margin-left: 0;
+    }
+    article .blockAnswersMobile .codeBlockQuestion>div {
+        width: auto !important;
+    }
+    .blockResponse form>div {
+        display: block;
+    }
+    .blockResponse form>div div:first-child {
+        margin-bottom: 10px;
+    }
+}

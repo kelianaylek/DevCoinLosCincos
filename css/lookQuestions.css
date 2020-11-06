@@ -50,7 +50,7 @@ main .filters h4 {
     font-size: 20px;
 }
 
-main article {
+main .allQuestions {
     width: 80%;
     margin-left: 20%;
 }
