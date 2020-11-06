@@ -87,7 +87,7 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 576px) {
     .EBdiv {
         background-color: #CAF0FF;
         margin-bottom: 10vh;
@@ -108,5 +108,31 @@
         height: 52vh;
         align-items: center;
         display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .EBdiv {
+        background-color: #CAF0FF;
+    }
+    .Ebtnsend {
+        background-color: #61B0FF;
+        height: 8vh;
+        width: 35vh;
+    }
+    .Easkbtn {
+        width: 25vh;
+        height: 7vh;
+        border: none;
+    }
+    .Ebtnsend a {
+        font-size: 3vh;
+    }
+    .Easktext p {
+        font-size: 3vh;
+        width: 97%;
+    }
+    .Easktext {
+        height: 28vh;
     }
 }
