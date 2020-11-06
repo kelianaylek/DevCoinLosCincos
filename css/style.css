@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 @import url("../css/nav.css");
 @import url("footer.css");
 @import url("lookQuestions.css");
 @import url("question.css");
-* {
-    margin: 0;
-    padding: 0;
-=======
-@import url("nav.css");
-@import url("footer.css");
 @import url("main.css");
 @import url("profil.css");
 * {
     margin: 0;
     padding: 0;
->>>>>>> Main_page
 }
