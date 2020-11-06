@@ -101,6 +101,29 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
 }
 
 
+/* Scrollbar du site */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: orange;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 20px;
+    border: 3px solid red;
+}
+
+
 /* Colorer les différences entre le code du problèmes et les codes des réponses. */
 
 
@@ -189,4 +212,84 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
 
 .blockResponse form div input {
     margin-right: 0;
+}
+
+.blockQuestionMobile {
+    display: none;
+}
+
+.blockAnswersMobile {
+    display: none;
+}
+
+
+/* ------------------------------------------ */
+
+
+/* Responsive Tablette */
+
+@media screen and (max-width:768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+/* Responsive Mobile */
+
+@media screen and (max-width:576px) {
+    .blockQuestion {
+        display: none;
+    }
+    .blockQuestionMobile {
+        display: block;
+    }
+    .blockQuestionMobile .introBlockQuestion {
+        display: block;
+    }
+    .blockQuestionMobile .introBlockQuestion>div {
+        display: flex;
+        justify-content: space-between;
+    }
+    .blockQuestion .introBlockQuestion div:first-child p {
+        margin-left: 0;
+    }
+    .blockQuestionMobile .introBlockQuestion>div div:nth-child(2) i {
+        margin-left: 10px;
+    }
+    .blockQuestionMobile .introBlockQuestion>div:first-child {
+        margin-bottom: 10px;
+    }
+    .blockQuestionMobile .codeBlockQuestion>div {
+        width: auto;
+    }
+    /* ---------------- */
+    .blockAnswers {
+        display: none;
+    }
+    .blockAnswersMobile {
+        display: block;
+    }
+    .blockAnswers .introBlockQuestion {
+        display: block;
+    }
+    .blockAnswersMobile .introBlockQuestion>div {
+        display: flex;
+        justify-content: space-between;
+    }
+    .blockAnswersMobile .introBlockQuestion div:first-child {
+        margin-bottom: 10px;
+    }
+    .blockAnswersMobile .introBlockQuestion div:first-child p {
+        margin-left: 0;
+    }
+    article .blockAnswersMobile .codeBlockQuestion>div {
+        width: auto !important;
+    }
+    .blockResponse form>div {
+        display: block;
+    }
+    .blockResponse form>div div:first-child {
+        margin-bottom: 10px;
+    }
 }
