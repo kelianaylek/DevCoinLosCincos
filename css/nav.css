@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 header nav {
     background-color: #61B0FF;
     color: #fff;
@@ -111,58 +110,4 @@ header nav .search button {
     .burger>div:last-child {
         background-color: #fff;
     }
-=======
-header nav {
-    background-color: #61B0FF;
-    color: #fff;
-    font-size: 20px;
-}
-
-header nav .upperNav {
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-}
-
-header nav a {
-    text-decoration: none;
-    color: #fff;
-}
-
-header nav .upperNav div:last-child a,
-header nav .lowerNav div a {
-    margin-right: 10px;
-}
-
-header nav .upperNav div a:last-child {
-    margin-right: 0px;
-}
-
-header nav .lowerNav {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px 10px 10px;
-}
-
-header nav .lowerNav div {
-    display: flex;
-}
-
-header nav .search {
-    background-color: #fff;
-    display: flex;
-}
-
-header nav .search input {
-    border: none;
-    margin-left: 10px;
-    outline: none;
-}
-
-header nav .search button {
-    border: none;
-    margin-left: 10px;
-    background-color: #fff;
-    margin-right: 10px;
->>>>>>> Main_page
 }
