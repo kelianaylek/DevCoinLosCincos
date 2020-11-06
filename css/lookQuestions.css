@@ -107,3 +107,27 @@ article section .footerProblem>div:last-child {
 article section .footerProblem>div:last-child i {
     padding: 0px 10px;
 }
+
+
+/* ------------------------------------ */
+
+
+/* Responsive Tablette */
+
+@media screen and (max-width:768px) {
+    .container {
+        width: 100%;
+    }
+    main .filters {
+        display: none;
+    }
+    main .allQuestions {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+/* Responsive Mobile */
+
+@media screen and (max-width:576px) {}
