@@ -323,6 +323,10 @@
             display: none;
         }
         
+        .mobileSesquestions {
+            display: none;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 display: block;
@@ -473,7 +477,110 @@
             .partright section {
                 background-color: #61B0FF;
                 color: white;
-                padding: 10px 45px;
+                padding: 10px;
+                margin-top: 30px;
+            }
+            .hf {
+                background-color: #61B0FF;
+                margin-top: 30px;
+                padding: 30px;
+                justify-content: space-around;
+                display: block;
+                align-items: center;
+            }
+            .defis {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 30px;
+            }
+            .parse {
+                display: flex;
+                justify-content: center;
+            }
+            .icons2 {
+                display: flex;
+            }
+            .icons {
+                display: flex;
+                padding-bottom: 30px;
+            }
+            .icons2 div {
+                color: white;
+                padding-right: 45px;
+            }
+            .icons2 div a {
+                color: white;
+            }
+            .hf div:first-child div:last-child {
+                align-items: center;
+                display: block;
+                color: white;
+            }
+            .hf .parse {
+                display: flex;
+                align-items: center;
+                padding-bottom: 20px;
+            }
+            .hf .parse p {
+                color: white;
+                padding-left: 10px;
+            }
+            .groupicons {
+                display: flex;
+                flex-direction: column;
+                padding-left: 65px;
+            }
+            .icons div {
+                padding-right: 45px;
+                padding-top: 15px;
+                color: white;
+            }
+            .badges p:first-child {
+                color: white;
+                font-size: 20px;
+                padding-bottom: 10px;
+            }
+            .mobileSesquestions {
+                margin-top: 15px;
+                padding-left: 35px;
+            }
+            .size {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 20px;
+            }
+            .size p {
+                font-size: 20px;
+            }
+            .mobileSesquestions .probleme p {
+                font-size: 20px;
+                border: solid 1px;
+                padding: 5px 1px;
+                padding-left: 80px;
+                justify-content: center;
+            }
+            .flex {
+                display: flex;
+                justify-content: space-around;
+                padding-bottom: 35px;
+            }
+            .resolu {
+                display: flex;
+                margin-top: 15px;
+                padding-left: 20px;
+                background-color: white;
+                color: #61B0FF;
+                padding: 10px;
+                margin-left: 0px;
+            }
+            .like {
+                display: flex;
+                margin-top: 15px;
+                padding-left: 20px;
+                background-color: white;
+                color: #61B0FF;
+                padding: 10px;
+                margin-left: 0px;
             }
             /*DISPLAY*/
             .partright .propos a {
@@ -492,6 +599,12 @@
                 display: block;
             }
             .hfweb {
+                display: none;
+            }
+            .mobileSesquestions {
+                display: block;
+            }
+            .Sesquestions {
                 display: none;
             }
         }
