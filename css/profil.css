@@ -1,6 +1,6 @@
         /*PARTIE GAUCHE*/
         
-        .container {
+        .containerProfil {
             display: flex;
             justify-content: space-around;
         }
@@ -56,7 +56,7 @@
             padding-left: 15px;
         }
         
-        button {
+        .containerProfil button {
             background-color: #61B0FF;
             /* Green */
             border: none;
@@ -391,7 +391,7 @@
                 color: white;
                 width: 50%;
             }
-            button {
+            .containerProfil button {
                 background-color: #61B0FF;
                 border: none;
                 color: white;

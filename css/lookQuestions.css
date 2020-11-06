@@ -3,7 +3,7 @@ header nav {
     width: 100%;
 }
 
-main {
+.mainLookQuestions {
     display: flex;
     background-color: #61B0FF;
     padding: 100px 20px 20px 20px;
