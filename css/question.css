@@ -1,10 +1,11 @@
-main {
+.questionPage {
     display: block;
 }
 
 .questionPage {
     background-color: #fff;
     color: #000;
+    padding-top: 100px;
 }
 
 .questionPage .blockQuestion,
@@ -230,7 +231,7 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
 
 @media screen and (max-width:768px) {
     .container {
-        width: 100%;
+        width: 90%;
     }
 }
 
