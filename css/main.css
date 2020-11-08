@@ -32,7 +32,7 @@
     margin: 0 auto;
 }
 
-article section div:first-child {
+.maincontainer .blockls div:first-child {
     display: block;
     color: black;
 }
@@ -184,7 +184,7 @@ article section div:first-child {
     #background {
         display: none;
     }
-    #backgroundmobile div:first-child button {
+    #backgroundmobile div:first-child .repq {
         display: block;
         margin: auto;
         background-color: #61B0FF;
@@ -196,10 +196,12 @@ article section div:first-child {
         font-size: 16px;
         border-radius: 30px;
         width: 32vh;
+        margin-bottom: 30px;
     }
     /*DISPLAY*/
     #backgroundmobile {
         display: block;
+        padding-top: 110px;
     }
     .maincontainer section div:first-child a {
         display: block;
