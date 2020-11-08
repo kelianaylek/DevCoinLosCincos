@@ -55,56 +55,56 @@ main .allQuestions {
     margin-left: 20%;
 }
 
-article section {
+.allQuestions section {
     border: 1px solid #CAF0FF;
     padding: 10px 20px 10px 20px;
     margin-bottom: 20px;
 }
 
-article section .informationsProblem {
+.allQuestions section .informationsProblem {
     display: flex;
     justify-content: space-between;
     padding: 0 0 10px 0;
 }
 
-article section .informationsProblem div {
+.allQuestions section .informationsProblem div {
     display: flex;
     align-items: center;
 }
 
-article section .informationsProblem div p:nth-child(2) {
+.allQuestions section .informationsProblem div p:nth-child(2) {
     padding: 0 20px;
 }
 
-article section .footerProblem {
+.allQuestions section .footerProblem {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
 
-article section .footerProblem>div:first-child {
+.allQuestions section .footerProblem>div:first-child {
     display: flex;
 }
 
-article section .footerProblem>div:first-child div {
+.allQuestions section .footerProblem>div:first-child div {
     display: flex;
     border: 1px solid #CAF0FF;
     margin-right: 20px;
     padding: 5px 10px;
 }
 
-article section .footerProblem>div:first-child div i {
+.allQuestions section .footerProblem>div:first-child div i {
     padding: 0 5px;
 }
 
-article section .footerProblem>div:last-child {
+.allQuestions section .footerProblem>div:last-child {
     display: flex;
     border: 1px solid #CAF0FF;
     justify-content: space-between;
     align-items: center;
 }
 
-article section .footerProblem>div:last-child i {
+.allQuestions section .footerProblem>div:last-child i {
     padding: 0px 10px;
 }
 
