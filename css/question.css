@@ -11,9 +11,8 @@
 .questionPage .blockQuestion,
 .questionPage .blockAnswers,
 .questionPage .blockResponse {
-    border: 2px solid #CAF0FF;
     padding: 10px 20px 10px 20px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .questionPage article section {
@@ -33,27 +32,61 @@
     align-items: center;
 }
 
-.blockQuestion .introBlockQuestion div:last-child,
-.blockAnswers .introBlockQuestion div:last-child {
+.blockQuestion .introBlockQuestion div:first-child>div:first-child,
+.blockAnswers .introBlockQuestion div:first-child>div:first-child {
+    background-color: var(--black-color);
+    color: #fff;
+    padding: 2px 20px;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+.blockQuestion .introBlockQuestion div:nth-child(4),
+.blockAnswers .introBlockQuestion div:nth-child(4) {
     display: flex;
     align-items: center;
 }
 
-.blockQuestion .introBlockQuestion div:first-child p,
-.blockAnswers .introBlockQuestion div:first-child p {
-    margin-left: 20px;
+.blockQuestion .introBlockQuestion div:nth-child(4),
+.blockAnswers .introBlockQuestion div:nth-child(4) {
+    display: flex;
+    align-items: center;
+    color: var(--green-color);
 }
 
-.blockQuestion .introBlockQuestion div:first-child div i {
-    margin-left: 5px;
+.blockQuestion .introBlockQuestion div:nth-child(5) {
+    display: flex;
+    align-items: center;
+    color: var(--blue-color);
 }
 
-.blockQuestion .introBlockQuestion>div:last-child i {
-    margin-left: 20px;
+.blockQuestion .introBlockQuestion div:last-child {
+    color: var(--red-color);
 }
 
-.blockQuestion .descriptionBlockQuestion,
-.blockAnswers .descriptionBlockQuestion {
+.blockAnswers .introBlockQuestion div:last-child {
+    color: var(--blue-color);
+}
+
+.introBlockQuestion>div:first-child>div,
+.introBlockQuestion>div:first-child>i,
+.introBlockQuestion>div:first-child>p {
+    margin-right: 20px;
+}
+
+.introBlockQuestion>div:last-child>i {
+    margin-left: 10px;
+}
+
+.introBlockQuestion>div:first-child i {
+    margin: 0px 5px;
+}
+
+.descriptionBlockQuestion {
+    background-color: var(--black-color);
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
     margin-bottom: 10px;
 }
 
@@ -76,7 +109,19 @@ article .blockAnswers:nth-child(2) .codeBlockQuestion>div {
 }
 
 article .blockAnswers:last-child .codeBlockQuestion>div {
-    width: calc((100% - 20px));
+    width: calc((100%));
+}
+
+
+/* Couleur de fond des blocks de code */
+
+.hljs {
+    background: var(--black-color)!important;
+    font-size: 14px;
+}
+
+*::-webkit-scrollbar-corner {
+    background: var(--orange-color);
 }
 
 
@@ -86,7 +131,9 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
 .blockAnswers .codeBlockQuestion>div button {
     padding: 4px;
     outline: none;
-    border: 1px solid #000;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--orange-color);
 }
 
 .blockQuestion .codeBlockQuestion>div code,
@@ -161,26 +208,38 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
 
 /* ----------------------------------------------------------------- */
 
-.blockResponse form>input {
+.blockResponse form>.styleInputResponse {
     width: 100%;
     padding: 5px 0px 60px 0px;
     margin-bottom: 10px;
-    border: 1px solid #000;
     outline: none;
+    border: none;
+    background-color: var(--black-color);
+    caret-color: var(--orange-color);
+    display: flex;
+    justify-content: center;
+}
+
+.blockResponse form input {
+    width: 98%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.blockResponse form>::-webkit-input-placeholder {
+    padding-left: 10px;
 }
 
 .blockResponse button {
     margin-right: 10px;
     outline: none;
     border: 1px solid #000;
-}
-
-.blockResponse button,
-.blockResponse form div input {
-    margin-right: 10px;
-    outline: none;
-    border: 1px solid #000;
-    padding: 4px 6px;
+    border-radius: 30px;
+    background-color: var(--orange-color);
+    padding: 2px 10px;
+    color: #fff;
 }
 
 .blockResponse form>div {
@@ -188,7 +247,7 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
     justify-content: space-between;
 }
 
-.blockResponse form div input {
+.blockResponse form div button {
     margin-right: 0;
 }
 
@@ -219,8 +278,17 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
     .blockQuestion {
         display: none;
     }
-    .blockQuestionMobile {
+    .questionPage .blockQuestion,
+    .questionPage .blockAnswers {
+        padding: 20px 20px 20px 20px;
+        margin-bottom: 20px;
+    }
+    .blockQuestionMobile,
+    .blockAnswersMobile {
         display: block;
+        background-color: var(--black-color);
+        border-radius: 10px;
+        color: #fff;
     }
     .blockQuestionMobile .introBlockQuestion {
         display: block;
@@ -229,17 +297,55 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
         display: flex;
         justify-content: space-between;
     }
-    .blockQuestion .introBlockQuestion div:first-child p {
-        margin-left: 0;
+    .blockQuestion .introBlockQuestion div:first-child p,
+    .blockAnswers .introBlockQuestion div:first-child p {
+        margin-right: 0;
+    }
+    .blockQuestion .introBlockQuestion div:first-child p:last-child {
+        color: var(--orange-color);
+    }
+    .blockAnswers .introBlockQuestion div:first-child p:last-child {
+        color: var(--orange-color);
     }
     .blockQuestionMobile .introBlockQuestion>div div:nth-child(2) i {
         margin-left: 10px;
     }
-    .blockQuestionMobile .introBlockQuestion>div:first-child {
+    .blockQuestion .introBlockQuestion div:last-child {
+        color: var(--white-color);
+    }
+    .blockQuestionMobile .introBlockQuestion>div:first-child,
+    .blockAnswersMobile .introBlockQuestion>div:first-child {
         margin-bottom: 10px;
+        border: 1px solid #ffffff;
+        border-radius: 30px;
+        padding: 4px 10px;
     }
     .blockQuestionMobile .codeBlockQuestion>div {
         width: auto;
+    }
+    .descriptionBlockQuestion {
+        padding: 0px;
+        border: 1px solid var(--orange-color);
+        border-radius: 15px;
+        padding: 4px 10px;
+    }
+    .blockQuestion .introBlockQuestion div:last-child {
+        color: var(--white-color);
+    }
+    .blockQuestion .introBlockQuestion div:last-child div>i {
+        color: var(--orange-color);
+        margin-left: 10px;
+    }
+    .blockQuestion .introBlockQuestion div:last-child div>p {
+        color: var(--green-color);
+    }
+    .blockQuestion .codeBlockQuestion>div button,
+    .blockAnswers .codeBlockQuestion>div button {
+        border-radius: 20px;
+        padding: 4px 8px;
+    }
+    .descriptionBlockQuestion {
+        font-size: 15px;
     }
     /* ---------------- */
     .blockAnswers {
@@ -255,14 +361,24 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
         display: flex;
         justify-content: space-between;
     }
-    .blockAnswersMobile .introBlockQuestion div:first-child {
-        margin-bottom: 10px;
+    .blockAnswers .introBlockQuestion div:last-child {
+        color: var(--white-color);
+    }
+    .blockAnswers .introBlockQuestion div:last-child p:last-child {
+        color: var(--orange-color);
     }
     .blockAnswersMobile .introBlockQuestion div:first-child p {
         margin-left: 0;
     }
     article .blockAnswersMobile .codeBlockQuestion>div {
         width: auto !important;
+    }
+    .questionPage .blockResponse {
+        margin-bottom: 0;
+        padding: 0 0;
+    }
+    .blockResponse form>.styleInputResponse {
+        border-radius: 10px;
     }
     .blockResponse form>div {
         display: block;
