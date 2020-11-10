@@ -5,8 +5,8 @@ header nav {
 
 .mainLookQuestions {
     display: flex;
-    background-color: #61B0FF;
-    padding: 100px 20px 20px 20px;
+    background-color: var(--white-color);
+    padding: 120px 20px 20px 20px;
     color: #fff;
     justify-content: space-between;
 }
@@ -17,10 +17,11 @@ header nav {
 }
 
 main .filters {
-    background-color: #CAF0FF;
+    background-color: var(--black-color);
     padding: 20px;
     width: 12%;
     position: fixed;
+    border-radius: 30px;
 }
 
 main .filters h3 {
@@ -56,15 +57,40 @@ main .allQuestions {
 }
 
 .allQuestions section {
-    border: 1px solid #CAF0FF;
-    padding: 10px 20px 10px 20px;
-    margin-bottom: 20px;
+    padding: 0px 20px 10px 20px;
+    margin-bottom: 40px;
 }
 
 .allQuestions section .informationsProblem {
     display: flex;
     justify-content: space-between;
-    padding: 0 0 10px 0;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+
+.allQuestions section .informationsProblem>div div {
+    background-color: var(--black-color);
+    padding: 0 10px;
+    border-radius: 25px;
+}
+
+.allQuestions section .informationsProblem>div div p {
+    font-size: 20px;
+}
+
+.allQuestions section .informationsProblem>div i,
+.allQuestions section .informationsProblem>div>p {
+    color: var(--black-color);
+}
+
+.allQuestions section .informationsProblem>div i {
+    margin: 0 20px;
+}
+
+.allQuestions section .descriptionProblem {
+    background-color: var(--black-color);
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .allQuestions section .informationsProblem div {
@@ -80,6 +106,8 @@ main .allQuestions {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    background-color: var(--black-color);
+    border-radius: 30px;
 }
 
 .allQuestions section .footerProblem>div:first-child {
@@ -88,9 +116,17 @@ main .allQuestions {
 
 .allQuestions section .footerProblem>div:first-child div {
     display: flex;
-    border: 1px solid #CAF0FF;
+    align-items: center;
     margin-right: 20px;
     padding: 5px 10px;
+}
+
+.allQuestions section .footerProblem>div:first-child div:first-child {
+    color: var(--green-color);
+}
+
+.allQuestions section .footerProblem>div:first-child div:last-child {
+    color: var(--blue-color);
 }
 
 .allQuestions section .footerProblem>div:first-child div i {
@@ -99,9 +135,9 @@ main .allQuestions {
 
 .allQuestions section .footerProblem>div:last-child {
     display: flex;
-    border: 1px solid #CAF0FF;
     justify-content: space-between;
     align-items: center;
+    color: var(--red-color);
 }
 
 .allQuestions section .footerProblem>div:last-child i {
