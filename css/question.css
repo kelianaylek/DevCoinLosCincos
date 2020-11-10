@@ -102,29 +102,6 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
 }
 
 
-/* Scrollbar du site */
-
-* {
-    scrollbar-width: thin;
-    scrollbar-color: blue orange;
-}
-
-*::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
-
-*::-webkit-scrollbar-track {
-    background: orange;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: blue;
-    border-radius: 20px;
-    border: 3px solid red;
-}
-
-
 /* Colorer les différences entre le code du problèmes et les codes des réponses. */
 
 
