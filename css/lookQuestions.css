@@ -73,9 +73,6 @@ main .allQuestions {
     background-color: var(--black-color);
     padding: 2px 20px;
     border-radius: 25px;
-}
-
-.allQuestions section .informationsProblem>div div p {
     font-size: 20px;
 }
 
@@ -145,6 +142,10 @@ main .allQuestions {
     padding: 0px 10px;
 }
 
+.informationsProblemMobile {
+    display: none;
+}
+
 
 /* ------------------------------------ */
 
@@ -167,4 +168,53 @@ main .allQuestions {
 
 /* Responsive Mobile */
 
-@media screen and (max-width:576px) {}
+@media screen and (max-width:576px) {
+    .allQuestions section .informationsProblem {
+        display: none;
+    }
+    .mainLookQuestions {
+        padding: 100px 20px 20px 20px;
+    }
+    .allQuestions section {
+        margin-bottom: 20px;
+    }
+    .informationsProblemMobile {
+        display: block;
+        background-color: var(--black-color);
+        border: 1px solid var(--orange-color);
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .allQuestions section .footerProblem {
+        display: none;
+    }
+    .informationsProblemMobile>div {
+        display: flex;
+        justify-content: space-between;
+    }
+    .informationsProblemMobile>div:first-child p:last-child {
+        color: var(--orange-color);
+    }
+    .informationsProblemMobile>div>div {
+        display: flex;
+        align-items: center;
+        color: var(--green-color);
+        +
+    }
+    .informationsProblemMobile>div>div p {
+        margin-right: 5px;
+    }
+    .informationsProblemMobile>div>div:last-child i {
+        margin-left: 10px;
+        color: var(--red-color);
+    }
+    .informationsProblemMobile>div:last-child {
+        margin-top: 10px;
+    }
+    .allQuestions section {
+        padding: 0px 2px 0px 2px;
+    }
+    .allQuestions section .descriptionProblem {
+        display: none;
+    }
+}
