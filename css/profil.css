@@ -133,6 +133,11 @@
             border: 2px ridge var(--orange-color);
         }
         
+        .Sesquestions .probleme a {
+            text-decoration: none;
+            color: white;
+        }
+        
         .discord {
             display: flex;
         }
