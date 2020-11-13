@@ -209,7 +209,6 @@ main .allQuestions {
         display: flex;
         align-items: center;
         color: var(--green-color);
-        +
     }
     .informationsProblemMobile>div>div p {
         margin-right: 5px;
