@@ -21,15 +21,15 @@
                 <div>
                     <a href="">Connexion</a>
                     <a href="">Inscription</a>
-                    <a href=""><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                    <a href="profil.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                 </div>
             </div>
 
             <!-- Partie basse de la nav sur desktop -->
             <div class="lowerNavDesktop">
                 <div>
-                    <a>Voir les problèmes</a>
-                    <a>Poser une question</a>
+                    <a href="lookQuestions.html">Voir les problèmes</a>
+                    <a href="askQuestion.html">Poser une question</a>
                 </div>
                 <form class="search">
                     <input type="search" placeholder="Rechercher" />
@@ -42,10 +42,10 @@
             <!-- Partie basse de la nav sur mobile -->
             <div class="lowerNavMobile">
                 <div>
-                    <a>Voir les problèmes</a>
+                    <a href="lookQuestions.html">Voir les problèmes</a>
                 </div>
                 <div>
-                    <a>Poser une question</a>
+                    <a href="askQuestions.html">Poser une question</a>
                 </div>
             </div>
 
@@ -105,86 +105,100 @@
 
 
     <article class="maincontainer">
-        <section class="blockls">
-            <div>
-                <h3>Qui est Los Cincos ?</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
-                <a href=""><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>
-
-            </div>
+        </div>
+        <div>
+            <a href="#maincontainer"><i class="fa fa-arrow-circle-down fa-4x" aria-hidden="true"></i></a>
+        </div>
         </section>
-        <section>
+        <section id="backgroundmobile">
             <div>
-                <h3>Ce que nous vous proposons</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
-                <a href=""><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>
-
+                <button class="repq">Répondre aux questions</button>
+                <button class="repq">Poser une question</button>
             </div>
+
+
         </section>
-    </article>
+        <article class="maincontainer" id="maincontainer">
+            <section class="blockls">
+                <div>
+                    <h3>Qui est Los Cincos ?</h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
+                    <a href=""><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>
 
-    <!-- footer mobile -->
-    <footer class="footerMobile">
-        <div>
-            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-            <a href="">Mentions légales</a>
-        </div>
-        <div>
-            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
-                </a>
-            <a href="">F.A.Q</a>
-        </div>
-        <div>
-            <a href=""><i class="fa fa-github" aria-hidden="true"></i>
-                </a>
-            <a href="">Contact Admin</a>
-        </div>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h3>Ce que nous vous proposons</h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
+                    <a href=""><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>
 
-    </footer>
+                </div>
+            </section>
+        </article>
 
-    <article class="footer">
-        <div>
+        <!-- footer mobile -->
+        <footer class="footerMobile">
             <div>
-                <h4>DevCoin LosCincos</h4>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">Mentions légales</a>
             </div>
             <div>
-                <nav>
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+                <a href="">F.A.Q</a>
+            </div>
+            <div>
+                <a href=""><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="">Contact Admin</a>
+            </div>
 
-                    <ul class="menu">
-                        <li>
-                            <a href="" title="Contact">Contact</a>
-                        </li>
-                        <li>
-                            <a href="" title="Mentions légales">Mentions légales</a>
-                        </li>
-                        <li>
-                            <a href="" title="Faq">F.A.Q</a>
-                        </li>
+        </footer>
+
+        <article class="footer">
+            <div>
+                <div>
+                    <h4>DevCoin LosCincos</h4>
+                </div>
+                <div>
+                    <nav>
+
+                        <ul class="menu">
+                            <li>
+                                <a href="" title="Contact">Contact</a>
+                            </li>
+                            <li>
+                                <a href="" title="Mentions légales">Mentions légales</a>
+                            </li>
+                            <li>
+                                <a href="" title="Faq">F.A.Q</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="rs">
+                    <ul>
+                        <a href=""><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
+
+                        <a href=""><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+
                     </ul>
-                </nav>
+                    <ul>
+                        <a href=""><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+
+                        <a href=""><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+                    </ul>
+                </div>
             </div>
-            <div class="rs">
-                <ul>
-                    <a href=""><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
-
-                    <a href=""><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
-
-                </ul>
-                <ul>
-                    <a href=""><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
-
-                    <a href=""><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
-                </ul>
+            <hr>
+            <div>
+                <p>Site créé dans le cadre d'un projet scolaire</p>
             </div>
-        </div>
-        <hr>
-        <div>
-            <p>Site créé dans le cadre d'un projet scolaire</p>
-        </div>
-    </article>
+        </article>
 
 </body>
 
