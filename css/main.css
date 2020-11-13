@@ -243,9 +243,13 @@
     /*DISPLAY*/
     .maincontainer section div:first-child a {
         display: block;
-        padding-left: 120px;
         color: var(--orange-color);
         padding-top: 20px;
+        margin: 0 auto;
+    }
+    .arrowcenter {
+        margin: 0 auto;
+        display: flex;
     }
     .footerMobile {
         display: flex;
