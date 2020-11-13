@@ -127,6 +127,11 @@
             padding-right: 100px;
         }
         
+        .Sesquestions .probleme a {
+            text-decoration: none;
+            color: white;
+        }
+        
         .discord {
             display: flex;
         }
