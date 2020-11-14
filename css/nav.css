@@ -62,7 +62,7 @@ header nav .search button {
     display: none;
 }
 
-@media screen and (min-width: 0px) and (max-width: 640px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
     header nav .lowerNavDesktop {
         display: none;
     }
