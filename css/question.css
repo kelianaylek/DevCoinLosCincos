@@ -41,6 +41,15 @@
     font-size: 20px;
 }
 
+.introBlockQuestion a p {
+    color: var(--black-color);
+}
+
+.introBlockQuestion a {
+    text-decoration: none;
+    margin-right: 20px;
+}
+
 .blockQuestion .introBlockQuestion div:nth-child(4),
 .blockAnswers .introBlockQuestion div:nth-child(4) {
     display: flex;
