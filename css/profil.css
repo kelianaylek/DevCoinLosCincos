@@ -106,7 +106,6 @@
         
         .partright .Succes {
             margin-top: 15px;
-            
         }
         
         .Succes p:first-child {
@@ -151,7 +150,7 @@
         }
         
         .languages div:first-child a {
-            color:var(--red-color);
+            color: var(--red-color);
             margin-top: 4px;
             padding-left: 10px;
         }
@@ -181,27 +180,25 @@
             margin-top: 4px;
             padding-left: 20px;
         }
-
- 
+        
         .Succes .fa-heart:before {
-           color: var(--red-color);
+            color: var(--red-color);
         }
-
+        
         .fa-trophy:before {
             color: var(--yellow-color);
         }
-
-        .fa-comment:before{
+        
+        .fa-comment:before {
             color: var(--blue-color);
         }
-
         
         .Succes p {
             font-size: 20px;
             padding-left: 5px;
         }
-
-        .Succes p:nth-child(3n){
+        
+        .Succes p:nth-child(3n) {
             color: var(--yellow-color);
         }
         
@@ -227,7 +224,6 @@
             color: #61B0FF;
             padding: 10px;
             margin-left: 15px;
-            
         }
         
         .like a {
@@ -362,7 +358,7 @@
             display: none;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 1208px) {
             .container {
                 display: block;
             }
@@ -406,9 +402,12 @@
             .buttonmobile {
                 display: flex;
             }
+            .defis p {
+                font-size: 16px;
+            }
         }
         
-        @media (max-width: 576px) {
+        @media (max-width: 776px) {
             #cercle {
                 margin: 0px;
                 margin-top: 30px;
@@ -439,15 +438,15 @@
                 font-size: 16px;
                 margin-top: 30px;
             }
-            
             .propos p {
                 padding-bottom: 20px;
             }
             .partright .propos a {
                 margin: auto;
             }
-            .partright .propos a{
-                color: var(--orange-color);;
+            .partright .propos a {
+                color: var(--orange-color);
+                ;
             }
             .languagessuccesmobile {
                 display: flex;
@@ -457,7 +456,7 @@
             .languagesmobile {
                 margin-right: 10px;
             }
-            .languagesmobile a{
+            .languagesmobile a {
                 color: var(--red-color);
             }
             .languagesmobile .html {
@@ -517,20 +516,18 @@
             }
             .hf {
                 margin-top: 30px;
-                padding: 30px;
                 justify-content: space-around;
                 display: block;
                 align-items: center;
             }
-
-            .icons2 div a i{
+            .icons2 div a i {
                 color: var(--orange-color);
             }
-
             .defis {
                 display: flex;
                 justify-content: center;
                 padding-bottom: 30px;
+                text-align: center;
             }
             .parse {
                 display: flex;
@@ -538,9 +535,9 @@
             }
             .icons2 {
                 display: flex;
+                justify-content: center;
             }
             .icons {
-                display: flex;
                 padding-bottom: 30px;
             }
             .icons2 div {
@@ -551,8 +548,6 @@
                 color: white;
             }
             .hf div:first-child div:last-child {
-                align-items: center;
-                display: block;
                 color: white;
             }
             .hf .parse {
@@ -567,7 +562,6 @@
             .groupicons {
                 display: flex;
                 flex-direction: column;
-                padding-left: 65px;
             }
             .icons div {
                 padding-right: 45px;
@@ -577,7 +571,6 @@
             .badges p:first-child {
                 color: white;
                 font-size: 20px;
-                padding-bottom: 10px;
             }
             .mobileSesquestions {
                 margin-top: 15px;
@@ -595,10 +588,10 @@
                 font-size: 20px;
                 border: solid 1px;
                 padding: 5px 1px;
-                padding-left: 80px;
                 justify-content: center;
                 border-radius: 21px;
                 border: 2px ridge var(--orange-color);
+                text-align: center;
             }
             .flex {
                 display: flex;
@@ -618,6 +611,14 @@
                 padding-left: 20px;
                 padding: 10px;
                 margin-left: 0px;
+            }
+            .badges {
+                display: grid;
+                justify-content: center;
+            }
+            .displayblock {
+                display: flex;
+                justify-content: center;
             }
             /*DISPLAY*/
             .partright .propos a {
