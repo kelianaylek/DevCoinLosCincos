@@ -21,12 +21,12 @@
         <nav>
             <div class="upperNav">
                 <div>
-                    <a href="">LOGO</a>
+                    <a href="index.html">LOGO</a>
                 </div>
                 <div>
                     <a href="">Connexion</a>
                     <a href="">Inscription</a>
-                    <a href=""><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                    <a href="profil.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                 </div>
             </div>
 
@@ -80,14 +80,21 @@
         <section class="blockQuestion">
             <div class="introBlockQuestion">
                 <div>
+                    <div>
+                        <p>Titre du problème</p>
+                    </div>
                     <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
                     <p>Pseudo</p>
-                    <p>Titre du problème</p>
-                    <p>10/19/2020</p>
                     <div>
                         <p>Résolu</p>
                         <i class="fa fa-check-circle" aria-hidden="true"></i>
                     </div>
+                    <div>
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <p>68</p>
+                    </div>
+                    <p>10/19/2020</p>
+
                 </div>
                 <div>
                     <i class="fa fa-html5" aria-hidden="true"></i>
@@ -285,7 +292,7 @@ function initValidateBet() {
 
             <div class="descriptionBlockQuestion">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum tenetur quia odio ducimus, aliquam voluptatibus assumenda pariatur? Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi soluta?</p>
+                    Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi soluta?</p>
             </div>
 
             <div class="codeBlockQuestion">
@@ -307,9 +314,11 @@ function initValidateBet() {
             <section class="blockAnswers">
                 <div class="introBlockQuestion">
                     <div>
+                        <div>
+                            <p>Re : Titre du problème</p>
+                        </div>
                         <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
                         <p>Pseudo</p>
-                        <p>Re : Titre du problème</p>
                         <p>12/19/2020</p>
                     </div>
                     <div>
@@ -825,7 +834,9 @@ if (isOnShoppingPage) {
 
         <section class="blockResponse">
             <form action="">
-                <input type="text" placeholder="Répondre à la question">
+                <div class="styleInputResponse">
+                    <input type="text" placeholder="Répondre à la question...">
+                </div>
                 <div>
                     <div>
                         <button>Paste HTML</button>
@@ -833,7 +844,7 @@ if (isOnShoppingPage) {
                         <button>Paste JS</button>
                     </div>
                     <div>
-                        <input type="submit" value="Send answer">
+                        <button type="submit">Send Answer</button>
                     </div>
                 </div>
             </form>

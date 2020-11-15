@@ -1,11 +1,11 @@
 header nav {
     color: #fff;
-    font-size: 20px;
     z-index: 2;
     background-color: var(--black-color);
 }
 
 header nav .upperNav {
+    font-size: 16px;
     display: flex;
     padding: 10px;
     justify-content: space-between;
@@ -29,6 +29,7 @@ header nav .lowerNavDesktop {
     display: flex;
     justify-content: space-between;
     padding: 0 10px 10px 10px;
+    font-size: 18px;
 }
 
 header nav .lowerNavDesktop div {
@@ -61,7 +62,7 @@ header nav .search button {
     display: none;
 }
 
-@media screen and (min-width: 0px) and (max-width: 640px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
     header nav .lowerNavDesktop {
         display: none;
     }

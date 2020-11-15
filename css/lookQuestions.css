@@ -5,10 +5,15 @@ header nav {
 
 .mainLookQuestions {
     display: flex;
-    background-color: #61B0FF;
-    padding: 100px 20px 20px 20px;
+    background-color: var(--white-color);
+    padding: 120px 20px 20px 20px;
     color: #fff;
     justify-content: space-between;
+}
+
+.mainLookQuestions .descriptionProblem p a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .container {
@@ -17,10 +22,11 @@ header nav {
 }
 
 main .filters {
-    background-color: #CAF0FF;
+    background-color: var(--black-color);
     padding: 20px;
-    width: 12%;
+    width: 13%;
     position: fixed;
+    border-radius: 30px;
 }
 
 main .filters h3 {
@@ -39,6 +45,7 @@ main .filters hr {
 main .filters>div {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 main .filters p,
@@ -56,15 +63,43 @@ main .allQuestions {
 }
 
 .allQuestions section {
-    border: 1px solid #CAF0FF;
-    padding: 10px 20px 10px 20px;
-    margin-bottom: 20px;
+    padding: 0px 20px 10px 20px;
+    margin-bottom: 40px;
 }
 
 .allQuestions section .informationsProblem {
     display: flex;
     justify-content: space-between;
-    padding: 0 0 10px 0;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+
+.allQuestions section .informationsProblem>div div {
+    background-color: var(--black-color);
+    padding: 2px 20px;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+.informationsProblem a,
+.informationsProblemMobile a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.allQuestions section .informationsProblem>div i,
+.allQuestions section .informationsProblem>div>p {
+    color: var(--black-color);
+}
+
+.allQuestions section .informationsProblem>div i {
+    margin: 0 20px;
+}
+
+.allQuestions section .descriptionProblem {
+    background-color: var(--black-color);
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .allQuestions section .informationsProblem div {
@@ -80,6 +115,9 @@ main .allQuestions {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    background-color: var(--black-color);
+    border-radius: 30px;
+    padding: 5px 20px;
 }
 
 .allQuestions section .footerProblem>div:first-child {
@@ -88,9 +126,16 @@ main .allQuestions {
 
 .allQuestions section .footerProblem>div:first-child div {
     display: flex;
-    border: 1px solid #CAF0FF;
+    align-items: center;
     margin-right: 20px;
-    padding: 5px 10px;
+}
+
+.allQuestions section .footerProblem>div:first-child div:first-child {
+    color: var(--green-color);
+}
+
+.allQuestions section .footerProblem>div:first-child div:last-child {
+    color: var(--blue-color);
 }
 
 .allQuestions section .footerProblem>div:first-child div i {
@@ -99,13 +144,17 @@ main .allQuestions {
 
 .allQuestions section .footerProblem>div:last-child {
     display: flex;
-    border: 1px solid #CAF0FF;
     justify-content: space-between;
     align-items: center;
+    color: var(--red-color);
 }
 
 .allQuestions section .footerProblem>div:last-child i {
     padding: 0px 10px;
+}
+
+.informationsProblemMobile {
+    display: none;
 }
 
 
@@ -130,4 +179,52 @@ main .allQuestions {
 
 /* Responsive Mobile */
 
-@media screen and (max-width:576px) {}
+@media screen and (max-width:576px) {
+    .allQuestions section .informationsProblem {
+        display: none;
+    }
+    .mainLookQuestions {
+        padding: 100px 20px 20px 20px;
+    }
+    .allQuestions section {
+        margin-bottom: 20px;
+    }
+    .informationsProblemMobile {
+        display: block;
+        background-color: var(--black-color);
+        border: 1px solid var(--orange-color);
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .allQuestions section .footerProblem {
+        display: none;
+    }
+    .informationsProblemMobile>div {
+        display: flex;
+        justify-content: space-between;
+    }
+    .informationsProblemMobile>div:first-child p:last-child {
+        color: var(--orange-color);
+    }
+    .informationsProblemMobile>div>div {
+        display: flex;
+        align-items: center;
+        color: var(--green-color);
+    }
+    .informationsProblemMobile>div>div p {
+        margin-right: 5px;
+    }
+    .informationsProblemMobile>div>div:last-child i {
+        margin-left: 10px;
+        color: var(--red-color);
+    }
+    .informationsProblemMobile>div:last-child {
+        margin-top: 10px;
+    }
+    .allQuestions section {
+        padding: 0px 2px 0px 2px;
+    }
+    .allQuestions section .descriptionProblem {
+        display: none;
+    }
+}
