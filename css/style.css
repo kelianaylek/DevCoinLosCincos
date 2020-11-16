@@ -5,6 +5,7 @@
 @import url("main.css");
 @import url("profil.css");
 @import url("askaquestion.css");
+@import url("darkMode.css");
 * {
     margin: 0;
     padding: 0;
