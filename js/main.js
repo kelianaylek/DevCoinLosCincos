@@ -18,9 +18,36 @@ $(btnSwitch).click(
     function() {
         // On check si on est sur la page principale
         if (isOnMainPage) {
+            $(".languages").toggleClass("red");
 
         } else if (isOnProfilPage) {
-            $(".languages").toggleClass("red")
+            $(".languages").toggleClass("red");
+
         }
 
-    })
+    }
+)
+
+
+function darkMode() {
+    if (localStorage.currentTheme == null) {
+        console.log('currentTheme does not exist', )
+        localStorage.currentTheme = "darkMode"
+    } else {
+        console.log('CurrentTheme does exist', )
+        console.log('Localstorage: ', localStorage.currentTheme)
+    }
+}
+
+
+function updateUI() {
+    // Si on est dèjà en dark mode
+    if (localStorage.currentTheme == "darkMode") {
+
+
+    }
+    // Si on est pas en dark mode
+    else {
+
+    }
+}
