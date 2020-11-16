@@ -1,3 +1,29 @@
-.red {
-    background-color: red !important;
+.black {
+    background-color:var(--black-color) !important;
+}
+
+.blackAnnee{
+    border: 2px ridge var(--orange-color) !important;
+    border-radius: 21px !important;
+}
+
+.blackAnnee p{
+    color:var(--white-color) !important;
+    border: 0 !important;
+}
+
+.blackAnnee div a{
+    color:var(--white-color) !important;
+    border: 0 !important;
+}
+
+.footerBlack{
+    border-top: 1px ridge var(--orange-color) !important;
+}
+
+.buttonBlack{
+    background-color: var(--black-color) !important;
+    color: white !important;
+    border: 2px ridge var(--orange-color) !important;
+    border-radius: 21px !important;
 }

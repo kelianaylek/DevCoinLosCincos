@@ -18,9 +18,23 @@ $(btnSwitch).click(
     function() {
         // On check si on est sur la page principale
         if (isOnMainPage) {
+            $("#background").toggleClass("red")
 
         } else if (isOnProfilPage) {
-            $(".languages").toggleClass("red")
+            
+            if(($(btnSwitch)).innerHTML == "DARK MODE"){
+                $(btnSwitch).text("WHITE MODE")
+            }else{
+                $(btnSwitch).text("DARK MODE")
+            }
+            $("body").toggleClass("black")
+            $(".annee").toggleClass("black")
+            $(".annee").toggleClass("blackAnnee")
+            $(".annee p").toggleClass("blackAnnee p")
+            $(".annee div a").toggleClass("blackAnnee div a")
+            $(".footerDesktop").toggleClass("footerBlack")
+            $(".footerMobile").toggleClass("footerBlack")
+            $(".containerProfil button").toggleClass("buttonBlack")
         }
 
     })
