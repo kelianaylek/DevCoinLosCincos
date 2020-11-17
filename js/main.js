@@ -35,6 +35,10 @@ function updateUI() {
         }
         // On check si on est sur la page profil
         else if (isOnProfilPage) {
+            // On change le texte du bouton
+            $(btnSwitch).text("WHITE MODE")
+
+            // On change le style de la page
             $("body").addClass("black")
             $(".annee").addClass("black")
             $(".annee").addClass("blackAnnee")
@@ -51,6 +55,10 @@ function updateUI() {
         }
         // On check si on est sur la page profil
         else if (isOnProfilPage) {
+            // On change le texte du bouton
+            $(btnSwitch).text("DARK MODE")
+
+            // On change le style de la page
             $("body").removeClass("black")
             $(".annee").removeClass("black")
             $(".annee").removeClass("blackAnnee")
