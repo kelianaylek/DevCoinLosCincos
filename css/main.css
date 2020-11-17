@@ -186,23 +186,81 @@
 }
 
 .modal-content2 form {
-    margin-top: 3%;
-    margin-left: 25%;
-    font-size: 35px;
+    margin-top: 8%;
 }
 
 .modal-content form {
-    margin-top: 7%;
-    margin-left: 25%;
-    font-size: 35px;
+    margin-top: 13%;
 }
 
-.modal-content form input {
-    font-size: 35px;
+#email {
+    padding-left: 15px;
 }
 
-.modal-content2 form input {
-    font-size: 35px;
+#password {
+    padding-left: 15px;
+}
+
+.modal-content form #password {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content form #email {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content form #envoyer {
+    width: 15vh;
+    height: 5vh;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: var(--orange-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-content2 form #password {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content2 form #email {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content2 form #envoyer {
+    width: 15vh;
+    height: 5vh;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: var(--orange-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
 }
 
 
