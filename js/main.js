@@ -13,28 +13,69 @@ var isOnQuestionPage = lastWordUrl == "question.html";
 // On sélectionne le bouton darkMode
 let btnSwitch = $("#darkMode");
 
-// On exécute la fonction au click sur le bouton
-$(btnSwitch).click(
-    function() {
+// Si on est en white mode dans le local storage
+if (localStorage.currentTheme == null) {
+    console.log('currentTheme does not exist', )
+    localStorage.currentTheme = "whiteMode"
+
+    // Si on est en white mode dans le local storage
+} else {
+    console.log('CurrentTheme does exist', )
+    console.log('Localstorage: ', localStorage.currentTheme)
+    updateUI();
+
+}
+
+// Update du mode en fonction du thème actuel
+function updateUI() {
+    if (localStorage.currentTheme == "darkMode") {
         // On check si on est sur la page principale
         if (isOnMainPage) {
-            $("#background").toggleClass("red")
-
-        } else if (isOnProfilPage) {
-            
-            if(($(btnSwitch)).innerHTML == "DARK MODE"){
-                $(btnSwitch).text("WHITE MODE")
-            }else{
-                $(btnSwitch).text("DARK MODE")
-            }
-            $("body").toggleClass("black")
-            $(".annee").toggleClass("black")
-            $(".annee").toggleClass("blackAnnee")
-            $(".annee p").toggleClass("blackAnnee p")
-            $(".annee div a").toggleClass("blackAnnee div a")
-            $(".footerDesktop").toggleClass("footerBlack")
-            $(".footerMobile").toggleClass("footerBlack")
-            $(".containerProfil button").toggleClass("buttonBlack")
+            $("#background").addClass("red")
         }
+        // On check si on est sur la page profil
+        else if (isOnProfilPage) {
+            $("body").addClass("black")
+            $(".annee").addClass("black")
+            $(".annee").addClass("blackAnnee")
+            $(".annee p").addClass("blackAnnee p")
+            $(".annee div a").addClass("blackAnnee div a")
+            $(".footerDesktop").addClass("footerBlack")
+            $(".footerMobile").addClass("footerBlack")
+            $(".containerProfil button").addClass("buttonBlack")
+        }
+    } else if (localStorage.currentTheme == "whiteMode") {
+        // On check si on est sur la page principale
+        if (isOnMainPage) {
+            $("#background").removeClass("red")
+        }
+        // On check si on est sur la page profil
+        else if (isOnProfilPage) {
+            $("body").removeClass("black")
+            $(".annee").removeClass("black")
+            $(".annee").removeClass("blackAnnee")
+            $(".annee p").removeClass("blackAnnee p")
+            $(".annee div a").removeClass("blackAnnee div a")
+            $(".footerDesktop").removeClass("footerBlack")
+            $(".footerMobile").removeClass("footerBlack")
+            $(".containerProfil button").removeClass("buttonBlack")
+        }
+    }
+}
+// Au click, déclenche la fonction updateUI() en fonction du mode dans lequel on est
+$(btnSwitch).click(
+    function() {
+        if (localStorage.currentTheme == "darkMode") {
+            localStorage.currentTheme = "whiteMode"
+            console.log('Localstorage: ', localStorage.currentTheme)
+            updateUI();
 
-    })
+        } else if (localStorage.currentTheme == "whiteMode") {
+            localStorage.currentTheme = "darkMode"
+            console.log('Localstorage: ', localStorage.currentTheme)
+            updateUI();
+
+        }
+        updateUI();
+    }
+)
