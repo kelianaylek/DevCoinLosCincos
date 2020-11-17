@@ -30,11 +30,13 @@ if (localStorage.currentTheme == null) {
 function updateUI() {
     if (localStorage.currentTheme == "darkMode") {
         // On check si on est sur la page principale
-        if (isOnMainPage) {
-            $("#background").addClass("red")
-        }
+        // if (isOnMainPage) {
+            $("body").addClass("black")
+            $("#background>div a").addClass("fleche")
+            $(".maincontainer section").addClass("fleche")
+        // }
         // On check si on est sur la page profil
-        else if (isOnProfilPage) {
+        if (isOnProfilPage) {
             $("body").addClass("black")
             $(".annee").addClass("black")
             $(".annee").addClass("blackAnnee")
@@ -78,4 +80,4 @@ $(btnSwitch).click(
         }
         updateUI();
     }
-)
+)   
