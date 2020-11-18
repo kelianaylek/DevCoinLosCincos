@@ -1,53 +1,57 @@
-.black {
-    background-color:var(--black-color) !important;
+header nav {
+    border-bottom: 2px solid var(--orange-color);
 }
 
-.blackAnnee{
+.black {
+    background-color: var(--black-color) !important;
+}
+
+.blackAnnee {
     border: 2px ridge var(--orange-color) !important;
     border-radius: 21px !important;
 }
 
-.blackAnnee p{
-    color:var(--white-color) !important;
+.blackAnnee p {
+    color: var(--white-color) !important;
     border: 0 !important;
 }
 
-.blackAnnee div a{
-    color:var(--white-color) !important;
+.blackAnnee div a {
+    color: var(--white-color) !important;
     border: 0 !important;
 }
 
-.footerBlack{
-    border-top: 1px ridge var(--orange-color) !important;
+.footerBlack {
+    border-top: 2px ridge var(--orange-color) !important;
 }
 
-.buttonBlack{
+.buttonBlack {
     background-color: var(--black-color) !important;
     color: white !important;
     border: 2px ridge var(--orange-color) !important;
     border-radius: 21px !important;
 }
 
-.text{
+.text {
     color: var(--white-color) !important;
 }
 
-.bgdc{
-    background-image: linear-gradient(298deg, var(--black-color) 49%, var(--black-color) 49%);
+.bgdc {
+    background-image: linear-gradient(298deg, var(--black-color) 50%, var(--orange-color) 50.2%, var(--black-color) 50%);
+    border-bottom: 2px solid var(--orange-color);
 }
 
-.mainFooterBlack{
-    border: 1px ridge var(--orange-color) !important;
+.mainFooterBlack {
+    border: 2px ridge var(--orange-color) !important;
 }
+
 
 /*-----Voir les question----*/
 
-
-.filtersBlack{
+.filtersBlack {
     background-color: var(--orange-color) !important;
 }
 
-.pictoBlack{
+.pictoBlack {
     color: var(--orange-color) !important;
 }
-
