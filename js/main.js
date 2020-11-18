@@ -29,9 +29,10 @@ if (localStorage.currentTheme == null) {
 // Update du mode en fonction du thème actuel
 function updateUI() {
     if (localStorage.currentTheme == "darkMode") {
+        $("header nav").addClass("borderBottomOrange")
+        $("body").addClass("black")
         // On check si on est sur la page principale
         if (isOnMainPage) {
-            $("body").addClass("black")
             $(".maincontainer section").addClass("black")
             $(".maincontainer section div").addClass("whiteColor")
             $(".backgroundmobile .background").addClass("bgdc")
@@ -40,13 +41,11 @@ function updateUI() {
         }
         // On check si on est sur la page poser une question
         else if (isOnAskQuestionPage) {
-            $("body").addClass("black")
             $(".footerDesktop").addClass("borderTopOrange")
             $(".footerMobile").addClass("borderTopOrange")
         }
         // On check si on est sur la page voir les questions
         else if (isOnLookQuestionsPage) {
-            $("body").addClass("black")
             $("main").addClass("black")
             $(".filters").addClass("borderOrange")
             $(".fa-picture-o").addClass("whiteColor")
@@ -62,18 +61,16 @@ function updateUI() {
             $(btnSwitch).text("WHITE MODE")
 
             // On change le style de la page
-            $("body").addClass("black")
             $(".annee").addClass("black")
             $(".annee").addClass("borderRadiusOrange")
-            $(".annee p").addClass("blackAnnee p")
-            $(".annee div a").addClass("blackAnnee div a")
+            $(".annee p").addClass("whiteColor")
+            $(".annee div a").addClass("whiteColor")
             $(".footerDesktop").addClass("borderTopOrange")
             $(".footerMobile").addClass("borderTopOrange")
             $(".containerProfil button").addClass("buttonBlack")
         }
         // On check si on est sur la page question
         else if (isOnQuestionPage) {
-            $("body").addClass("black")
             $("main").addClass("black")
             $(".blockQuestion .introBlockQuestion div:first-child>div:first-child, .blockAnswers .introBlockQuestion div:first-child>div:first-child").addClass("borderOrange")
             $(".descriptionBlockQuestion").addClass("borderOrange")
@@ -86,9 +83,10 @@ function updateUI() {
             $(".footerMobile").addClass("borderTopOrange")
         }
     } else if (localStorage.currentTheme == "whiteMode") {
+        $("header nav").removeClass("borderBottomOrange")
+        $("body").removeClass("black")
         // On check si on est sur la page principale
         if (isOnMainPage) {
-            $("body").removeClass("black")
             $(".maincontainer section").removeClass("black")
             $(".maincontainer section div").removeClass("whiteColor")
             $(".backgroundmobile .background").removeClass("bgdc")
@@ -97,15 +95,13 @@ function updateUI() {
         }
         // On check si on est sur la page poser une question
         else if (isOnAskQuestionPage) {
-            $("body").removeClass("black")
             $(".footerDesktop").removeClass("borderTopOrange")
             $(".footerMobile").removeClass("borderTopOrange")
         }
         // On check si on est sur la page voir les questions
         else if (isOnLookQuestionsPage) {
-            $("body").removeClass("black")
             $("main").removeClass("black")
-            $(".filters").removeClass("filtersBlack")
+            $(".filters").removeClass("borderOrange")
             $(".fa-picture-o").removeClass("white")
             $(".informationsProblem a, .informationsProblemMobile a").removeClass("orangeColor")
             $(".allQuestions section .informationsProblem>div i, .allQuestions section .informationsProblem>div>p").addClass("white")
@@ -119,18 +115,16 @@ function updateUI() {
             $(btnSwitch).text("DARK MODE")
 
             // On change le style de la page
-            $("body").removeClass("black")
             $(".annee").removeClass("black")
             $(".annee").removeClass("borderRadiusOrange")
-            $(".annee p").removeClass("blackAnnee p")
-            $(".annee div a").removeClass("blackAnnee div a")
+            $(".annee p").removeClass("whiteColor")
+            $(".annee div a").removeClass("whiteColor")
             $(".footerDesktop").removeClass("borderTopOrange")
             $(".footerMobile").removeClass("borderTopOrange")
             $(".containerProfil button").removeClass("buttonBlack")
         }
         // On check si on est sur la page question
         else if (isOnQuestionPage) {
-            $("body").removeClass("black")
             $("main").removeClass("black")
             $(".blockQuestion .introBlockQuestion div:first-child>div:first-child, .blockAnswers .introBlockQuestion div:first-child>div:first-child").removeClass("borderOrange")
             $(".descriptionBlockQuestion").removeClass("borderOrange")

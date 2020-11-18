@@ -71,6 +71,7 @@
     min-height: 45vh;
     width: 95%;
     margin: 0 auto;
+    margin-top: 40px;
 }
 
 .footer h4 {
@@ -82,7 +83,6 @@
     display: flex;
     color: white;
     padding-top: 100px;
-    margin-top: 40px;
     padding-bottom: 25px;
 }
 

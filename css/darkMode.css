@@ -1,30 +1,20 @@
+.borderBottomOrange {
+    border-bottom: 2px solid var(--orange-color);
+}
+
 .black {
-    background-color:var(--black-color) !important;
-}
-
-.blackAnnee p{
-    color:var(--white-color) !important;
-    border: 0 !important;
-}
-
-.blackAnnee div a{
-    color:var(--white-color) !important;
-    border: 0 !important;
+    background-color: var(--black-color) !important;
 }
 
 .borderTopOrange{
-    border-top: 1px ridge var(--orange-color) !important;
+    border-top: 2px ridge var(--orange-color) !important;
 }
 
-.buttonBlack{
+.buttonBlack {
     background-color: var(--black-color) !important;
     color: white !important;
     border: 2px ridge var(--orange-color) !important;
     border-radius: 21px !important;
-}
-
-.bgdc{
-    background-image: linear-gradient(298deg, var(--black-color) 49%, var(--black-color) 49%);
 }
 
 .borderOrange{
@@ -42,4 +32,10 @@
 .borderRadiusOrange{
     border:1px ridge var(--orange-color) !important;
     border-radius: 21px;
+}
+
+
+.bgdc {
+    background-image: linear-gradient(298deg, var(--black-color) 50%, var(--orange-color) 50.2%, var(--black-color) 50%);
+    border-bottom: 2px solid var(--orange-color);
 }
