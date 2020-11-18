@@ -32,8 +32,25 @@ function updateUI() {
         // On check si on est sur la page principale
         if (isOnMainPage) {
             $("body").addClass("black")
-            $("#background>div a").addClass("fleche")
-            $(".maincontainer section").addClass("fleche")
+            $(".maincontainer section").addClass("black")
+            $(".maincontainer section div").addClass("text")
+            $(".backgroundmobile .background").addClass("bgdc")
+            $(".backgroundDesktop .background").addClass("bgdc")
+            $(".footer").addClass("mainFooterBlack")
+        }
+        // On check si on est sur la page poser une question
+        else if (isOnAskQuestionPage) {
+            $("body").addClass("black")
+            $(".footerDesktop").addClass("footerBlack")
+            $(".footerMobile").addClass("footerBlack")
+        }
+        // On check si on est sur la page voir les questions
+        else if (isOnLookQuestionsPage) {
+            $("body").addClass("black")
+            $("main").addClass("black")
+            $(".filters").addClass("filtersBlack")
+            $(".fa-picture-o").addClass("pictoBlack")
+            $(".informationsProblem a, .informationsProblemMobile a").addClass("pictoBlack")
         }
         // On check si on est sur la page profil
         else if (isOnProfilPage) {
@@ -53,7 +70,18 @@ function updateUI() {
     } else if (localStorage.currentTheme == "whiteMode") {
         // On check si on est sur la page principale
         if (isOnMainPage) {
-            $("#background").removeClass("red")
+            $("body").removeClass("black")
+            $(".maincontainer section").removeClass("black")
+            $(".maincontainer section div").removeClass("text")
+            $(".backgroundmobile .background").removeClass("bgdc")
+            $(".backgroundDesktop .background").removeClass("bgdc")
+            $(".footer").removeClass("mainFooterBlack")
+        }
+        // On check si on est sur la page poser une question
+        else if (isOnAskQuestionPage) {
+            $("body").removeClass("black")
+            $(".footerDesktop").removeClass("footerBlack")
+            $(".footerMobile").removeClass("footerBlack")
         }
         // On check si on est sur la page profil
         else if (isOnProfilPage) {
