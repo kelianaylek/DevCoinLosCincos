@@ -33,24 +33,28 @@ function updateUI() {
         if (isOnMainPage) {
             $("body").addClass("black")
             $(".maincontainer section").addClass("black")
-            $(".maincontainer section div").addClass("text")
+            $(".maincontainer section div").addClass("whiteColor")
             $(".backgroundmobile .background").addClass("bgdc")
             $(".backgroundDesktop .background").addClass("bgdc")
-            $(".footer").addClass("mainFooterBlack")
+            $(".footer").addClass("borderOrange")
         }
         // On check si on est sur la page poser une question
         else if (isOnAskQuestionPage) {
             $("body").addClass("black")
-            $(".footerDesktop").addClass("footerBlack")
-            $(".footerMobile").addClass("footerBlack")
+            $(".footerDesktop").addClass("borderTopOrange")
+            $(".footerMobile").addClass("borderTopOrange")
         }
         // On check si on est sur la page voir les questions
         else if (isOnLookQuestionsPage) {
             $("body").addClass("black")
             $("main").addClass("black")
-            $(".filters").addClass("filtersBlack")
-            $(".fa-picture-o").addClass("pictoBlack")
-            $(".informationsProblem a, .informationsProblemMobile a").addClass("pictoBlack")
+            $(".filters").addClass("borderOrange")
+            $(".fa-picture-o").addClass("whiteColor")
+            $(".informationsProblem a, .informationsProblemMobile a").addClass("orangeColor")
+            $(".allQuestions section .informationsProblem>div i, .allQuestions section .informationsProblem>div>p").addClass("whiteColor")
+            $(".allQuestions section").addClass("borderRadiusOrange")
+            $(".footerDesktop").addClass("borderTopOrange")
+            $(".footerMobile").addClass("borderTopOrange")
         }
         // On check si on est sur la page profil
         else if (isOnProfilPage) {
@@ -60,28 +64,54 @@ function updateUI() {
             // On change le style de la page
             $("body").addClass("black")
             $(".annee").addClass("black")
-            $(".annee").addClass("blackAnnee")
+            $(".annee").addClass("borderRadiusOrange")
             $(".annee p").addClass("blackAnnee p")
             $(".annee div a").addClass("blackAnnee div a")
-            $(".footerDesktop").addClass("footerBlack")
-            $(".footerMobile").addClass("footerBlack")
+            $(".footerDesktop").addClass("borderTopOrange")
+            $(".footerMobile").addClass("borderTopOrange")
             $(".containerProfil button").addClass("buttonBlack")
+        }
+        // On check si on est sur la page question
+        else if (isOnQuestionPage) {
+            $("body").addClass("black")
+            $("main").addClass("black")
+            $(".blockQuestion .introBlockQuestion div:first-child>div:first-child, .blockAnswers .introBlockQuestion div:first-child>div:first-child").addClass("borderOrange")
+            $(".descriptionBlockQuestion").addClass("borderOrange")
+            $(".blockQuestion .codeBlockQuestion>div, .blockAnswers .codeBlockQuestion>div").addClass("borderOrange")
+            $(".styleInputResponse").addClass("borderRadiusOrange")
+            $(".introBlockQuestion a p").addClass("whiteColor")
+            $(".fa-picture-o").addClass("whiteColor")
+            $("div:first-child>p").addClass("whiteColor")
+            $(".footerDesktop").addClass("borderTopOrange")
+            $(".footerMobile").addClass("borderTopOrange")
         }
     } else if (localStorage.currentTheme == "whiteMode") {
         // On check si on est sur la page principale
         if (isOnMainPage) {
             $("body").removeClass("black")
             $(".maincontainer section").removeClass("black")
-            $(".maincontainer section div").removeClass("text")
+            $(".maincontainer section div").removeClass("whiteColor")
             $(".backgroundmobile .background").removeClass("bgdc")
             $(".backgroundDesktop .background").removeClass("bgdc")
-            $(".footer").removeClass("mainFooterBlack")
+            $(".footer").removeClass("borderOrange")
         }
         // On check si on est sur la page poser une question
         else if (isOnAskQuestionPage) {
             $("body").removeClass("black")
-            $(".footerDesktop").removeClass("footerBlack")
-            $(".footerMobile").removeClass("footerBlack")
+            $(".footerDesktop").removeClass("borderTopOrange")
+            $(".footerMobile").removeClass("borderTopOrange")
+        }
+        // On check si on est sur la page voir les questions
+        else if (isOnLookQuestionsPage) {
+            $("body").removeClass("black")
+            $("main").removeClass("black")
+            $(".filters").removeClass("filtersBlack")
+            $(".fa-picture-o").removeClass("white")
+            $(".informationsProblem a, .informationsProblemMobile a").removeClass("orangeColor")
+            $(".allQuestions section .informationsProblem>div i, .allQuestions section .informationsProblem>div>p").addClass("white")
+            $(".allQuestions section").removeClass("borderRadiusOrange")
+            $(".footerDesktop").removeClass("borderTopOrange")
+            $(".footerMobile").removeClass("borderTopOrange")
         }
         // On check si on est sur la page profil
         else if (isOnProfilPage) {
@@ -91,12 +121,26 @@ function updateUI() {
             // On change le style de la page
             $("body").removeClass("black")
             $(".annee").removeClass("black")
-            $(".annee").removeClass("blackAnnee")
+            $(".annee").removeClass("borderRadiusOrange")
             $(".annee p").removeClass("blackAnnee p")
             $(".annee div a").removeClass("blackAnnee div a")
-            $(".footerDesktop").removeClass("footerBlack")
-            $(".footerMobile").removeClass("footerBlack")
+            $(".footerDesktop").removeClass("borderTopOrange")
+            $(".footerMobile").removeClass("borderTopOrange")
             $(".containerProfil button").removeClass("buttonBlack")
+        }
+        // On check si on est sur la page question
+        else if (isOnQuestionPage) {
+            $("body").removeClass("black")
+            $("main").removeClass("black")
+            $(".blockQuestion .introBlockQuestion div:first-child>div:first-child, .blockAnswers .introBlockQuestion div:first-child>div:first-child").removeClass("borderOrange")
+            $(".descriptionBlockQuestion").removeClass("borderOrange")
+            $(".blockQuestion .codeBlockQuestion>div, .blockAnswers .codeBlockQuestion>div").removeClass("borderOrange")
+            $(".styleInputResponse").removeClass("borderRadiusOrange")
+            $(".introBlockQuestion a p").removeClass("whiteColor")
+            $(".fa-picture-o").removeClass("whiteColor")
+            $("div:first-child>p").removeClass("whiteColor")
+            $(".footerDesktop").removeClass("borderTopOrange")
+            $(".footerMobile").removeClass("borderTopOrange")
         }
     }
 }

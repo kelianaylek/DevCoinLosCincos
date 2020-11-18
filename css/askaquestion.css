@@ -75,15 +75,13 @@
     text-decoration: none;
     cursor: pointer;
     background-color: var(--orange-color);
-    width: 27vh;
-    height: 4vh;
     text-align: center;
     border-radius: 20px;
     border: none;
     margin-top: 12vh;
     margin-bottom: 5vh;
     align-self: center;
-    border: 2px solid var(--black-color);
+    padding: 5px 20px;
 }
 
 .Ebtnsend a {
