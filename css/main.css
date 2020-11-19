@@ -308,6 +308,9 @@
     .fa-3x {
         font-size: 2em;
     }
+    .modal-content form {
+        margin-top: 30%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -391,6 +394,9 @@
     }
     #background>div:last-child a {
         padding-bottom: 25px;
+    }
+    .modal-content form {
+        margin-top: 45%;
     }
     /*DISPLAY*/
     .maincontainer section div:first-child a {
