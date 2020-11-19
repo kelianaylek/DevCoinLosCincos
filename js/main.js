@@ -11,7 +11,7 @@ var isOnProfilPage = lastWordUrl == "profil.html";
 var isOnQuestionPage = lastWordUrl == "question.html";
 
 // On sélectionne le bouton darkMode
-let btnSwitch = $("#darkMode");
+let btnSwitch = $(".darkModeBtn");
 
 // Si on est en white mode dans le local storage
 if (localStorage.currentTheme == null) {
@@ -31,7 +31,7 @@ function updateUI() {
     if (localStorage.currentTheme == "darkMode") {
         $("header nav").addClass("borderBottomOrange")
         $("body").addClass("black")
-        // On check si on est sur la page principale
+            // On check si on est sur la page principale
         if (isOnMainPage) {
             $(".maincontainer section").addClass("black")
             $(".maincontainer section div").addClass("whiteColor")
@@ -85,7 +85,7 @@ function updateUI() {
     } else if (localStorage.currentTheme == "whiteMode") {
         $("header nav").removeClass("borderBottomOrange")
         $("body").removeClass("black")
-        // On check si on est sur la page principale
+            // On check si on est sur la page principale
         if (isOnMainPage) {
             $(".maincontainer section").removeClass("black")
             $(".maincontainer section div").removeClass("whiteColor")
