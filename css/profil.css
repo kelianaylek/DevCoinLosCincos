@@ -360,6 +360,10 @@
             display: none;
         }
         
+        .darkMode {
+            display: none;
+        }
+        
         @media (max-width: 1208px) {
             .container {
                 display: block;
@@ -407,6 +411,16 @@
             .defis p {
                 font-size: 16px;
             }
+            .containerProfil button {
+                width: auto;
+            }
+            #cercle {
+                margin: 0 0;
+            }
+            .darkMode {
+                display: flex;
+                justify-content: center;
+            }
         }
         
         @media (max-width: 776px) {
@@ -428,7 +442,6 @@
                 border: 2px ridge var(--orange-color);
                 margin-top: 15px;
                 color: white;
-                width: 50%;
             }
             .containerProfil button {
                 border: none;
