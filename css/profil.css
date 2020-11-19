@@ -635,6 +635,10 @@
                 display: flex;
                 justify-content: center;
             }
+            .mobileSesquestions p a {
+                text-decoration: none;
+                color: white;
+            }
             /*DISPLAY*/
             .partright .propos a {
                 display: table;

@@ -2,14 +2,14 @@
 
 .background {
     background-image: linear-gradient(298deg, rgb(200, 200, 200) 49%, rgb(179, 179, 179) 49%);
-    min-height: 90vh;
+    height: 100vh;
 }
 
 .background>div:first-child {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 40vh;
+    padding-top: 50vh;
 }
 
 .background>div:last-child {
@@ -98,7 +98,7 @@
 .footer .menu li a {
     text-decoration: none;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .footer li a {
@@ -239,6 +239,9 @@
     }
     .background>div:last-child a {
         padding-bottom: 25px;
+    }
+    #background .placement2 a {
+        color: white;
     }
     /*DISPLAY*/
     .maincontainer section div:first-child a {
