@@ -42,22 +42,31 @@ $(document).ready(function() {
 
     /*POPUP RESPONSIVE*/
     let arrow = $("#scrolldown");
+    let arrowup = '<a href="#" id="scrollup"><i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i></a>'
+    let textarrowdown = '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>'
+    let arrowdown = '<a href="#" id="scrolldown"><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>'
+    let arrowreverse = $("#scrollup")
+
+
     arrow.click(function(e) {
         e.preventDefault();
-        let arrowup = '<a href="#" id="scrollup"><i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i></a>'
-        let textarrowdown = '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>'
         $(".addtext").append(textarrowdown);
         $("#firstarrow a").remove()
         $("#firstarrow").append(arrowup)
-
-    })
-    let arrowreverse = $("#scrollup")
-    arrowreverse.click(function(e) {
-        e.preventDefault();
         console.log('kélian')
-        let arrowdown = '<a href="#" id="scrolldown"><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>'
-        $(textarrowdown).remove()
-        $(arrowup).remove()
-        $("#firstarrow").append(arrowdown)
     })
+
+    if (document.querySelector("#scrollup") !== null) {
+        arrowreverse.click(function(e) {
+            console.log('kélian')
+
+            e.preventDefault();
+            $(textarrowdown).remove()
+            $(arrowup).remove()
+            $("#firstarrow").append(arrowdown)
+
+        })
+    }
+
+
 })
