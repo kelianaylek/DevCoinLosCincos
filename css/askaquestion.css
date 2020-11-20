@@ -1,52 +1,41 @@
 .EBdiv {
-    /* background-color: #61B0FF; */
     width: 90%;
     margin-top: 15vh;
-    padding-top: 53px;
 }
 
-.Emaindiv {
+.EBdiv div:first-child {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.EmaindivDesk {
     justify-content: center;
     display: flex;
+    height: 93vh;
 }
 
-.Easktitre {
-    /* margin-top: 5vh; */
-    margin-left: 5vh;
-    border: 2px solid var(--orange-color);
-    width: 50vh;
-    height: 4vh;
-    padding-bottom: 0.5vh;
-    border-radius: 20px;
-    background-color: var(--black-color);
-}
-
-.Easktitre h2 {
+.EBtitre {
     color: var(--white-color);
-    font-size: 2.5vh;
-    padding-left: 3vh;
+    font-size: 20px;
+    padding-right: 120px;
+    padding-left: 25px;
     padding-top: 0.3vh;
+    border: 2px solid var(--orange-color);
+    background-color: var(--black-color);
+    border-radius: 20px;
 }
 
 .Easktext {
-    margin-top: 5vh;
-    margin-left: 5vh;
-    font-size: 2.5vh;
-    text-align: left;
+    padding: 30px;
     border: 2px solid var(--orange-color);
-    width: 80%;
     border-radius: 20px;
     background-color: var(--black-color);
 }
 
 .Easktext p {
-    padding-top: 2vh;
-    padding-left: 3vh;
-    margin-bottom: 2vh;
     color: var(--white-color);
-    width: 95%;
-    height: 100%;
     overflow: hidden;
+    font-size: 18px;
 }
 
 .Easkbtn {
@@ -55,10 +44,9 @@
     background-color: var(--black-color);
     border-radius: 20px;
     border: 2px solid var(--orange-color);
-    width: 14vh;
-    height: 4vh;
+    padding: 2px 15px;
     text-align: center;
-    margin-left: 5vh;
+    margin-right: 55px;
 }
 
 .Easkbtn a {
@@ -68,7 +56,8 @@
 }
 
 .Egroupbtn {
-    padding-top: 3.5vh;
+    margin-top: 40px;
+    display: flex;
 }
 
 .Ebtnsend {
@@ -95,64 +84,69 @@
     justify-content: center;
 }
 
+.EmaindivMobile {
+    display: none;
+}
+
 @media screen and (max-width: 576px) {
-    .EBdiv {
-        /* background-color: #CAF0FF; */
-        margin-bottom: 10vh;
-        justify-content: center;
-    }
-    .Ebtnsend {
-        background-color: var(--orange-color);
-        height: 6vh;
-        border-radius: 30px;
-        border: none;
+    .EBtitre {
+        padding-right: 20px;
+        padding-left: 10px;
     }
     .Easkbtn {
-        width: 12vh;
-        height: 5vh;
-        border: none;
-        border-radius: 30px;
         background-color: var(--orange-color);
+        margin-right: 5px;
+    }
+    .Easkbtn {
+        padding: 5px;
+    }
+    .Egroupbtn {
+        justify-content: space-around;
+    }
+    .EmaindivMobile {
+        display: block;
+    }
+    .EmaindivDesk {
+        display: none;
+    }
+    .EmaindivMobile {
+        justify-content: center;
+        display: flex;
+    }
+    .Ebtnsend {
+        margin-top: 8vh;
+        margin-bottom: 4vh;
+        align-self: center;
+        padding: 5px 20px;
+    }
+    .Easktext .arrowcenter {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
     .Easktext {
-        height: 52vh;
-        align-items: center;
-        display: flex;
+        padding: 20px;
     }
 }
 
+
+}
 @media screen and (max-width: 768px) {
     .Ebtnsend {
         background-color: var(--orange-color);
-        height: 8vh;
-        width: 35vh;
-        border: 0px;
     }
+    
     .Easkbtn {
-        width: 25vh;
-        height: 7vh;
         border: none;
         background-color: var(--orange-color);
-        margin-left: 0;
     }
-    .Easkbtn a {
-        font-size: 3vh;
-    }
+    
     .Ebtnsend a {
-        font-size: 3vh;
+        padding: 40px;
     }
-    .Easktext p {
-        font-size: 3vh;
-        width: 97%;
-        height: 100%;
-    }
+    
     .Easktext {
         height: 28vh;
         width: 90%;
-    }
-    .Egroupbtn {
-        display: flex;
-        justify-content: space-around;
-        margin-left: 0;
     }
 }
