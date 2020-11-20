@@ -223,7 +223,7 @@
 }
 
 .modal-content2 form {
-    margin-top: 30%;
+    margin-top: 15%;
 }
 
 .modal-content form {
@@ -453,6 +453,9 @@
     }
     .HmodalAnsw .modal-content p {
         font-size: 20px;
+    }
+    .modal-content2 form {
+        margin-top: 40%;
     }
     /*DISPLAY*/
     .maincontainer section div:first-child a {
