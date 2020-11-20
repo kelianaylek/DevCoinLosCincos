@@ -12,6 +12,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --orange-color: #DC965A;
     --black-color: #242325;

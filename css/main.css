@@ -133,6 +133,188 @@
 }
 
 
+/* POPUP */
+
+
+/* Background du popup */
+
+.Hmodal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Hmodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.HmodalAnsw {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: var(--black-color);
+    margin: auto;
+    padding: 20px;
+    border: 2px solid var(--orange-color);
+    width: 80%;
+    height: 70%;
+    border-radius: 31px;
+}
+
+.modal-content2 {
+    background-color: var(--black-color);
+    margin: auto;
+    padding: 20px;
+    border: 2px solid var(--orange-color);
+    width: 80%;
+    height: 70%;
+    border-radius: 31px;
+}
+
+.HmodalAnsw .modal-content {
+    background-color: var(--black-color);
+    margin: auto;
+    padding: 20px;
+    border: 2px solid var(--orange-color);
+    width: 40%;
+    height: 30%;
+    border-radius: 31px;
+}
+
+.modal-content2 form {
+    margin-top: 8%;
+}
+
+.modal-content form {
+    margin-top: 13%;
+}
+
+#email {
+    padding-left: 15px;
+}
+
+#password {
+    padding-left: 15px;
+}
+
+.modal-content form #password {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content form #email {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.HmodalAnsw .modal-content input {
+    width: 15vh;
+    height: 5vh;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: var(--orange-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.HmodalAnsw .modal-content p {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.modal-content2 form #password {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content2 form #email {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content2 form #envoyer {
+    width: 15vh;
+    height: 5vh;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: var(--orange-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* bouton Close */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 /*DISPLAY NONE*/
 
 .maincontainer section div:first-child a {
@@ -155,6 +337,9 @@
     }
     .fa-3x {
         font-size: 2em;
+    }
+    .modal-content form {
+        margin-top: 30%;
     }
 }
 
@@ -242,6 +427,12 @@
     }
     #background .placement2 a {
         color: white;
+    }
+    .modal-content form {
+        margin-top: 45%;
+    }
+    .HmodalAnsw .modal-content p {
+        font-size: 20px;
     }
     /*DISPLAY*/
     .maincontainer section div:first-child a {
