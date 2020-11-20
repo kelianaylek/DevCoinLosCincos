@@ -11,7 +11,15 @@
 .EmaindivDesk {
     justify-content: center;
     display: flex;
-    height: 93vh;
+}
+
+.Easktext input {
+    background-color: var(--black-color);
+    outline: none;
+    caret-color: var(--orange-color);
+    color: white;
+    border: none;
+    width: 100%;
 }
 
 .EBtitre {
@@ -84,10 +92,6 @@
     justify-content: center;
 }
 
-.EmaindivMobile {
-    display: none;
-}
-
 @media screen and (max-width: 576px) {
     .EBtitre {
         padding-right: 20px;
@@ -102,12 +106,6 @@
     }
     .Egroupbtn {
         justify-content: space-around;
-    }
-    .EmaindivMobile {
-        display: block;
-    }
-    .EmaindivDesk {
-        display: none;
     }
     .EmaindivMobile {
         justify-content: center;
@@ -129,22 +127,17 @@
     }
 }
 
-
-}
 @media screen and (max-width: 768px) {
     .Ebtnsend {
         background-color: var(--orange-color);
     }
-    
     .Easkbtn {
         border: none;
         background-color: var(--orange-color);
     }
-    
     .Ebtnsend a {
         padding: 40px;
     }
-    
     .Easktext {
         height: 28vh;
         width: 90%;
