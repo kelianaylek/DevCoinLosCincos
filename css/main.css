@@ -237,6 +237,17 @@
     padding-left: 15px;
 }
 
+.modal-content form #envoyer {
+    width: 15vh;
+    height: 5vh;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: var(--orange-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
 .modal-content form #password {
     width: 80%;
     height: 6vh;
