@@ -883,7 +883,22 @@ if (isOnShoppingPage) {
                         <button>Paste JS</button>
                     </div>
                     <div>
-                        <button type="submit">Send Answer</button>
+                        <button type="submit" id="myBtnAnsw">Answer</button>
+                        <!-- Fond gris du popup -->
+                        <div id="myModal" class="HmodalAnsw">
+
+                            <!-- Contenu du popup -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <form action="#"><br>
+                                    <p>Envoyez cette réponse ?</p><br>
+                                    <input type="submit" id="envoyer" value="Oui"><br>
+                                    <input type="submit" id="envoyer" value="Non"><br>
+
+                                </form>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </form>
