@@ -405,9 +405,6 @@
             .Partleft {
                 display: none;
             }
-            .buttonmobile {
-                display: flex;
-            }
             .defis p {
                 font-size: 16px;
             }
@@ -420,6 +417,11 @@
             .darkMode {
                 display: flex;
                 justify-content: center;
+            }
+            .pseudocercle p {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 18px;
             }
         }
         
@@ -462,6 +464,9 @@
                 color: var(--orange-color);
                 ;
             }
+            .Succesmobile {
+                width: 50%;
+            }
             .languagessuccesmobile {
                 display: flex;
                 justify-content: center;
@@ -469,6 +474,7 @@
             }
             .languagesmobile {
                 margin-right: 10px;
+                width: 50%;
             }
             .languagesmobile a {
                 color: var(--red-color);
@@ -637,6 +643,10 @@
             .mobileSesquestions p a {
                 text-decoration: none;
                 color: white;
+            }
+            .buttonmobile {
+                display: flex;
+                flex-wrap: wrap;
             }
             /*DISPLAY*/
             .partright .propos a {
