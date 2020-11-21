@@ -51,7 +51,8 @@ function updateUI() {
             $(".fa-picture-o").addClass("whiteColor")
             $(".informationsProblem a, .informationsProblemMobile a").addClass("orangeColor")
             $(".allQuestions section .informationsProblem>div i, .allQuestions section .informationsProblem>div>p").addClass("whiteColor")
-            $(".allQuestions section").addClass("borderRadiusOrange")
+            $(".allQuestions section").addClass("borderRadiusOrangeLook")
+            $(".allQuestions section .informationsProblemMobile").addClass("borderNoneLook")
             $(".footerDesktop").addClass("borderTopOrange")
             $(".footerMobile").addClass("borderTopOrange")
         }
@@ -74,6 +75,7 @@ function updateUI() {
             $("main").addClass("black")
             $(".blockQuestion .introBlockQuestion div:first-child>div:first-child, .blockAnswers .introBlockQuestion div:first-child>div:first-child").addClass("borderOrange")
             $(".descriptionBlockQuestion").addClass("borderOrange")
+            $(".codeBlockQuestion div").addClass("borderOrangeDeux")
             $(".blockQuestion .codeBlockQuestion>div, .blockAnswers .codeBlockQuestion>div").addClass("borderOrange")
             $(".styleInputResponse").addClass("borderRadiusOrange")
             $(".introBlockQuestion a p").addClass("whiteColor")

@@ -38,7 +38,7 @@
     color: #fff;
     padding: 2px 20px;
     border-radius: 25px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .introBlockQuestion a p {
@@ -278,6 +278,10 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
     .container {
         width: 90%;
     }
+    .blockQuestion .introBlockQuestion div:last-child {
+        color: var(--red-color);
+        margin-top: 7px;
+    }
 }
 
 
@@ -394,5 +398,9 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
     }
     .blockResponse form>div div:first-child {
         margin-bottom: 10px;
+    }
+
+    .blockQuestion .introBlockQuestion div:last-child {
+        margin-top: 0px;
     }
 }
