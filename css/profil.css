@@ -423,6 +423,14 @@
                 margin-top: 10px;
                 font-size: 18px;
             }
+            .Succesmobile div:first-child {
+                display: table;
+                margin: auto;
+            }
+            .languagesmobile div:first-child {
+                display: table;
+                margin: auto;
+            }
         }
         
         @media (max-width: 776px) {
