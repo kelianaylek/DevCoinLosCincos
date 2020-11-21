@@ -135,10 +135,23 @@
                 <a href="#">Paste JS</a>
             </button>
             </article>
-            <div class="Ecbtn">
-                <button class="Ebtnsend">
-            <a href="lookQuestions.html">Envoyer ma question</a>
-        </button>
+            <div class="mbbtn">
+                <button class="Ebtnsend" type="submit" id="myBtnAnsw">Envoyer ma question</button>
+
+                <!-- Fond gris du popup -->
+                <div id="myModal" class="HmodalAnsw">
+
+                    <!-- Contenu du popup -->
+                    <div class="modal-content" id="testa">
+                        <span class="close">&times;</span>
+                        <form action="#"><br>
+                            <p>Vous avez envoyé votre question.</p><br>
+                            <input type="submit" id="envoyer" value="Retour"><br>
+
+                        </form>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>

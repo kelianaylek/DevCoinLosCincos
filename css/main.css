@@ -222,12 +222,31 @@
     border-radius: 31px;
 }
 
+
+/*RESPONSIVE POPUP PAGE ASKQUESTION*/
+
+.HmodalAnsw #testa {
+    background-color: var(--black-color);
+    margin: auto;
+    padding: 20px;
+    border: 2px solid var(--orange-color);
+    width: 60%;
+    height: 20%;
+    border-radius: 31px;
+}
+
 .modal-content2 form {
     margin-top: 15%;
 }
 
 .modal-content form {
     margin-top: 13%;
+}
+
+#testa form {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1%;
 }
 
 #email {
@@ -281,7 +300,7 @@
 }
 
 .HmodalAnsw .modal-content p {
-    font-size: 30px;
+    font-size: 25px;
     color: white;
     text-align: center;
 }
