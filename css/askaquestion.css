@@ -4,7 +4,6 @@
 }
 
 .EBdiv div:first-child {
-    display: flex;
     margin-bottom: 25px;
 }
 
@@ -79,6 +78,13 @@
     margin-bottom: 5vh;
     align-self: center;
     padding: 5px 20px;
+    display: block;
+    margin: 0 auto;
+    color: white;
+}
+
+.mbbtn {
+    padding-top: 50px;
 }
 
 .Ebtnsend a {
@@ -124,6 +130,9 @@
     }
     .Easktext {
         padding: 20px;
+    }
+    .mbbtn {
+        padding-top: 0px;
     }
 }
 
