@@ -22,6 +22,14 @@
     width: 100%;
 }
 
+.Easktext textarea {
+    background-color: var(--black-color);
+    border-color: transparent;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
 .EBtitre {
     color: var(--white-color);
     font-size: 20px;
