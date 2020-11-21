@@ -268,6 +268,36 @@ article .blockAnswers:last-child .codeBlockQuestion>div {
     display: none;
 }
 
+.htmlCodeResponsive,
+.cssCodeResponsive,
+.jsCodeResponsive {
+    display: none;
+}
+
+.htmlCodeResponsive>div,
+.cssCodeResponsive>div,
+.jsCodeResponsive>div {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black-color);
+}
+
+.htmlCodeResponsive>div button,
+.cssCodeResponsive>div button,
+.jsCodeResponsive>div button {
+    padding: 4px;
+    outline: none;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--orange-color);
+}
+
+.popupCloseHtml,
+.popupCloseCss,
+.popupCloseJs {
+    color: #fff;
+}
+
 
 /* ------------------------------------------ */
 
