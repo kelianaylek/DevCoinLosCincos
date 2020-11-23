@@ -87,13 +87,9 @@
             border: 2px ridge var(--orange-color);
         }
         
-        .partright section .propos p:first-child {
+        .partright section .propos .titreapropos {
             font-size: 20px;
             padding-bottom: 10px;
-            padding-left: 20px;
-        }
-        
-        .partright section .propos p:last-child {
             padding-left: 20px;
         }
         

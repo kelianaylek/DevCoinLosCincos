@@ -173,14 +173,20 @@ $(document).ready(function() {
 
     // Ouvre le fond gris lors du click
     btn.click(function() {
-        $(".Hmodal").css({ "display": "block" });
+        $(".Hmodal").css({
+            "display": "block"
+        });
     })
     btnInsc.click(function() {
-        $(".Hmodal2").css({ "display": "block" });
+        $(".Hmodal2").css({
+            "display": "block"
+        });
     })
     btnAnsw.click(function(e) {
         e.preventDefault();
-        $(".HmodalAnsw").css({ "display": "block" });
+        $(".HmodalAnsw").css({
+            "display": "block"
+        });
 
     })
 
@@ -188,13 +194,19 @@ $(document).ready(function() {
     // Quand click sur la croix close le popup
 
     span.click(function() {
-        $(".Hmodal").css({ "display": "none" });
+        $(".Hmodal").css({
+            "display": "none"
+        });
     })
     span.click(function() {
-        $(".Hmodal2").css({ "display": "none" });
+        $(".Hmodal2").css({
+            "display": "none"
+        });
     })
     span.click(function() {
-        $(".HmodalAnsw").css({ "display": "none" });
+        $(".HmodalAnsw").css({
+            "display": "none"
+        });
     })
 
 
@@ -237,6 +249,53 @@ $(document).ready(function() {
             secondIsDown = true
         }
     })
+
+    /*POPUP RESPONSIVE PROFIL*/
+
+
+
+    /*POPUP RESPONSIVE*/
+    let arrow2 = $(".propos i");
+    let textarrowdown2 = '<p class="textAdded">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>'
+
+    let isDown2 = true;
+    arrow2.click(function(e) {
+        e.preventDefault()
+            // Change la flèche de sens
+        arrow2.toggleClass("fa-arrow-circle-up")
+
+        // En fonction du sens de la flèche, add ou suppr le paragraphe
+        if (isDown2 == true) {
+            $(".moretexte").append(textarrowdown2)
+            isDown2 = false
+        } else {
+            $('.textAdded').remove()
+            isDown2 = true
+        }
+    })
+
+
+    let secondArrow2 = $("#secondarrow i");
+    let textsecondarrowdown2 = '<p class="textAdded2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore kélian</p>'
+
+    let secondIsDown2 = true;
+    secondArrow2.click(function(e) {
+        e.preventDefault()
+            // Change la flèche de sens
+        secondArrow2.toggleClass("fa-arrow-circle-up")
+
+        // En fonction du sens de la flèche, add ou suppr le paragraphe
+        if (secondIsDown2 == true) {
+            $(".moretexte").append(textsecondarrowdown2)
+            secondIsDown2 = false
+        } else {
+            $('.textAdded2').remove()
+            secondIsDown2 = true
+        }
+    })
+
+
+
 
 
 
