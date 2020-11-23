@@ -46,6 +46,7 @@
     border: 2px solid var(--orange-color);
     border-radius: 20px;
     background-color: var(--black-color);
+    height: 450px;
 }
 
 .Easktext p {

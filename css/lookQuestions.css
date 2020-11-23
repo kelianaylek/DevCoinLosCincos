@@ -81,14 +81,14 @@ main .allQuestions {
     font-size: 20px;
 }
 
-.informationsProblem a {
-    text-decoration: none;
-    color: white;
-}
-
-.informationsProblemMobile a {
+.informationsProblem div a {
     text-decoration: none;
     color: var(--black-color);
+}
+
+.informationsProblem div p a {
+    text-decoration: none;
+    color: white;
 }
 
 .allQuestions section .informationsProblem>div i,
@@ -199,6 +199,10 @@ main .allQuestions {
         border: 1px solid var(--orange-color);
         border-radius: 10px;
         padding: 10px;
+    }
+    .informationsProblemMobile a {
+        text-decoration: none;
+        color: white;
     }
     .allQuestions section .footerProblem {
         display: none;
