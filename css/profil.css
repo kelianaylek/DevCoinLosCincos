@@ -39,7 +39,6 @@
         
         .annee p {
             padding-bottom: 10px;
-            padding-left: 15px;
             color: var(--black-color);
             font-size: 18px;
         }
@@ -379,7 +378,6 @@
             .annee {
                 padding: 15px 15px;
                 font-size: 20px;
-                padding-left: 30px;
                 background-color: var(--white-color);
                 border-radius: 21px;
                 border: 2px ridge var(--orange-color);
