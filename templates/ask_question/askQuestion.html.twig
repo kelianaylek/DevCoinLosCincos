@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/9bcfa8c000.js" defer crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Devcoin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <nav>
             <div class="upperNav">
                 <div>
-                    <a href="">LOGO</a>
+                    <a href="index.html">LOGO</a>
                 </div>
                 <div>
                     <a id="myBtn" href="#">Connexion</a>
@@ -62,12 +62,14 @@
                     <a href="profil.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                 </div>
             </div>
+            </div>
+            </div>
 
             <!-- Partie basse de la nav sur desktop -->
             <div class="lowerNavDesktop">
                 <div>
                     <a href="lookQuestions.html">Voir les problèmes</a>
-                    <a href="askQuestion.html">Poser une question</a>
+                    <a href="#">Poser une question</a>
                 </div>
                 <form class="search">
                     <input type="search" placeholder="Rechercher" />
@@ -83,7 +85,7 @@
                     <a href="lookQuestions.html">Voir les problèmes</a>
                 </div>
                 <div>
-                    <a href="askQuestion.html">Poser une question</a>
+                    <a href="#">Poser une question</a>
                 </div>
             </div>
 
@@ -110,136 +112,87 @@
 
         </nav>
     </header>
-    <div class="backgroundmobile">
-        <section class="background">
+    <div class="EmaindivDesk">
+        <div class="EBdiv">
             <div>
-                <div class="placement1">
-                    <a href="lookQuestions.html">
-                        <h2>Répondre aux questions</h2>
-                    </a>
-                </div>
-                <div class="placement2">
-                    <h2><a href="askQuestion.html">Poser vos questions</a></h2>
+                <h2 class="EBtitre"> Titre du problème</h2>
+            </div>
+            <section class="Easktext">
+                <!--<input placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi, omnis alias sit laborum doloremque est labore nesciunt corporis ipsam sint saepe inventore, obcaecati ipsa exercitationem cumque, quis animi earum? Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. adipisicing elit. Numquam commodi, omnis alias sit laborum doloremque est labore nesciunt corporis ipsam sint">-->
+                <textarea id="textQuestion" name="textquestion" rows="5" cols="33">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, cum tempora enim nemo velit...
+      </textarea>
+            </section>
+            <article class="Egroupbtn">
+                <button class="Easkbtn">
+                <a href="#">Paste HTML</a>
+            </button>
+                <button class="Easkbtn">
+                <a href="#">Paste CSS</a>
+            </button>
+                <button class="Easkbtn">
+                <a href="#">Paste JS</a>
+            </button>
+            </article>
+            <div class="mbbtn">
+                <button class="Ebtnsend" type="submit" id="myBtnAnsw">Envoyer ma question</button>
+
+                <!-- Fond gris du popup -->
+                <div id="myModal" class="HmodalAnsw">
+
+                    <!-- Contenu du popup -->
+                    <div class="modal-content" id="testa">
+                        <span class="close">&times;</span>
+                        <form action="#"><br>
+                            <p>Vous avez envoyé votre question.</p><br>
+                            <input type="submit" id="envoyer" value="Retour"><br>
+
+                        </form>
+                    </div>
+
                 </div>
             </div>
-            <div>
-                <a href="#maincontainer"><i class="fa fa-arrow-circle-down fa-3x" aria-hidden="true"></i></a>
-            </div>
-        </section>
+        </div>
     </div>
-    <div class="backgroundDesktop">
-        <section class="background">
-            <div>
-                <div class="placement1">
-                    <a href="lookQuestions.html">
-                        <h2>Répondre aux questions</h2>
-                    </a>
-                </div>
-                <div class="placement2">
-                    <a href="askQuestion.html">
-                        <h2>Poser vos questions</h2>
-                    </a>
-                </div>
-            </div>
-            <div>
-                <a href="#maincontainer"><i class="fa fa-arrow-circle-down fa-4x" aria-hidden="true"></i></a>
-            </div>
-        </section>
-    </div>
-    <article class="maincontainer" id="maincontainer">
-        <section class="blockls">
-            <div>
-                <h3>Qui est Los Cincos ?</h3>
-                <p class="addtext">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                    no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                <div class="arrowcenter" id="firstarrow">
-                    <a href=""><i id="scrolldown" class="fa fa-arrow-circle-down fa-2x " aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </section>
 
-        <!--PREMIERE Div présentation loscincos mobile après clique-->
+    <!-- footer desktop -->
+    <footer class="footerDesktop">
+        <div>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href=""><i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
 
-
-        <section class="blockls2">
-            <div>
-                <h3>Ce que nous vous proposons</h3>
-                <p class="addtext2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                    sed diam voluptua.</p>
-                <div class="arrowcenter" id="secondarrow">
-                    <a href=""><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!--DEUXIEME Div présentation loscincos mobile après clique-->
-
-
-    </article>
-
+        </div>
+        <div>
+            <a href="">Mentions légales</a>
+            <a href="">Contact Admin</a>
+            <a href="">F.A.Q</a>
+        </div>
+    </footer>
 
     <!-- footer mobile -->
     <footer class="footerMobile">
         <div>
             <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
+            </a>
             <a href="#">Mentions légales</a>
         </div>
         <div>
             <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i>
-                </a>
+            </a>
             <a href="#">F.A.Q</a>
         </div>
         <div>
             <a href="#"><i class="fa fa-github" aria-hidden="true"></i>
-                </a>
+            </a>
             <a href="#">Contact Admin</a>
         </div>
 
     </footer>
-
-    <article class="footer">
-        <div>
-            <div>
-                <h4>DevCoin LosCincos</h4>
-            </div>
-            <div>
-                <nav>
-
-                    <ul class="menu">
-                        <li>
-                            <a href="#" title="Contact">Contact</a>
-                        </li>
-                        <li>
-                            <a href="#" title="Mentions légales">Mentions légales</a>
-                        </li>
-                        <li>
-                            <a href="#" title="Faq">F.A.Q</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="rs">
-                <ul>
-                    <a href="#"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
-
-                    <a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
-
-                </ul>
-                <ul>
-                    <a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
-
-                    <a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <div>
-            <p>Site créé dans le cadre d'un projet scolaire</p>
-        </div>
-    </article>
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
