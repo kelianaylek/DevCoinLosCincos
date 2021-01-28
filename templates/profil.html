@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/238afd9a39.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Devcoin</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="upperNav">
+                <div>
+                    <a href="index.html">LOGO</a>
+                </div>
+                <div>
+                    <a id="myBtn" href="#">Connexion</a>
+                    <!-- Fond gris du popup -->
+                    <div id="myModal" class="Hmodal">
+
+                        <!-- Contenu du popup -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <form action="#">
+                                <input type="text" id="email" name="email" placeholder="Email or username"><br>
+                                <input type="text" id="password" name="password" placeholder="Password"><br>
+                                <input type="submit" id="envoyer" value="Sign up"><br>
+                                <input type="submit" id="envoyer" value="Sign in">
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <a id="myBtn2" href="#">Inscription</a>
+                    <!-- Fond gris du popup -->
+                    <div id="myModal" class="Hmodal2">
+
+                        <!-- Contenu du popup -->
+                        <div class="modal-content2">
+                            <span class="close">&times;</span>
+                            <div>
+                                <form action="#">
+                                    <input type="text" id="email" name="email" placeholder="Email or username"><br>
+
+                                    <input type="text" id="password" name="password" placeholder="Password"><br>
+
+                                    <input type="text" id="password" name="password" placeholder="Confirm your password..."><br>
+
+
+                                    <input type="submit" id="envoyer" value="Sign up"><br>
+                                    <input type="submit" id="envoyer" value="Sign in">
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="profil.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            </div>
+
+            <!-- Partie basse de la nav sur desktop -->
+            <div class="lowerNavDesktop">
+                <div>
+                    <a href="lookQuestions.html">Voir les problèmes</a>
+                    <a href="askQuestion.html">Poser une question</a>
+                </div>
+                <form class="search">
+                    <input type="search" placeholder="Rechercher" />
+                    <button type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Partie basse de la nav sur mobile -->
+            <div class="lowerNavMobile">
+                <div>
+                    <a href="lookQuestions.html">Voir les problèmes</a>
+                </div>
+                <div>
+                    <a href="askQuestion.html">Poser une question</a>
+                </div>
+            </div>
+
+            <!-- Menu au click sur "voir les probèmes" -->
+            <div class="burger">
+                <div>
+                    <button>Les plus populaires</button>
+                    <button>Les plus récents</button>
+                    <button>Sans réponse</button>
+                    <button>Langages</button>
+                    <form class="search">
+                        <input type="search" placeholder="Rechercher" />
+                    </form>
+                </div>
+                <!-- Menu au click sur "Langages" -->
+                <div class="langagesBurger">
+                    <button>HTML</button>
+                    <button>CSS</button>
+                    <button>JS</button>
+                    <button>php</button>
+                </div>
+                <div></div>
+            </div>
+
+        </nav>
+    </header>
+    <main class="containerProfil container">
+        <div class="partleftmobile">
+            <div class="pseudocercle">
+                <div id="cercle">
+                </div>
+                <p>Pseudo</p>
+            </div>
+
+            <div class="annee">
+                <p>Année d'étude: 4</p>
+                <div class="discord">
+                    <p>Discord</p>
+                    <a href=""><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="compte">
+                    <p>Compte</p>
+                    <a href=""><i class="fas fa-user-check"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="buttonmobile">
+            <button>Modifier</button>
+            <div class="darkMode">
+                <!-- bouton pour le dark mode -->
+                <button class="darkModeBtn">DARK MODE</button>
+            </div>
+        </div>
+
+
+        <div class="Partleft">
+            <div id="cercle">
+
+            </div>
+            <div class="pseudo">Pseudo</div>
+            <div class="annee">
+                <p>Année d'étude: 4</p>
+                <div class="discord">
+                    <p>Discord</p>
+                    <a href=""><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="compte">
+                    <p>Compte</p>
+                    <a href=""><i class="fas fa-user-check"></i></a>
+                </div>
+            </div>
+            <button>Modifier</button>
+
+            <!-- bouton pour le dark mode -->
+
+            <button class="darkModeBtn">DARK MODE</button>
+
+        </div>
+        <div class="partright">
+            <section>
+                <div class="propos">
+                    <p class="titreapropos">A propos de pseudo :</p>
+                    <p class="moretexte">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
+                    <a href=""><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>
+
+                </div>
+            </section>
+            <div class="languagessuccesmobile">
+                <section class="languagesmobile">
+                    <div>
+                        <p>Langages favoris: </p>
+                        <div class="html">
+                            <p>HTML</p>
+                            <a href=""><i class="fa fa-html5 fa-1x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="css">
+                            <p>CSS</p>
+                            <a href=""><i class="fa fa-css3" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="js">
+                            <p>JavaScript</p>
+                            <a href=""><i class="fab fa-js fa-1x"></i></a>
+                        </div>
+                        <div class="php">
+                            <p>php</p>
+                            <a href=""><i class="fab fa-php fa-1x"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="Succesmobile">
+                    <div>
+                        <p>Succès: </p>
+                        <div class="trophy">
+                            <a href=""><i class="fas fa-trophy"></i></a>
+                            <p>42</p>
+                        </div>
+
+                        <div class="heart">
+                            <a href=""><i class="fas fa-heart"></i></a>
+                            <p>32</p>
+                        </div>
+                        <div class="comment">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>68</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="languages">
+                <div>
+                    <p>Langages favoris: </p>
+                    <p>HTML</p>
+                    <a href=""><i class="fa fa-html5 fa-1x" aria-hidden="true"></i></a>
+                    <div class="css">
+                        <p>CSS</p>
+                        <a href=""><i class="fa fa-css3" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="js">
+                        <p>JavaScript</p>
+                        <a href=""><i class="fab fa-js fa-1x"></i></a>
+                    </div>
+                    <div class="php">
+                        <p>php</p>
+                        <a href=""><i class="fab fa-php fa-1x"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="Succes">
+                <div>
+                    <p>Succès: </p>
+                    <a href=""><i class="fas fa-trophy"></i></a>
+                    <p>42</p>
+
+                    <div class="heart">
+                        <a href=""><i class="fas fa-heart"></i></a>
+                        <p>32</p>
+                    </div>
+                    <div class="comment">
+                        <a href=""><i class="fas fa-comment"></i></a>
+                        <p>68</p>
+                    </div>
+                </div>
+            </section>
+            <article>
+                <div class="hfmobile">
+                    <div class="hf">
+
+
+                        <div class="defis">
+                            <ul>
+                                <li>
+                                    <p>Défis quotidien :</p>
+                                </li>
+                                <li>
+                                    <p>Répondre à deux questions</p>
+                                </li>
+                                <li>
+                                    <p>Liker une réponse</p>
+                                </li>
+                                <li>
+                                    <p>Poser une question</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="parse">
+                            <div class="half-circle"></div>
+                            <div>
+                                <p>75%</p>
+                            </div>
+                        </div>
+                        <div class="displayblock">
+                            <div class="badges">
+                                <p>Mes badges</p>
+                                <div class="groupicons">
+                                    <div class="icons">
+                                        <div>
+                                            <a href=""><i class="fa fa-shield fa-3x" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div>
+                                            <a href=""><i class="fa fa-heart fa-3x" aria-hidden="true"></i>
+                                </i></a>
+                                        </div>
+                                    </div>
+                                    <div class="icons2">
+                                        <div>
+                                            <a href=""><i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div>
+                                            <a href=""><i class="fa fa-question fa-3x" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="hfweb">
+                    <div class="hf">
+                        <div class="parse">
+                            <div class="half-circle"></div>
+                            <div>
+                                <p>75%</p>
+                            </div>
+                        </div>
+
+                        <div class="defis">
+                            <ul>
+                                <li>
+                                    <p>Défis quotidien :</p>
+                                </li>
+                                <li>
+                                    <p>Répondre à deux questions</p>
+                                </li>
+                                <li>
+                                    <p>Liker une réponse</p>
+                                </li>
+                                <li>
+                                    <p>Poser une question</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="badges">
+                            <p>Mes badges</p>
+                            <div class="icons">
+                                <div>
+                                    <a href=""><i class="fa fa-shield fa-3x" aria-hidden="true"></i></a>
+                                    <p>Sauveur</p>
+                                </div>
+                                <div>
+                                    <a href=""><i class="fa fa-heart fa-3x" aria-hidden="true"></i>
+                                </i></a>
+                                    <p>Loveur</p>
+                                </div>
+
+                                <div>
+                                    <a href=""><i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i></a>
+                                    <p>Helpeur</p>
+                                </div>
+                                <div>
+                                    <a href=""><i class="fa fa-question fa-3x" aria-hidden="true"></i></a>
+                                    <p>Inspecteur</p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+            <section class="mobileSesquestions">
+                <div>
+                    <p class="size">Mes questions: </p>
+
+                    <div class="probleme">
+                        <p><a href="question.html"> Titre du problème</a></p>
+                    </div>
+                    <div class="flex">
+                        <div class="like">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>12</p>
+                        </div>
+                        <div class="resolu">
+                            <p>Résolu</p>
+                            <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="probleme">
+                        <p><a href="question.html"> Titre du problème</a></p>
+                    </div>
+                    <div class="flex">
+                        <div class="like">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>12</p>
+                        </div>
+                        <div class="resolu">
+                            <p>Résolu</p>
+                            <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="probleme">
+                        <p><a href="question.html"> Titre du problème</a></p>
+                    </div>
+                    <div class="flex">
+                        <div class="like">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>12</p>
+                        </div>
+                        <div class="resolu">
+                            <p>Résolu</p>
+                            <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="probleme">
+                        <p><a href="question.html"> Titre du problème</a></p>
+                    </div>
+                    <div class="flex">
+                        <div class="like">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>12</p>
+                        </div>
+                        <div class="resolu">
+                            <p>Résolu</p>
+                            <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="probleme">
+                        <p><a href="question.html"> Titre du problème</a></p>
+                    </div>
+                    <div class="flex">
+                        <div class="like">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>12</p>
+                        </div>
+                        <div class="resolu">
+                            <p>Résolu</p>
+                            <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="Sesquestions">
+                <div>
+                    <p class="size">Ses questions: </p>
+                    <div class="flex">
+                        <div class="probleme">
+                            <p><a href="question.html">Titre du problème</a></p>
+                        </div>
+                        <div class="like">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>12</p>
+                        </div>
+                        <div class="resolu">
+                            <p>Résolu</p>
+                            <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="probleme">
+                            <p><a href="question.html">Titre du problème</a></p>
+                        </div>
+                        <div class="like">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>12</p>
+                        </div>
+                        <div class="resolu">
+                            <p>Résolu</p>
+                            <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="probleme">
+                            <p><a href="question.html">Titre du problème</a></p>
+                        </div>
+                        <div class="like">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>12</p>
+                        </div>
+                        <div class="resolu">
+                            <p>Résolu</p>
+                            <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="probleme">
+                            <p><a href="question.html">Titre du problème</a></p>
+                        </div>
+                        <div class="like">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>12</p>
+                        </div>
+                        <div class="resolu">
+                            <p>Résolu</p>
+                            <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="probleme">
+                            <p><a href="question.html">Titre du problème</a></p>
+                        </div>
+                        <div class="like">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>12</p>
+                        </div>
+                        <div class="resolu">
+                            <p>Résolu</p>
+                            <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- footer desktop -->
+    <footer class="footerDesktop">
+        <div>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href=""><i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+
+        </div>
+        <div>
+            <a href="">Mentions légales</a>
+            <a href="">Contact Admin</a>
+            <a href="">F.A.Q</a>
+        </div>
+    </footer>
+
+    <!-- footer mobile -->
+    <footer class="footerMobile">
+        <div>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">Mentions légales</a>
+        </div>
+        <div>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+            <a href="">F.A.Q</a>
+        </div>
+        <div>
+            <a href=""><i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="">Contact Admin</a>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

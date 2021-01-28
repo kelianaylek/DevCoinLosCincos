@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Devcoin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="upperNav">
+                <div>
+                    <a href="index.html">LOGO</a>
+                </div>
+                <div>
+                    <a id="myBtn" href="#">Connexion</a>
+                    <!-- Fond gris du popup -->
+                    <div id="myModal" class="Hmodal">
+
+                        <!-- Contenu du popup -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <form action="#">
+                                <input type="text" id="email" name="email" placeholder="Email or username"><br>
+                                <input type="text" id="password" name="password" placeholder="Password"><br>
+                                <input type="submit" id="envoyer" value="Sign up"><br>
+                                <input type="submit" id="envoyer" value="Sign in">
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <a id="myBtn2" href="#">Inscription</a>
+                    <!-- Fond gris du popup -->
+                    <div id="myModal" class="Hmodal2">
+
+                        <!-- Contenu du popup -->
+                        <div class="modal-content2">
+                            <span class="close">&times;</span>
+                            <div>
+                                <form action="#">
+                                    <input type="text" id="email" name="email" placeholder="Email or username"><br>
+
+                                    <input type="text" id="password" name="password" placeholder="Password"><br>
+
+                                    <input type="text" id="password" name="password" placeholder="Confirm your password..."><br>
+
+
+                                    <input type="submit" id="envoyer" value="Sign up"><br>
+                                    <input type="submit" id="envoyer" value="Sign in">
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="profil.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            </div>
+
+            <!-- Partie basse de la nav sur desktop -->
+            <div class="lowerNavDesktop">
+                <div>
+                    <a href="#">Voir les problèmes</a>
+                    <a href="askQuestion.html">Poser une question</a>
+                </div>
+                <form class="search">
+                    <input type="search" placeholder="Rechercher" />
+                    <button type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Partie basse de la nav sur mobile -->
+            <div class="lowerNavMobile">
+                <div>
+                    <a href="#">Voir les problèmes</a>
+                </div>
+                <div>
+                    <a href="askQuestion.html">Poser une question</a>
+                </div>
+            </div>
+
+            <!-- Menu au click sur "voir les probèmes" -->
+            <div class="burger">
+                <div>
+                    <button>Les plus populaires</button>
+                    <button>Les plus récents</button>
+                    <button>Sans réponse</button>
+                    <button>Langages</button>
+                    <form class="search">
+                        <input type="search" placeholder="Rechercher" />
+                    </form>
+                </div>
+                <!-- Menu au click sur "Langages" -->
+                <div class="langagesBurger">
+                    <button>HTML</button>
+                    <button>CSS</button>
+                    <button>JS</button>
+                    <button>php</button>
+                </div>
+                <div></div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="mainLookQuestions container">
+        <section class="filters">
+            <h3>Filtres</h3>
+            <hr>
+            <div>
+                <p>Les plus récents</p>
+                <input type="checkbox" checked="checked">
+            </div>
+            <div>
+                <p>Les plus populaires</p>
+                <input type="checkbox">
+            </div>
+            <div>
+                <p>Non résolus</p>
+                <input type="checkbox">
+            </div>
+            <hr>
+            <h4>Langages</h4>
+            <div>
+                <p>HTML</p>
+                <input type="checkbox">
+            </div>
+            <div>
+                <p>CSS</p>
+                <input type="checkbox">
+            </div>
+            <div>
+                <p>Javascript</p>
+                <input type="checkbox">
+            </div>
+            <div>
+                <p>PHP</p>
+                <input type="checkbox">
+            </div>
+        </section>
+
+        <article class="allQuestions">
+            <section>
+                <div class="informationsProblem">
+                    <div>
+                        <div>
+                            <p><a href="question.html">Titre du problème</a></p>
+                        </div>
+                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                        <a href="profil.html">Pseudo</a>
+
+                    </div>
+                    <div>
+                        <p>10/19/2020</p>
+                    </div>
+                </div>
+                <div class="informationsProblemMobile">
+                    <div>
+                        <p><a href="question.html">Titre du problème</a></p>
+                        <a href="profil.html">Pseudo</a>
+                    </div>
+                    <div>
+                        <p>10/19/2020</p>
+                        <div>
+                            <p>Résolu</p>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-html5" aria-hidden="true"></i>
+                            <i class="fa fa-css3" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="descriptionProblem">
+                    <p><a href="question.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde dolor consequatur esse repudiandae error id omnis aliquam nemo facilis! Non totam ad, nulla in facere voluptas magni ab sit. Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Explicabo omnis necessitatibus maiores incidunt nostrum eum sapiente doloribus illum. Neque nostrum hic eius debitis delectus natus illo odit est beatae aliquam?</a></p>
+                </div>
+                <div class="footerProblem">
+                    <div>
+                        <div>
+                            <p>Résolu</p>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                            <p>68</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa fa-html5" aria-hidden="true"></i>
+                        <i class="fa fa-css3" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="informationsProblem">
+                    <div>
+                        <div>
+                            <p><a href="question.html">Titre du problème</a></p>
+                        </div>
+                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                        <a href="profil.html">Pseudo</a>
+
+                    </div>
+                    <div>
+                        <p>10/19/2020</p>
+                    </div>
+                </div>
+                <div class="informationsProblemMobile">
+                    <div>
+                        <p><a href="question.html">Titre du problème</a></p>
+                        <a href="profil.html">Pseudo</a>
+                    </div>
+                    <div>
+                        <p>10/19/2020</p>
+                        <div>
+                            <p>Résolu</p>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-html5" aria-hidden="true"></i>
+                            <i class="fa fa-css3" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="descriptionProblem">
+                    <p><a href="question.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde dolor consequatur esse repudiandae error id omnis aliquam nemo facilis! Non totam ad, nulla in facere voluptas magni ab sit. Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Explicabo omnis necessitatibus maiores incidunt nostrum eum sapiente doloribus illum. Neque nostrum hic eius debitis delectus natus illo odit est beatae aliquam?</a></p>
+                </div>
+                <div class="footerProblem">
+                    <div>
+                        <div>
+                            <p>Résolu</p>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                            <p>68</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa fa-html5" aria-hidden="true"></i>
+                        <i class="fa fa-css3" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="informationsProblem">
+                    <div>
+                        <div>
+                            <p><a href="question.html">Titre du problème</a></p>
+                        </div>
+                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                        <a href="profil.html">Pseudo</a>
+
+                    </div>
+                    <div>
+                        <p>10/19/2020</p>
+                    </div>
+                </div>
+                <div class="informationsProblemMobile">
+                    <div>
+                        <p><a href="question.html">Titre du problème</a></p>
+                        <a href="profil.html">Pseudo</a>
+                    </div>
+                    <div>
+                        <p>10/19/2020</p>
+                        <div>
+                            <p>Résolu</p>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-html5" aria-hidden="true"></i>
+                            <i class="fa fa-css3" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="descriptionProblem">
+                    <p><a href="question.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde dolor consequatur esse repudiandae error id omnis aliquam nemo facilis! Non totam ad, nulla in facere voluptas magni ab sit. Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Explicabo omnis necessitatibus maiores incidunt nostrum eum sapiente doloribus illum. Neque nostrum hic eius debitis delectus natus illo odit est beatae aliquam?</a></p>
+                </div>
+                <div class="footerProblem">
+                    <div>
+                        <div>
+                            <p>Résolu</p>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                            <p>68</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa fa-html5" aria-hidden="true"></i>
+                        <i class="fa fa-css3" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="informationsProblem">
+                    <div>
+                        <div>
+                            <p><a href="question.html">Titre du problème</a></p>
+                        </div>
+                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                        <a href="profil.html">Pseudo</a>
+
+                    </div>
+                    <div>
+                        <p>10/19/2020</p>
+                    </div>
+                </div>
+                <div class="informationsProblemMobile">
+                    <div>
+                        <p><a href="question.html">Titre du problème</a></p>
+                        <a href="profil.html">Pseudo</a>
+                    </div>
+                    <div>
+                        <p>10/19/2020</p>
+                        <div>
+                            <p>Résolu</p>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-html5" aria-hidden="true"></i>
+                            <i class="fa fa-css3" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="descriptionProblem">
+                    <p><a href="question.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde dolor consequatur esse repudiandae error id omnis aliquam nemo facilis! Non totam ad, nulla in facere voluptas magni ab sit. Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Explicabo omnis necessitatibus maiores incidunt nostrum eum sapiente doloribus illum. Neque nostrum hic eius debitis delectus natus illo odit est beatae aliquam?</a></p>
+                </div>
+                <div class="footerProblem">
+                    <div>
+                        <div>
+                            <p>Résolu</p>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                            <p>68</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa fa-html5" aria-hidden="true"></i>
+                        <i class="fa fa-css3" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="informationsProblem">
+                    <div>
+                        <div>
+                            <p><a href="question.html">Titre du problème</a></p>
+                        </div>
+                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                        <a href="profil.html">Pseudo</a>
+
+                    </div>
+                    <div>
+                        <p>10/19/2020</p>
+                    </div>
+                </div>
+                <div class="informationsProblemMobile">
+                    <div>
+                        <p><a href="question.html">Titre du problème</a></p>
+                        <a href="profil.html">Pseudo</a>
+                    </div>
+                    <div>
+                        <p>10/19/2020</p>
+                        <div>
+                            <p>Résolu</p>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-html5" aria-hidden="true"></i>
+                            <i class="fa fa-css3" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="descriptionProblem">
+                    <p><a href="question.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde dolor consequatur esse repudiandae error id omnis aliquam nemo facilis! Non totam ad, nulla in facere voluptas magni ab sit. Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Explicabo omnis necessitatibus maiores incidunt nostrum eum sapiente doloribus illum. Neque nostrum hic eius debitis delectus natus illo odit est beatae aliquam?</a></p>
+                </div>
+                <div class="footerProblem">
+                    <div>
+                        <div>
+                            <p>Résolu</p>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                            <p>68</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa fa-html5" aria-hidden="true"></i>
+                        <i class="fa fa-css3" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </section>
+
+            <div class="informationsProblemMobile">
+                <div>
+                    <p><a href="question.html">Titre du problème</a></p>
+                    <a href="profil.html">Pseudo</a>
+                </div>
+                <div>
+                    <p>10/19/2020</p>
+                    <div>
+                        <p>Résolu</p>
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-html5" aria-hidden="true"></i>
+                        <i class="fa fa-css3" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </article>
+    </main>
+
+
+    <!-- footer desktop -->
+    <footer class="footerDesktop">
+        <div>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            <a href=""><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+        </div>
+        <div>
+            <a href="">Mentions légales</a>
+            <a href="">Contact Admin</a>
+            <a href="">F.A.Q</a>
+        </div>
+    </footer>
+    <!-- footer mobile -->
+    <footer class="footerMobile">
+        <div>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            <a href="">Mentions légales</a>
+        </div>
+        <div>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+            <a href="">F.A.Q</a>
+        </div>
+        <div>
+            <a href=""><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+            <a href="">Contact Admin</a>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

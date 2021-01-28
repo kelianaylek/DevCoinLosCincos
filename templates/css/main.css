@@ -1,0 +1,503 @@
+/*Partie background diagonale et choix*/
+
+.background {
+    background-image: linear-gradient(298deg, rgb(200, 200, 200) 49%, rgb(179, 179, 179) 49%);
+    height: 100vh;
+}
+
+.background>div:first-child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50vh;
+}
+
+.background>div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35vh;
+    color: white;
+}
+
+.background>div:last-child a {
+    color: var(--orange-color);
+}
+
+.backgroundDesktop .background .placement1 h2 {
+    color: white;
+}
+
+.backgroundDesktop .background .placement2 h2 {
+    color: white;
+}
+
+
+/*background diagonale mobile*/
+
+.backgroundmobile {
+    display: none;
+}
+
+
+/*Présentation loscincos*/
+
+.maincontainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.maincontainer .blockls div:first-child {
+    display: block;
+    color: black;
+}
+
+.maincontainer section {
+    border-radius: 30px;
+    border: 2px solid var(--orange-color);
+    padding: 30px;
+    margin-top: 35px;
+}
+
+.maincontainer section h3 {
+    padding-bottom: 10px;
+}
+
+.blocklsmobile {
+    display: none;
+}
+
+.blockls2mobile {
+    display: none;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    background-color: var(--black-color);
+    min-height: 45vh;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.footer h4 {
+    font-size: 30px;
+}
+
+.footer>div:first-child {
+    justify-content: space-around;
+    display: flex;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 25px;
+}
+
+.footer .rs a {
+    color: white;
+    padding: 20px;
+}
+
+.footer nav .menu li {
+    padding-bottom: 15px;
+}
+
+.footer .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.footer li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding-bottom: 30px;
+}
+
+.footer hr {
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer>div:last-child {
+    padding-left: 110px;
+    padding-top: 50px;
+    color: white;
+}
+
+.footer>div:last-child p {
+    color: white;
+    font-size: 25px;
+}
+
+.background a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* POPUP */
+
+
+/* Background du popup */
+
+.Hmodal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Hmodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.HmodalAnsw {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: var(--black-color);
+    margin: auto;
+    padding: 20px;
+    border: 2px solid var(--orange-color);
+    width: 80%;
+    height: 70%;
+    border-radius: 31px;
+}
+
+.modal-content2 {
+    background-color: var(--black-color);
+    margin: auto;
+    padding: 20px;
+    border: 2px solid var(--orange-color);
+    width: 80%;
+    height: 70%;
+    border-radius: 31px;
+}
+
+.HmodalAnsw .modal-content {
+    background-color: var(--black-color);
+    margin: auto;
+    padding: 20px;
+    border: 2px solid var(--orange-color);
+    width: 40%;
+    height: 30%;
+    border-radius: 31px;
+}
+.modal-content2 form {
+    margin-top: 10%;
+}
+
+
+/*RESPONSIVE POPUP PAGE ASKQUESTION*/
+
+.HmodalAnsw #testa {
+    background-color: var(--black-color);
+    margin: auto;
+    padding: 20px;
+    border: 2px solid var(--orange-color);
+    width: 60%;
+    height: 20%;
+    border-radius: 31px;
+}
+
+
+
+.modal-content form {
+    margin-top: 13%;
+}
+
+#testa form {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+#email {
+    padding-left: 15px;
+}
+
+#password {
+    padding-left: 15px;
+}
+
+.modal-content form #envoyer {
+    width: 15vh;
+    height: 5vh;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: var(--orange-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-content form #password {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content form #email {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.HmodalAnsw .modal-content input {
+    width: 15vh;
+    height: 5vh;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: var(--orange-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.HmodalAnsw .modal-content p {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.modal-content2 form #password {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content2 form #email {
+    width: 80%;
+    height: 6vh;
+    border-radius: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content2 form #envoyer {
+    width: 15vh;
+    height: 5vh;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: var(--orange-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* bouton Close */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*DISPLAY NONE*/
+
+.maincontainer section div:first-child a {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .footer h4 {
+        font-size: 25px;
+    }
+    .footer .menu li a {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+    }
+    .footer>div:last-child {
+        padding-left: 10px;
+        padding-top: 50px;
+        color: white;
+    }
+    .fa-3x {
+        font-size: 2em;
+    }
+    .modal-content form {
+        margin-top: 30%;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer h4 {
+        font-size: 25px;
+        justify-content: center;
+        display: flex;
+        padding-bottom: 30px;
+    }
+    .footer .menu li a {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        justify-content: center;
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .footer>div:last-child p {
+        color: white;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    .footer>div:first-child {
+        justify-content: space-around;
+        display: block;
+        color: white;
+        padding-top: 100px;
+        margin-top: 40px;
+        padding-bottom: 25px;
+    }
+    .rs {
+        justify-content: center;
+        display: grid;
+        margin: auto;
+    }
+    .footer .rs a {
+        color: white;
+        padding: 40px;
+        padding-bottom: 20px;
+    }
+    .backgroundmobile div:first-child .repq {
+        display: block;
+        margin: auto;
+        background-color: #61B0FF;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 30px;
+        width: 32vh;
+        margin-bottom: 30px;
+    }
+    .background {
+        background-image: linear-gradient(328deg, rgb(200, 200, 200) 49%, rgb(179, 179, 179) 49%);
+        min-height: 85vh;
+    }
+    .background>div:first-child {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 0vh;
+    }
+    .backgroundmobile .background .placement1 h2 {
+        margin-top: 5vh;
+        padding-left: 20px;
+        color: white;
+    }
+    .backgroundmobile .background .placement2 h2 {
+        margin-top: 65vh;
+        color: white;
+    }
+    .background>div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15vh;
+        color: white;
+    }
+    .background>div:last-child a {
+        padding-bottom: 25px;
+    }
+    #background .placement2 a {
+        color: white;
+    }
+    .modal-content form {
+        margin-top: 45%;
+    }
+    .HmodalAnsw .modal-content p {
+        font-size: 20px;
+    }
+    .modal-content2 form {
+        margin-top: 40%;
+    }
+    /*DISPLAY*/
+    .maincontainer section div:first-child a {
+        display: block;
+        color: var(--orange-color);
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+    .arrowcenter {
+        margin: 0 auto;
+        display: flex;
+    }
+    .footerMobile {
+        display: flex;
+    }
+    .footer {
+        display: none;
+    }
+    .backgroundmobile {
+        display: flex;
+    }
+    .backgroundDesktop {
+        display: none;
+    }
+}

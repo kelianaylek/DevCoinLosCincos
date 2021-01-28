@@ -1,0 +1,164 @@
+.EBdiv {
+    width: 90%;
+    margin-top: 15vh;
+}
+
+.EBdiv div:first-child {
+    margin-bottom: 25px;
+}
+
+.EmaindivDesk {
+    justify-content: center;
+    display: flex;
+}
+
+.Easktext input {
+    background-color: var(--black-color);
+    outline: none;
+    caret-color: var(--orange-color);
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.Easktext textarea {
+    background-color: var(--black-color);
+    border-color: transparent;
+    width: 100%;
+    height: 100%;
+    color: white;
+    max-width: 100%;
+}
+
+.EBtitre {
+    color: var(--white-color);
+    font-size: 20px;
+    padding-right: 120px;
+    padding-left: 25px;
+    padding-top: 0.3vh;
+    border: 2px solid var(--orange-color);
+    background-color: var(--black-color);
+    border-radius: 20px;
+}
+
+.Easktext {
+    padding: 30px;
+    border: 2px solid var(--orange-color);
+    border-radius: 20px;
+    background-color: var(--black-color);
+    height: 450px;
+}
+
+.Easktext p {
+    color: var(--white-color);
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.Easkbtn {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--black-color);
+    border-radius: 20px;
+    border: 2px solid var(--orange-color);
+    padding: 2px 15px;
+    text-align: center;
+    margin-right: 55px;
+}
+
+.Easkbtn a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 2vh;
+}
+
+.Egroupbtn {
+    margin-top: 40px;
+    display: flex;
+}
+
+.Ebtnsend {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--orange-color);
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+    align-self: center;
+    padding: 5px 20px;
+    display: block;
+    margin: 0 auto;
+    color: white;
+}
+
+.mbbtn {
+    padding-top: 50px;
+}
+
+.Ebtnsend a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 2.3vh;
+}
+
+.Ecbtn {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 576px) {
+    .EBtitre {
+        padding-right: 20px;
+        padding-left: 10px;
+    }
+    .Easkbtn {
+        background-color: var(--orange-color);
+        margin-right: 5px;
+    }
+    .Easkbtn {
+        padding: 5px;
+    }
+    .Egroupbtn {
+        justify-content: space-around;
+    }
+    .EmaindivMobile {
+        justify-content: center;
+        display: flex;
+    }
+    .Ebtnsend {
+        margin-top: 8vh;
+        margin-bottom: 4vh;
+        align-self: center;
+        padding: 5px 20px;
+    }
+    .Easktext .arrowcenter {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .Easktext {
+        padding: 20px;
+    }
+    .mbbtn {
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Ebtnsend {
+        background-color: var(--orange-color);
+    }
+    .Easkbtn {
+        border: none;
+        background-color: var(--orange-color);
+    }
+    .Ebtnsend a {
+        padding: 40px;
+    }
+    .Easktext {
+        height: 28vh;
+        width: 90%;
+    }
+}

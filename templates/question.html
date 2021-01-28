@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="highlight/styles/atom-one-dark.css">
+    <script src="highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <title>Devcoin</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="upperNav">
+                <div>
+                    <a href="index.html">LOGO</a>
+                </div>
+                <div>
+                    <a id="myBtn" href="#">Connexion</a>
+                    <!-- Fond gris du popup -->
+                    <div id="myModal" class="Hmodal">
+
+                        <!-- Contenu du popup -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <form action="#">
+                                <input type="text" id="email" name="email" placeholder="Email or username"><br>
+                                <input type="text" id="password" name="password" placeholder="Password"><br>
+                                <input type="submit" id="envoyer" value="Sign up"><br>
+                                <input type="submit" id="envoyer" value="Sign in">
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <a id="myBtn2" href="#">Inscription</a>
+                    <!-- Fond gris du popup -->
+                    <div id="myModal" class="Hmodal2">
+
+                        <!-- Contenu du popup -->
+                        <div class="modal-content2">
+                            <span class="close">&times;</span>
+                            <div>
+                                <form action="#">
+                                    <input type="text" id="email" name="email" placeholder="Email or username"><br>
+
+                                    <input type="text" id="password" name="password" placeholder="Password"><br>
+
+                                    <input type="text" id="password" name="password" placeholder="Confirm your password..."><br>
+
+
+                                    <input type="submit" id="envoyer" value="Sign up"><br>
+                                    <input type="submit" id="envoyer" value="Sign in">
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="profil.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            </div>
+
+            <div class="lowerNavDesktop">
+                <div>
+                    <a href="lookQuestions.html">Voir les problèmes</a>
+                    <a href="askQuestion.html">Poser une question</a>
+                </div>
+                <form class="search">
+                    <input type="search" placeholder="Rechercher" />
+                    <button type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="lowerNavMobile">
+                <div>
+                    <a>Voir les problèmes</a>
+                </div>
+                <div>
+                    <a>Poser une question</a>
+                </div>
+            </div>
+
+            <!-- Menu au click sur "voir les probèmes" -->
+            <div class="burger">
+                <div>
+                    <button>Les plus populaires</button>
+                    <button>Les plus récents</button>
+                    <button>Sans réponse</button>
+                    <button>Langages</button>
+                    <form class="search">
+                        <input type="search" placeholder="Rechercher" />
+                    </form>
+                </div>
+                <!-- Menu au click sur "Langages" -->
+                <div class="langagesBurger">
+                    <button>HTML</button>
+                    <button>CSS</button>
+                    <button>JS</button>
+                    <button>php</button>
+                </div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="questionPage container">
+        <section class="blockQuestion">
+            <div class="introBlockQuestion">
+                <div>
+                    <div>
+                        <p>Titre du problème</p>
+                    </div>
+                    <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                    <a href="profil.html">
+                        <p>Pseudo</p>
+                    </a>
+                    <div>
+                        <p>Résolu</p>
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <p>68</p>
+                    </div>
+                    <p>10/19/2020</p>
+
+                </div>
+                <div>
+                    <i class="fa fa-html5" aria-hidden="true"></i>
+                    <i class="fa fa-css3" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="descriptionBlockQuestion">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum tenetur quia odio ducimus, aliquam voluptatibus assumenda pariatur? Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi soluta?</p>
+            </div>
+
+            <div class="codeBlockQuestion">
+                <div>
+                    <button>HTML <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+                    <pre><code>
+&lt!DOCTYPE html>
+&lthtml lang="fr">
+&lthead>
+    &ltmeta charset="UTF-8" />
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0" />
+    &ltlink rel="stylesheet" href="css/style.css" />
+    &ltlink href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+    &ltlink rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    &ltscript src="../fil_rouge/js/jquery-3.4.1.min.js">
+    &lt/script>
+    &lttitle>Projet fil rouge&lt/title>
+&lt/head>
+&ltbody>
+    &ltheader>
+        &ltnav>
+            &ltdiv>
+                &lta href="">Logo&lt/a>
+            &lt/div>
+            &ltdiv>
+                &lta href="shopping.html">&lti class="fa fa-shopping-cart fa-lg" aria-hidden="true">&lt/i>&lt/a>
+                &lta href="">
+                    &ltp>0&lt/p>&lti class="fa fa-star fa-lg" aria-hidden="true">&lt/i>
+                &lt/a>
+                &lta href="">&lti class="fa fa-user-circle-o fa-lg" aria-hidden="true">&lt/i>&lt/a>
+            &lt/div>
+        &lt/nav>
+    &lt/header>
+                    </code></pre>
+
+                </div>
+
+
+                <div>
+                    <button>CSS <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+                    <pre><code>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+  body {
+    background-color: #e3dede;
+  }
+  /* nav header */
+  header nav {
+    overflow: hidden;
+    background-color: #272625;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  header nav div {
+    display: flex;
+  }
+  /* header nav div:first-child a:nth-child(2),
+  header nav div:first-child a:nth-child(3) {
+    display: none;
+  } */
+  header nav div:last-child a:nth-child(4) {
+    display: none;
+  }
+                      </code></pre>
+                </div>
+
+                <div>
+                    <button>JS <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+                    <pre><code>
+function initValidateBet() {
+    $('.popupBetValidation').hide();
+    var formValidateBet = document.querySelector("form[name = 'validateBet']");
+    // Après le click, on exéctute la fonction de validation des paris
+    function validateBet(event) {
+      event.preventDefault();
+      userBetList = sessionStorage.getItem("betListChoose");
+      userBetList = JSON.parse(userBetList);
+  
+      var score = 0;
+      goodAnswers = 0;
+  
+      if (userBetList !== null) {
+        for (let i = 0; i userBetList.length; i++) {
+          if (userBetList[i].response == true) {
+            score = score + userBetList[i].difficulty;
+            goodAnswers = goodAnswers + 1;
+          }
+        }
+      }
+  
+      sessionStorage.setItem("score", score);
+  
+      if (userHaveBets) {
+        userBetList = JSON.parse(sessionStorage.getItem("betListChoose"));
+        if(sessionStorage.getItem("betListChoose") !== '[]'){
+          function popupBetValidation(){
+            $('.backgroundPopupBetValidation').css({
+              "opacity" : 0.6
+            });
+            $('.backgroundPopupBetValidation').fadeIn('slow');
+            $('.popupBetValidation').fadeIn('slow');
+            displayPopup()
+            var name = sessionStorage.getItem('username')
+            $(".popupBetValidation").append(""+name+", vous avez répondu correctement à " + goodAnswers + " sur "+userBetList.length+" questions.Votre score est de "+score+" points.")
+      
+        }
+        popupBetValidation();
+  
+        function displayPopup(){
+          var windowHeight = document.documentElement.clientHeight;
+          var windowWidth = document.documentElement.clientWidth;
+          var popupHeight = $(".popupBetValidation").height();
+          var popupWidth = $(".popupBetValidation").width();
+        
+          $('.popupBetValidation').css({
+            "position" : "absolute",
+            "top": windowHeight/2-popupHeight/2,
+            "left": windowWidth/2-popupWidth/2,
+          })
+        }
+        displayPopup();
+  
+        function initClosePopup(){
+          var buttonClosePopup = document.querySelector(".popupBetValidation button")
+          buttonClosePopup.addEventListener("click", closePopupValidateBet)
+          }
+          initClosePopup();
+        }
+        userBetList = userBetList.splice(0, 0);
+        userBetList = JSON.stringify(userBetList);
+        sessionStorage.setItem("betListChoose", userBetList);
+      }
+    }
+    if (isOnShoppingPage) {
+      formValidateBet.addEventListener("submit", validateBet);
+    }
+  }
+</code></pre>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Meme section pour le mobile -->
+        <section class="blockQuestionMobile blockQuestion">
+            <div class="introBlockQuestion">
+                <div>
+                    <p>Titre du problème</p>
+                    <a href="profil.html">
+                        <p>Pseudo</p>
+                    </a>
+                </div>
+
+                <div>
+                    <p>10/19/2020</p>
+                    <div>
+                        <p>Résolu<i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                    <div>
+                        <i class="fa fa-html5" aria-hidden="true"></i>
+                        <i class="fa fa-css3" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="descriptionBlockQuestion">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
+                    Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi soluta?</p>
+            </div>
+            <div class="codeBlockQuestion">
+                <div>
+                    <button name="html">LOOK HTML</button>
+                </div>
+                <div>
+                    <button name="css">LOOK CSS</button>
+                </div>
+                <div>
+                    <button name="js">LOOK JS</button>
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <section class="blockAnswers">
+                <div class="introBlockQuestion">
+                    <div>
+                        <div>
+                            <p>Re : Titre du problème</p>
+                        </div>
+                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                        <a href="profil.html">
+                            <p>Pseudo</p>
+                        </a>
+                        <p>12/19/2020</p>
+                    </div>
+                    <div>
+                        <p>12<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+
+                    </div>
+                </div>
+
+                <div class="descriptionBlockQuestion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum tenetur quia odio ducimus, aliquam voluptatibus assumenda pariatur? Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi
+                        soluta?
+                    </p>
+                </div>
+
+                <div class="codeBlockQuestion">
+                    <div>
+                        <button>HTML <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+                        <pre><code>
+&lt!DOCTYPE html>
+&lthtml lang="fr">
+&lthead>
+    &ltmeta charset="UTF-8" />
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0" />
+    &ltlink rel="stylesheet" href="css/style.css" />
+    &ltlink href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+    &ltlink rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    &ltscript src="../fil_rouge/js/jquery-3.4.1.min.js">
+    &lt/script>
+    &lttitle>Projet fil rouge&lt/title>
+&lt/head>
+&ltbody>
+    &ltheader>
+        &ltnav>
+            &ltdiv>
+                &lta href="">Logo&lt/a>
+            &lt/div>
+            &ltdiv>
+                &lta href="shopping.html">&lti class="fa fa-shopping-cart fa-lg" aria-hidden="true">&lt/i>&lt/a>
+                &lta href="">
+                    &ltp>0&lt/p>&lti class="fa fa-star fa-lg" aria-hidden="true">&lt/i>
+                &lt/a>
+                &lta href="">&lti class="fa fa-user-circle-o fa-lg" aria-hidden="true">&lt/i>&lt/a>
+            &lt/div>
+        &lt/nav>
+    &lt/header>
+                    </code></pre>
+
+                    </div>
+
+
+                    <div>
+                        <button>CSS <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+                        <pre><code>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+  body {
+    background-color: #e3dede;
+  }
+  /* nav header */
+  header nav {
+    overflow: hidden;
+    background-color: #272625;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  header nav div {
+    display: flex;
+  }
+  /* header nav div:first-child a:nth-child(2),
+  header nav div:first-child a:nth-child(3) {
+    display: none;
+  } */
+  header nav div:last-child a:nth-child(4) {
+    display: none;
+  }
+                      </code></pre>
+                    </div>
+
+                    <div>
+                        <button>JS <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+                        <pre><code>
+function initValidateBet() {
+    $('.popupBetValidation').hide();
+    var formValidateBet = document.querySelector("form[name = 'validateBet']");
+    // Après le click, on exéctute la fonction de validation des paris
+    function validateBet(event) {
+      event.preventDefault();
+      userBetList = sessionStorage.getItem("betListChoose");
+      userBetList = JSON.parse(userBetList);
+  
+      var score = 0;
+      goodAnswers = 0;
+  
+      if (userBetList !== null) {
+        for (let i = 0; i userBetList.length; i++) {
+          if (userBetList[i].response == true) {
+            score = score + userBetList[i].difficulty;
+            goodAnswers = goodAnswers + 1;
+          }
+        }
+      }
+  
+      sessionStorage.setItem("score", score);
+  
+      if (userHaveBets) {
+        userBetList = JSON.parse(sessionStorage.getItem("betListChoose"));
+        if(sessionStorage.getItem("betListChoose") !== '[]'){
+          function popupBetValidation(){
+            $('.backgroundPopupBetValidation').css({
+              "opacity" : 0.6
+            });
+            $('.backgroundPopupBetValidation').fadeIn('slow');
+            $('.popupBetValidation').fadeIn('slow');
+            displayPopup()
+            var name = sessionStorage.getItem('username')
+            $(".popupBetValidation").append(""+name+", vous avez répondu correctement à " + goodAnswers + " sur "+userBetList.length+" questions.Votre score est de "+score+" points.")
+      
+        }
+        popupBetValidation();
+  
+        function displayPopup(){
+          var windowHeight = document.documentElement.clientHeight;
+          var windowWidth = document.documentElement.clientWidth;
+          var popupHeight = $(".popupBetValidation").height();
+          var popupWidth = $(".popupBetValidation").width();
+        
+          $('.popupBetValidation').css({
+            "position" : "absolute",
+            "top": windowHeight/2-popupHeight/2,
+            "left": windowWidth/2-popupWidth/2,
+          })
+        }
+        displayPopup();
+  
+        function initClosePopup(){
+          var buttonClosePopup = document.querySelector(".popupBetValidation button")
+          buttonClosePopup.addEventListener("click", closePopupValidateBet)
+          }
+          initClosePopup();
+        }
+        userBetList = userBetList.splice(0, 0);
+        userBetList = JSON.stringify(userBetList);
+        sessionStorage.setItem("betListChoose", userBetList);
+      }
+    }
+    if (isOnShoppingPage) {
+      formValidateBet.addEventListener("submit", validateBet);
+    }
+  }
+</code></pre>
+                    </div>
+
+                </div>
+
+
+            </section>
+            <section class="blockAnswers">
+                <div class="introBlockQuestion">
+                    <div>
+                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                        <a href="profil.html">
+                            <p>Pseudo</p>
+                        </a>
+                        <p>Re : Titre du problème</p>
+                        <p>12/19/2020</p>
+                    </div>
+                    <div>
+                        <p>12<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+
+                    </div>
+                </div>
+
+                <div class="descriptionBlockQuestion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum tenetur quia odio ducimus, aliquam voluptatibus assumenda pariatur? Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi
+                        soluta?
+                    </p>
+                </div>
+
+                <div class="codeBlockQuestion">
+                    <div>
+                        <button>HTML <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+                        <pre><code>
+&lt!DOCTYPE html>
+&lthtml lang="fr">
+&lthead>
+  &ltmeta charset="UTF-8" />
+  &ltmeta name="viewport" content="width=device-width, initial-scale=1.0" />
+  &ltlink rel="stylesheet" href="css/style.css" />
+  &ltlink href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+  &ltlink rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  &ltscript src="../fil_rouge/js/jquery-3.4.1.min.js">
+  &lt/script>
+  &lttitle>Projet fil rouge&lt/title>
+&lt/head>
+&ltbody>
+  &ltheader>
+      &ltnav>
+          &ltdiv>
+              &lta href="">Logo&lt/a>
+          &lt/div>
+          &ltdiv>
+              &lta href="shopping.html">&lti class="fa fa-shopping-cart fa-lg" aria-hidden="true">&lt/i>&lt/a>
+              &lta href="">
+                  &ltp>0&lt/p>&lti class="fa fa-star fa-lg" aria-hidden="true">&lt/i>
+              &lt/a>
+              &lta href="">&lti class="fa fa-user-circle-o fa-lg" aria-hidden="true">&lt/i>&lt/a>
+          &lt/div>
+      &lt/nav>
+  &lt/header>
+                  </code></pre>
+
+                    </div>
+                    <div>
+                        <button>JS <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+                        <pre><code>
+function initValidateBet() {
+  $('.popupBetValidation').hide();
+  var formValidateBet = document.querySelector("form[name = 'validateBet']");
+  // Après le click, on exéctute la fonction de validation des paris
+  function validateBet(event) {
+    event.preventDefault();
+    userBetList = sessionStorage.getItem("betListChoose");
+    userBetList = JSON.parse(userBetList);
+
+    var score = 0;
+    goodAnswers = 0;
+
+    if (userBetList !== null) {
+      for (let i = 0; i userBetList.length; i++) {
+        if (userBetList[i].response == true) {
+          score = score + userBetList[i].difficulty;
+          goodAnswers = goodAnswers + 1;
+        }
+      }
+    }
+
+    sessionStorage.setItem("score", score);
+
+    if (userHaveBets) {
+      userBetList = JSON.parse(sessionStorage.getItem("betListChoose"));
+      if(sessionStorage.getItem("betListChoose") !== '[]'){
+        function popupBetValidation(){
+          $('.backgroundPopupBetValidation').css({
+            "opacity" : 0.6
+          });
+          $('.backgroundPopupBetValidation').fadeIn('slow');
+          $('.popupBetValidation').fadeIn('slow');
+          displayPopup()
+          var name = sessionStorage.getItem('username')
+          $(".popupBetValidation").append(""+name+", vous avez répondu correctement à " + goodAnswers + " sur "+userBetList.length+" questions.Votre score est de "+score+" points.")
+    
+      }
+      popupBetValidation();
+
+      function displayPopup(){
+        var windowHeight = document.documentElement.clientHeight;
+        var windowWidth = document.documentElement.clientWidth;
+        var popupHeight = $(".popupBetValidation").height();
+        var popupWidth = $(".popupBetValidation").width();
+      
+        $('.popupBetValidation').css({
+          "position" : "absolute",
+          "top": windowHeight/2-popupHeight/2,
+          "left": windowWidth/2-popupWidth/2,
+        })
+      }
+      displayPopup();
+
+      function initClosePopup(){
+        var buttonClosePopup = document.querySelector(".popupBetValidation button")
+        buttonClosePopup.addEventListener("click", closePopupValidateBet)
+        }
+        initClosePopup();
+      }
+      userBetList = userBetList.splice(0, 0);
+      userBetList = JSON.stringify(userBetList);
+      sessionStorage.setItem("betListChoose", userBetList);
+    }
+  }
+  if (isOnShoppingPage) {
+    formValidateBet.addEventListener("submit", validateBet);
+  }
+}
+</code></pre>
+                    </div>
+
+                </div>
+            </section>
+            <section class="blockAnswers">
+                <div class="introBlockQuestion">
+                    <div>
+                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                        <a href="profil.html">
+                            <p>Pseudo</p>
+                        </a>
+                        <p>Re : Titre du problème</p>
+                        <p>12/19/2020</p>
+                    </div>
+                    <div>
+                        <p>12<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+
+                    </div>
+                </div>
+
+                <div class="descriptionBlockQuestion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum tenetur quia odio ducimus, aliquam voluptatibus assumenda pariatur? Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi
+                        soluta?
+                    </p>
+                </div>
+
+                <div class="codeBlockQuestion">
+
+                    <div>
+                        <button>JS <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+
+                        <pre><code>
+function initValidateBet() {
+$('.popupBetValidation').hide();
+var formValidateBet = document.querySelector("form[name = 'validateBet']");
+// Après le click, on exéctute la fonction de validation des paris
+function validateBet(event) {
+  event.preventDefault();
+  userBetList = sessionStorage.getItem("betListChoose");
+  userBetList = JSON.parse(userBetList);
+
+  var score = 0;
+  goodAnswers = 0;
+
+  if (userBetList !== null) {
+    for (let i = 0; i userBetList.length; i++) {
+      if (userBetList[i].response == true) {
+        score = score + userBetList[i].difficulty;
+        goodAnswers = goodAnswers + 1;
+      }
+    }
+  }
+
+  sessionStorage.setItem("score", score);
+
+  if (userHaveBets) {
+    userBetList = JSON.parse(sessionStorage.getItem("betListChoose"));
+    if(sessionStorage.getItem("betListChoose") !== '[]'){
+      function popupBetValidation(){
+        $('.backgroundPopupBetValidation').css({
+          "opacity" : 0.6
+        });
+        $('.backgroundPopupBetValidation').fadeIn('slow');
+        $('.popupBetValidation').fadeIn('slow');
+        displayPopup()
+        var name = sessionStorage.getItem('username')
+        $(".popupBetValidation").append(""+name+", vous avez répondu correctement à " + goodAnswers + " sur "+userBetList.length+" questions.Votre score est de "+score+" points.")
+  
+    }
+    popupBetValidation();
+
+    function displayPopup(){
+      var windowHeight = document.documentElement.clientHeight;
+      var windowWidth = document.documentElement.clientWidth;
+      var popupHeight = $(".popupBetValidation").height();
+      var popupWidth = $(".popupBetValidation").width();
+    
+      $('.popupBetValidation').css({
+        "position" : "absolute",
+        "top": windowHeight/2-popupHeight/2,
+        "left": windowWidth/2-popupWidth/2,
+      })
+    }
+    displayPopup();
+
+    function initClosePopup(){
+      var buttonClosePopup = document.querySelector(".popupBetValidation button")
+      buttonClosePopup.addEventListener("click", closePopupValidateBet)
+      }
+      initClosePopup();
+    }
+    userBetList = userBetList.splice(0, 0);
+    userBetList = JSON.stringify(userBetList);
+    sessionStorage.setItem("betListChoose", userBetList);
+  }
+}
+if (isOnShoppingPage) {
+  formValidateBet.addEventListener("submit", validateBet);
+}
+}
+</code></pre>
+                    </div>
+
+                </div>
+
+
+            </section>
+        </article>
+
+        <article>
+            <section class="blockAnswers blockAnswersMobile">
+                <div class="introBlockQuestion">
+                    <div>
+                        <p>Re : Titre du problème</p>
+                        <a href="profil.html">
+                            <p>Pseudo</p>
+                        </a>
+                    </div>
+                    <div>
+                        <p>12/19/2020</p>
+                        <p>12<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+
+                <div class="descriptionBlockQuestion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum tenetur quia odio ducimus, aliquam voluptatibus assumenda pariatur? Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi
+                        soluta?
+                    </p>
+                </div>
+                <div class="codeBlockQuestion">
+                    <div>
+                        <button name="html">LOOK HTML</button>
+                    </div>
+                    <div>
+                        <button name="css">LOOK CSS</button>
+                    </div>
+                    <div>
+                        <button name="js">LOOK JS</button>
+                    </div>
+                </div>
+            </section>
+            <section class="blockAnswers blockAnswersMobile">
+                <div class="introBlockQuestion">
+                    <div>
+                        <p>Re : Titre du problème</p>
+                        <a href="profil.html">
+                            <p>Pseudo</p>
+                        </a>
+                    </div>
+                    <div>
+                        <p>12/19/2020</p>
+                        <p>12<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+
+                <div class="descriptionBlockQuestion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum tenetur quia odio ducimus, aliquam voluptatibus assumenda pariatur? Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi
+                        soluta?
+                    </p>
+                </div>
+                <div class="codeBlockQuestion">
+                    <div>
+                        <button name="html">LOOK HTML</button>
+                    </div>
+                    <div>
+                        <button name="css">LOOK CSS</button>
+                    </div>
+                    <div>
+                        <button name="js">LOOK JS</button>
+                    </div>
+                </div>
+            </section>
+            <section class="blockAnswers blockAnswersMobile">
+                <div class="introBlockQuestion">
+                    <div>
+                        <p>Re : Titre du problème</p>
+                        <a href="profil.html">
+                            <p>Pseudo</p>
+                        </a>
+                    </div>
+                    <div>
+                        <p>12/19/2020</p>
+                        <p>12<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+
+                <div class="descriptionBlockQuestion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum tenetur quia odio ducimus, aliquam voluptatibus assumenda pariatur? Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi
+                        soluta?
+                    </p>
+                </div>
+                <div class="codeBlockQuestion">
+                    <div>
+                        <button name="html">LOOK HTML</button>
+                    </div>
+                    <div>
+                        <button name="css">LOOK CSS</button>
+                    </div>
+                    <div>
+                        <button name="js">LOOK JS</button>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+
+        <!-- Pop up code en responsive mobile -->
+
+        <div class="htmlCodeResponsive">
+            <div>
+                <button>HTML <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+                <i class="fa fa-times fa-2x popupCloseHtml" aria-hidden="true"></i>
+            </div>
+            <pre><code>
+&lt!DOCTYPE html>
+&lthtml lang="fr">
+&lthead>
+&ltmeta charset="UTF-8" />
+&ltmeta name="viewport" content="width=device-width, initial-scale=1.0" />
+&ltlink rel="stylesheet" href="css/style.css" />
+&ltlink href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+&ltlink rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+&ltscript src="../fil_rouge/js/jquery-3.4.1.min.js">
+&lt/script>
+&lttitle>Projet fil rouge&lt/title>
+&lt/head>
+&ltbody>
+&ltheader>
+&ltnav>
+&ltdiv>
+    &lta href="">Logo&lt/a>
+&lt/div>
+&ltdiv>
+    &lta href="shopping.html">&lti class="fa fa-shopping-cart fa-lg" aria-hidden="true">&lt/i>&lt/a>
+    &lta href="">
+        &ltp>0&lt/p>&lti class="fa fa-star fa-lg" aria-hidden="true">&lt/i>
+    &lt/a>
+    &lta href="">&lti class="fa fa-user-circle-o fa-lg" aria-hidden="true">&lt/i>&lt/a>
+&lt/div>
+&lt/nav>
+&lt/header>
+&lt!DOCTYPE html>
+&lthtml lang="fr">
+&lthead>
+&ltmeta charset="UTF-8" />
+&ltmeta name="viewport" content="width=device-width, initial-scale=1.0" />
+&ltlink rel="stylesheet" href="css/style.css" />
+&ltlink href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+&ltlink rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+&ltscript src="../fil_rouge/js/jquery-3.4.1.min.js">
+&lt/script>
+&lttitle>Projet fil rouge&lt/title>
+&lt/head>
+&ltbody>
+&ltheader>
+&ltnav>
+&ltdiv>
+    &lta href="">Logo&lt/a>
+&lt/div>
+&ltdiv>
+    &lta href="shopping.html">&lti class="fa fa-shopping-cart fa-lg" aria-hidden="true">&lt/i>&lt/a>
+    &lta href="">
+        &ltp>0&lt/p>&lti class="fa fa-star fa-lg" aria-hidden="true">&lt/i>
+    &lt/a>
+    &lta href="">&lti class="fa fa-user-circle-o fa-lg" aria-hidden="true">&lt/i>&lt/a>
+&lt/div>
+&lt/nav>
+&lt/header>
+        </code></pre>
+        </div>
+        <div class="cssCodeResponsive">
+            <div>
+                <button>CSS <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+                <i class="fa fa-times fa-2x popupCloseCss" aria-hidden="true"></i>
+            </div>
+            <pre><code>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    font-family: "Open Sans", sans-serif;
+                  }
+                  body {
+                    background-color: #e3dede;
+                  }
+                  /* nav header */
+                  header nav {
+                    overflow: hidden;
+                    background-color: #272625;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                  }
+                  header nav a {
+                    float: left;
+                    display: block;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                  }
+                  header nav div {
+                    display: flex;
+                  }
+                  /* header nav div:first-child a:nth-child(2),
+                  header nav div:first-child a:nth-child(3) {
+                    display: none;
+                  } */
+                  header nav div:last-child a:nth-child(4) {
+                    display: none;
+                  }
+                  body {
+                    background-color: #e3dede;
+                  }
+                  /* nav header */
+                  header nav {
+                    overflow: hidden;
+                    background-color: #272625;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                  }
+                  header nav a {
+                    float: left;
+                    display: block;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                  }
+                  header nav div {
+                    display: flex;
+                  }
+                  /* header nav div:first-child a:nth-child(2),
+                  header nav div:first-child a:nth-child(3) {
+                    display: none;
+                  } */
+                  header nav div:last-child a:nth-child(4) {
+                    display: none;
+                  }
+        </code></pre>
+        </div>
+        <div class="jsCodeResponsive">
+            <div>
+                <button>JS <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+                <i class="fa fa-times fa-2x popupCloseJs" aria-hidden="true"></i>
+            </div>
+            <pre><code>
+                function initValidateBet() {
+                    $('.popupBetValidation').hide();
+                    var formValidateBet = document.querySelector("form[name = 'validateBet']");
+                    // Après le click, on exéctute la fonction de validation des paris
+                    function validateBet(event) {
+                      event.preventDefault();
+                      userBetList = sessionStorage.getItem("betListChoose");
+                      userBetList = JSON.parse(userBetList);
+                  
+                      var score = 0;
+                      goodAnswers = 0;
+                  
+                      if (userBetList !== null) {
+                        for (let i = 0; i userBetList.length; i++) {
+                          if (userBetList[i].response == true) {
+                            score = score + userBetList[i].difficulty;
+                            goodAnswers = goodAnswers + 1;
+                          }
+                        }
+                      }
+                  
+                      sessionStorage.setItem("score", score);
+                  
+                      if (userHaveBets) {
+                        userBetList = JSON.parse(sessionStorage.getItem("betListChoose"));
+                        if(sessionStorage.getItem("betListChoose") !== '[]'){
+                          function popupBetValidation(){
+                            $('.backgroundPopupBetValidation').css({
+                              "opacity" : 0.6
+                            });
+                            $('.backgroundPopupBetValidation').fadeIn('slow');
+                            $('.popupBetValidation').fadeIn('slow');
+                            displayPopup()
+                            var name = sessionStorage.getItem('username')
+                            $(".popupBetValidation").append(""+name+", vous avez répondu correctement à " + goodAnswers + " sur "+userBetList.length+" questions.Votre score est de "+score+" points.")
+                      
+                        }
+                        popupBetValidation();
+                  
+                        function displayPopup(){
+                          var windowHeight = document.documentElement.clientHeight;
+                          var windowWidth = document.documentElement.clientWidth;
+                          var popupHeight = $(".popupBetValidation").height();
+                          var popupWidth = $(".popupBetValidation").width();
+                        
+                          $('.popupBetValidation').css({
+                            "position" : "absolute",
+                            "top": windowHeight/2-popupHeight/2,
+                            "left": windowWidth/2-popupWidth/2,
+                          })
+                        }
+                        displayPopup();
+                  
+                        function initClosePopup(){
+                          var buttonClosePopup = document.querySelector(".popupBetValidation button")
+                          buttonClosePopup.addEventListener("click", closePopupValidateBet)
+                          }
+                          initClosePopup();
+                        }
+                        userBetList = userBetList.splice(0, 0);
+                        userBetList = JSON.stringify(userBetList);
+                        sessionStorage.setItem("betListChoose", userBetList);
+                      }
+                    }
+                    if (isOnShoppingPage) {
+                      formValidateBet.addEventListener("submit", validateBet);
+                    }
+                  }
+        </code></pre>
+        </div>
+
+
+
+        <section class="blockResponse">
+            <form action="">
+                <div class="styleInputResponse">
+                    <input type="text" placeholder="Répondre à la question...">
+                </div>
+                <div>
+                    <div>
+                        <button>Paste HTML</button>
+                        <button>Paste CSS</button>
+                        <button>Paste JS</button>
+                    </div>
+                    <div>
+                        <button type="submit" id="myBtnAnsw">Answer</button>
+                        <!-- Fond gris du popup -->
+                        <div id="myModal" class="HmodalAnsw">
+
+                            <!-- Contenu du popup -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <form action="#"><br>
+                                    <p>Envoyez cette réponse ?</p><br>
+                                    <input type="submit" id="envoyer" value="Oui"><br>
+                                    <input type="submit" id="envoyer" value="Non"><br>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+    <!-- footer desktop -->
+    <footer class="footerDesktop">
+        <div>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href=""><i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div>
+            <a href="">Mentions légales</a>
+            <a href="">Contact Admin</a>
+            <a href="">F.A.Q</a>
+        </div>
+    </footer>
+
+    <!-- footer mobile -->
+    <footer class="footerMobile">
+        <div>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">Mentions légales</a>
+        </div>
+        <div>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+            <a href="">F.A.Q</a>
+        </div>
+        <div>
+            <a href=""><i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="">Contact Admin</a>
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/displayCode.js"></script>
+
+</body>
+
+</html>

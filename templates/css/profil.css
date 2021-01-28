@@ -1,0 +1,678 @@
+        /*PARTIE GAUCHE*/
+        
+        .containerProfil {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 110px;
+        }
+        
+        #cercle {
+            margin: 0 auto;
+            width: 200px;
+            background: var(--white-color);
+            height: 200px;
+            text-align: center;
+            border-radius: 100px;
+            border: 1px ridge var(--orange-color);
+            line-height: 190px;
+        }
+        
+        .Partleft {
+            padding-top: 30px;
+        }
+        
+        .pseudo {
+            color: var(--orange-color);
+            font-size: 30px;
+            padding-top: 15px;
+            text-align: center;
+        }
+        
+        .annee {
+            padding: 15px 15px;
+            font-size: 20px;
+            padding-left: 30px;
+            background-color: var(--white-color);
+            margin-top: 15px;
+            color: white;
+        }
+        
+        .annee p {
+            padding-bottom: 10px;
+            color: var(--black-color);
+            font-size: 18px;
+        }
+        
+        .discord p {
+            font-size: 20px;
+        }
+        
+        .discord a {
+            color: var(--black-color);
+            padding-left: 15px;
+        }
+        
+        .compte a {
+            color: var(--black-color);
+            padding-left: 15px;
+        }
+        
+        .containerProfil button {
+            width: 100%;
+            background-color: var(--orange-color);
+            /* Green */
+            border-radius: 21px;
+            border: 1px ridge var(--black-color);
+            color: var(--black-color);
+            padding: 8px 82px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            margin-top: 30px;
+            outline: none;
+        }
+        /*PARTIE DROITE*/
+        
+        .partright {
+            width: 60%;
+            padding-top: 30px;
+        }
+        
+        .partright section {
+            background-color: var(--black-color);
+            color: white;
+            padding: 15px 15px;
+            border-radius: 21px;
+            border: 2px ridge var(--orange-color);
+        }
+        
+        .partright section .propos .titreapropos {
+            font-size: 20px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+        }
+        
+        .partright .languages {
+            margin-top: 15px;
+        }
+        
+        .languages p {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        
+        .partright .Succes {
+            margin-top: 15px;
+        }
+        
+        .Succes p:first-child {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        
+        .partright .Sesquestions {
+            margin-top: 15px;
+            padding-left: 35px;
+        }
+        
+        .Sesquestions .probleme {
+            padding-top: 15px;
+            display: flex;
+        }
+        
+        .Sesquestions .probleme p {
+            font-size: 20px;
+            border: solid 1px;
+            padding: 4px 10px;
+            padding-right: 100px;
+            border-radius: 21px;
+            border: 2px ridge var(--orange-color);
+        }
+        
+        .Sesquestions .probleme a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .discord {
+            display: flex;
+        }
+        
+        .compte {
+            display: flex;
+        }
+        
+        .languages div:first-child {
+            display: flex;
+        }
+        
+        .languages div:first-child a {
+            color: var(--red-color);
+            margin-top: 4px;
+            padding-left: 10px;
+        }
+        
+        .languages .css {
+            display: flex;
+        }
+        
+        .languages .js {
+            display: flex;
+        }
+        
+        .languages .php {
+            display: flex;
+        }
+        
+        .Succes div:first-child {
+            display: flex;
+        }
+        
+        .Succes div:first-child p:first-child {
+            padding-left: 20px;
+        }
+        
+        .Succes div:first-child a {
+            color: white;
+            margin-top: 4px;
+            padding-left: 20px;
+        }
+        
+        .Succes .fa-heart:before {
+            color: var(--red-color);
+        }
+        
+        .fa-trophy:before {
+            color: var(--yellow-color);
+        }
+        
+        .fa-comment:before {
+            color: var(--blue-color);
+        }
+        
+        .Succes p {
+            font-size: 20px;
+            padding-left: 5px;
+        }
+        
+        .Succes p:nth-child(3n) {
+            color: var(--yellow-color);
+        }
+        
+        .Succes .heart {
+            display: flex;
+            color: var(--red-color);
+        }
+        
+        .Succes .comment {
+            display: flex;
+            color: var(--blue-color);
+        }
+        
+        .Succes {
+            justify-content: space-between;
+        }
+        
+        .like {
+            display: flex;
+            margin-top: 15px;
+            padding-left: 20px;
+            background-color: var(--black-color);
+            color: #61B0FF;
+            padding: 10px;
+            margin-left: 15px;
+        }
+        
+        .like a {
+            color: #61B0FF;
+            padding-right: 10px;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .size {
+            font-size: 20px;
+        }
+        
+        .resolu {
+            display: flex;
+            margin-top: 15px;
+            padding-left: 20px;
+            background-color: var(--black-color);
+            color: var(--green-color);
+            padding: 10px;
+            margin-left: 15px;
+        }
+        
+        .resolu a {
+            color: var(--green-color);
+            padding-left: 10px;
+            padding-top: 3px;
+        }
+        
+        .hf {
+            background-color: var(--black-color);
+            margin-top: 30px;
+            padding: 30px;
+            justify-content: space-around;
+            display: flex;
+            align-items: center;
+            border-radius: 21px;
+            border: 2px ridge var(--orange-color);
+        }
+        
+        .hf .parse {
+            display: flex;
+        }
+        
+        .hf div:first-child div:last-child {
+            align-items: center;
+            display: flex;
+            color: white;
+        }
+        
+        .hf div:first-child div:last-child p {
+            padding-left: 15px;
+        }
+        
+        .half-circle {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border-top: 12px solid transparent;
+            border-left: 12px solid var(--orange-color);
+            border-right: 12px solid var(--orange-color);
+            border-bottom: 12px solid var(--orange-color);
+            transform: rotate(-45deg);
+        }
+        
+        .defis ul li {
+            list-style: none;
+            color: white;
+            padding: 5px;
+        }
+        
+        .defis ul li:first-child p:first-child {
+            font-size: 20px;
+        }
+        
+        .icons {
+            display: flex;
+        }
+        
+        .icons div {
+            padding-right: 20px;
+            padding-top: 15px;
+            color: white;
+        }
+        
+        .icons div a {
+            color: var(--orange-color);
+        }
+        
+        .icons div p {
+            padding-top: 10px;
+        }
+        
+        .badges p:first-child {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .parsecirlce {
+            font-size: 20px;
+            color: white;
+        }
+        
+        .parsecirlce p {
+            align-items: flex-start;
+        }
+        /*DISPLAY NONE*/
+        
+        .partleftmobile {
+            display: none;
+        }
+        
+        .buttonmobile {
+            display: none;
+        }
+        
+        .partright .propos a {
+            display: none;
+        }
+        
+        .languagessuccesmobile {
+            display: none;
+        }
+        
+        .hfmobile {
+            display: none;
+        }
+        
+        .mobileSesquestions {
+            display: none;
+        }
+        
+        .darkMode {
+            display: none;
+        }
+        
+        @media (max-width: 1208px) {
+            .container {
+                display: block;
+            }
+            .pseudo {
+                color: #61B0FF;
+                font-size: 30px;
+                padding-top: 15px;
+                text-align: start;
+                padding-left: 70px;
+            }
+            .annee {
+                padding: 15px 15px;
+                font-size: 20px;
+                background-color: var(--white-color);
+                border-radius: 21px;
+                border: 2px ridge var(--orange-color);
+                margin-top: 15px;
+                color: white;
+            }
+            .partright {
+                width: 100%;
+                padding-top: 30px;
+            }
+            .partleftmobile {
+                display: flex;
+                justify-content: space-around;
+            }
+            .buttonmobile {
+                display: flex;
+                justify-content: space-around;
+            }
+            /*DISPLAY*/
+            .partleftmobile {
+                display: flex;
+            }
+            .Partleft {
+                display: none;
+            }
+            .defis p {
+                font-size: 16px;
+            }
+            .containerProfil button {
+                width: auto;
+            }
+            #cercle {
+                margin: 0 0;
+            }
+            .darkMode {
+                display: flex;
+                justify-content: center;
+            }
+            .pseudocercle p {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 18px;
+            }
+            .Succesmobile div:first-child {
+                display: table;
+                margin: auto;
+            }
+            .languagesmobile div:first-child {
+                display: table;
+                margin: auto;
+            }
+        }
+        
+        @media (max-width: 776px) {
+            #cercle {
+                margin: 0px;
+                margin-top: 30px;
+                width: 100px;
+                height: 100px;
+                text-align: center;
+                border-radius: 100px;
+                color: white;
+            }
+            .annee {
+                padding: 15px 15px;
+                font-size: 20px;
+                background-color: var(--white-color);
+                border-radius: 21px;
+                border: 2px ridge var(--orange-color);
+                margin-top: 15px;
+                color: white;
+            }
+            .containerProfil button {
+                border: none;
+                color: white;
+                padding: 8px 42px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-top: 30px;
+            }
+            .propos p {
+                padding-bottom: 20px;
+            }
+            .partright .propos a {
+                margin: auto;
+            }
+            .partright .propos a {
+                color: var(--orange-color);
+                ;
+            }
+            .Succesmobile {
+                width: 50%;
+            }
+            .languagessuccesmobile {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            .languagesmobile {
+                margin-right: 10px;
+                width: 50%;
+            }
+            .languagesmobile a {
+                color: var(--red-color);
+            }
+            .languagesmobile .html {
+                display: flex;
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            .languagesmobile .html a {
+                margin-left: 10px;
+            }
+            .languagesmobile .css {
+                display: flex;
+                padding-bottom: 10px;
+            }
+            .languagesmobile .css a {
+                margin-left: 10px;
+            }
+            .languagesmobile .js {
+                display: flex;
+                padding-bottom: 10px;
+            }
+            .languagesmobile .js a {
+                margin-left: 10px;
+            }
+            .languagesmobile .php {
+                display: flex;
+                padding-bottom: 10px;
+            }
+            .languagesmobile .php a {
+                margin-left: 10px;
+            }
+            .Succesmobile .trophy {
+                display: flex;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .Succesmobile .trophy a {
+                padding-right: 10px;
+            }
+            .Succesmobile .heart {
+                display: flex;
+                padding-bottom: 10px;
+            }
+            .Succesmobile .heart a {
+                padding-right: 10px;
+                color: var(--red-color);
+            }
+            .Succesmobile .comment {
+                display: flex;
+            }
+            .Succesmobile .comment a {
+                padding-right: 10px;
+            }
+            .partright section {
+                padding: 10px;
+                margin-top: 30px;
+            }
+            .hf {
+                margin-top: 30px;
+                justify-content: space-around;
+                display: block;
+                align-items: center;
+            }
+            .icons2 div a i {
+                color: var(--orange-color);
+            }
+            .defis {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .parse {
+                display: flex;
+                justify-content: center;
+            }
+            .icons2 {
+                display: flex;
+                justify-content: center;
+            }
+            .icons {
+                padding-bottom: 30px;
+            }
+            .icons2 div {
+                color: white;
+                padding-right: 45px;
+            }
+            .icons2 div a {
+                color: white;
+            }
+            .hf div:first-child div:last-child {
+                color: white;
+            }
+            .hf .parse {
+                display: flex;
+                align-items: center;
+                padding-bottom: 20px;
+            }
+            .hf .parse p {
+                color: white;
+                padding-left: 10px;
+            }
+            .groupicons {
+                display: flex;
+                flex-direction: column;
+            }
+            .icons div {
+                padding-right: 45px;
+                padding-top: 15px;
+                color: white;
+            }
+            .badges p:first-child {
+                color: white;
+                font-size: 20px;
+            }
+            .mobileSesquestions {
+                margin-top: 15px;
+                padding-left: 35px;
+            }
+            .size {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 20px;
+            }
+            .size p {
+                font-size: 20px;
+            }
+            .mobileSesquestions .probleme p {
+                font-size: 20px;
+                border: solid 1px;
+                padding: 5px 1px;
+                justify-content: center;
+                border-radius: 21px;
+                border: 2px ridge var(--orange-color);
+                text-align: center;
+            }
+            .flex {
+                display: flex;
+                justify-content: space-around;
+                padding-bottom: 35px;
+            }
+            .resolu {
+                display: flex;
+                margin-top: 15px;
+                padding-left: 20px;
+                padding: 10px;
+                margin-left: 0px;
+            }
+            .like {
+                display: flex;
+                margin-top: 15px;
+                padding-left: 20px;
+                padding: 10px;
+                margin-left: 0px;
+            }
+            .badges {
+                display: grid;
+                justify-content: center;
+            }
+            .displayblock {
+                display: flex;
+                justify-content: center;
+            }
+            .mobileSesquestions p a {
+                text-decoration: none;
+                color: white;
+            }
+            .buttonmobile {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            /*DISPLAY*/
+            .partright .propos a {
+                display: table;
+            }
+            .languagessuccesmobile {
+                display: flex;
+            }
+            .languages {
+                display: none;
+            }
+            .Succes {
+                display: none;
+            }
+            .hfmobile {
+                display: block;
+            }
+            .hfweb {
+                display: none;
+            }
+            .mobileSesquestions {
+                display: block;
+            }
+            .Sesquestions {
+                display: none;
+            }
+        }

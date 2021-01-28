@@ -1,0 +1,114 @@
+header nav {
+    color: #fff;
+    z-index: 2;
+    background-color: var(--black-color);
+}
+
+header nav .upperNav {
+    font-size: 16px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav .upperNav div:last-child a,
+header nav .lowerNavDesktop div a {
+    margin-right: 10px;
+}
+
+header nav .upperNav div a:last-child {
+    margin-right: 0px;
+}
+
+header nav .lowerNavDesktop {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 10px 10px;
+    font-size: 18px;
+}
+
+header nav .lowerNavDesktop div {
+    display: flex;
+}
+
+header nav .search {
+    background-color: #fff;
+    display: flex;
+}
+
+header nav .search input {
+    border: none;
+    margin-left: 10px;
+    outline: none;
+}
+
+header nav .search button {
+    border: none;
+    margin-left: 10px;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.lowerNavMobile {
+    display: none;
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+    header nav .lowerNavDesktop {
+        display: none;
+    }
+    .lowerNavMobile {
+        display: flex;
+        padding: 0 10px 10px 10px;
+    }
+    .lowerNavMobile>div {
+        width: 50%;
+        text-align: center;
+    }
+    /* Mettre en display flex pour afficher le menu burger */
+    .burger {
+        display: none;
+    }
+    .burger>div {
+        width: 50%;
+    }
+    .burger button {
+        display: block;
+        padding: 4px;
+        color: #fff;
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 25px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        width: 70%;
+    }
+    .burger form {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        border-radius: 25px;
+    }
+    .burger input {
+        border-radius: 25px;
+        padding: 4px 0px;
+        width: 100%;
+    }
+    /* A mettre en display flex pour afficher les langages */
+    .langagesBurger {
+        display: none;
+    }
+    /* A mettre en display none pour afficher les langages */
+    .burger>div:last-child {
+        background-color: #fff;
+    }
+}
