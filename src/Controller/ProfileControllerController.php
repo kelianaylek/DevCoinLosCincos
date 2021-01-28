@@ -9,11 +9,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProfileControllerController extends AbstractController
 {
     /**
-     * @Route("/profile/controller", name="profile_controller")
+     * @Route("/profile", name="profile_controller")
      */
     public function index(): Response
     {
-        return $this->render('profile_controller/index.html.twig', [
+        return $this->render('profile_controller/profile.html.twig', [
             'controller_name' => 'ProfileControllerController',
         ]);
     }

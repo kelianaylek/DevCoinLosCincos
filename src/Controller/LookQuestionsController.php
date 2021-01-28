@@ -13,7 +13,7 @@ class LookQuestionsController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('look_questions/index.html.twig', [
+        return $this->render('look_questions/lookQuestions.html.twig', [
             'controller_name' => 'LookQuestionsController',
         ]);
     }
