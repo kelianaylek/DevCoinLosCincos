@@ -35,8 +35,8 @@ class UserController extends AbstractController
             $em->persist($user);
             $em->flush();
 
-            $userName = $userForm["user_email"]->getData();
-            $userExist = $usersRepo->findBy(array('user_email' => $userName));
+            $emailUserType = $userForm["user_email"]->getData();
+            $userExist = $usersRepo->findBy(array('user_email' => $emailUserType));
 
             $paswword = $userExist[0]->getUserPassword();
             $userName = $userExist[0]->getUserName();
@@ -58,8 +58,6 @@ class UserController extends AbstractController
             'controller_name' => 'QuestionController',
             "path" => $path,
             "userForm" => $userForm->createView(),
-            // "user_name" =>  $_SESSION["user_name"],
-
         ]);
     }
 
@@ -79,12 +77,12 @@ class UserController extends AbstractController
         ;
         $userFormToConnect->handleRequest($request);
 
-        $userName = $userFormToConnect["user_email"]->getData();
+        $emailUserType = $userFormToConnect["user_email"]->getData();
         $userPassword = $userFormToConnect["user_password"]->getData();
 
         if($userFormToConnect -> isSubmitted() && $userFormToConnect->isValid()){
 
-            $userExist = $usersRepo->findBy(array('user_email' => $userName));
+            $userExist = $usersRepo->findBy(array('user_email' => $emailUserType));
 
             if($userExist !== []){
                 $correctPassword = $userExist[0]->getUserPassword();
@@ -93,8 +91,6 @@ class UserController extends AbstractController
                 $userEmail = $userExist[0]->getUserName();
 
                 if($userPassword == $correctPassword){
-                    print_r("Bienvenue ". $user . "  " . $correctPassword);
-
                     $session = $request->getSession();
                     $session->set("user", array( 
                         'user_name' => $user,
@@ -103,15 +99,14 @@ class UserController extends AbstractController
                         'user_password' => $correctPassword,
                         )
                     );
-
                     return $this->redirectToRoute($path);
 
                 }else{
-                    print_r("nop");
+                    echo("Mot de passe incorrect");
                 }
             }
             else{
-                print_r("pas de mail comme ca");
+                echo("Cette adresse email n'est pas valide.");
             }
 
         }
@@ -120,10 +115,18 @@ class UserController extends AbstractController
             'controller_name' => 'QuestionController',
             "userFormToConnect" => $userFormToConnect->createView(),
             "path" => $path,
-
-
         ]);
     }
 
     // Deconnexion
+    /**
+     * @Route("{path}/deconnection", name="deconnection")
+     */
+    public function deconnection($path, UsersRepository $usersRepo, Request $request): Response
+    {
+        $session = $request->getSession();
+        $session->clear();
+        return $this->redirectToRoute($path);
+
+    }
 }
