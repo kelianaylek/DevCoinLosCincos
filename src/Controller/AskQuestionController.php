@@ -9,11 +9,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class AskQuestionController extends AbstractController
 {
     /**
-     * @Route("/ask/question", name="ask_question")
+     * @Route("/ask_question", name="ask_question")
      */
     public function index(): Response
     {
-        return $this->render('ask_question/askQuestion.html.twig', [
+        return $this->render('ask_question/ask_question.html.twig', [
             'controller_name' => 'AskQuestionController',
         ]);
     }

@@ -148,7 +148,7 @@
 /* Background du popup */
 
 .Hmodal2 {
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -162,7 +162,7 @@
 }
 
 .Hmodal {
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -176,7 +176,7 @@
 }
 
 .HmodalAnsw {
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -221,6 +221,7 @@
     height: 30%;
     border-radius: 31px;
 }
+
 .modal-content2 form {
     margin-top: 10%;
 }
@@ -238,8 +239,6 @@
     border-radius: 31px;
 }
 
-
-
 .modal-content form {
     margin-top: 13%;
 }
@@ -250,9 +249,10 @@
     margin-top: 1%;
 }
 
-#email {
+
+/* #form_user_email {
     padding-left: 15px;
-}
+} */
 
 #password {
     padding-left: 15px;
