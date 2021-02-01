@@ -2,19 +2,21 @@
 
 {% block title %}Devcoin{% endblock %}
 
-{% block mainContent %}
+{% block body %}
     <div class="EmaindivDesk">
         <div class="EBdiv">
-            <div>
-                <h2 class="EBtitre"> Titre du problème</h2>
+
+            {{ form_start(newQuestion) }} 
+            {{ form_end(newQuestion) }} 
+
+            {# <div>
+                <input class="EBtitre" type="text" placeholder="Titre du problème">
             </div>
             <section class="Easktext">
-                <!--<input placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi, omnis alias sit laborum doloremque est labore nesciunt corporis ipsam sint saepe inventore, obcaecati ipsa exercitationem cumque, quis animi earum? Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. adipisicing elit. Numquam commodi, omnis alias sit laborum doloremque est labore nesciunt corporis ipsam sint">-->
-                <textarea id="textQuestion" name="textquestion" rows="5" cols="33">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, cum tempora enim nemo velit...
-      </textarea>
-            </section>
+                <input type="text" placeholder="Titre du problème">
+
+            </section> #}
+
             <article class="Egroupbtn">
                 <button class="Easkbtn">
                 <a href="#">Paste HTML</a>
@@ -26,24 +28,25 @@
                 <a href="#">Paste JS</a>
             </button>
             </article>
-            <div class="mbbtn">
-                <button class="Ebtnsend" type="submit" id="myBtnAnsw">Envoyer ma question</button>
+
+            {# <div class="mbbtn">
+                <button class="Ebtnsend" type="submit" id="myBtnAnsw">Envoyer ma question</button> #}
 
                 <!-- Fond gris du popup -->
-                <div id="myModal" class="HmodalAnsw">
+                {# <div id="myModal" class="HmodalAnsw"> #}
 
                     <!-- Contenu du popup -->
-                    <div class="modal-content" id="testa">
+                    {# <div class="modal-content" id="testa">
                         <span class="close">&times;</span>
                         <form action="#"><br>
                             <p>Vous avez envoyé votre question.</p><br>
                             <input type="submit" id="envoyer" value="Retour"><br>
 
                         </form>
-                    </div>
-
-                </div>
-            </div>
+                    </div> #}
+{# 
+                </div> #}
+            {# </div> #}
         </div>
     </div>
 {% endblock %}

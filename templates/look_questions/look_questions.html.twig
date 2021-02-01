@@ -40,293 +40,64 @@
         </section>
 
         <article class="allQuestions">
-            <section>
-                <div class="informationsProblem">
-                    <div>
-                        <div>
-                            <p><a href="question.html">Titre du problème</a></p>
-                        </div>
-                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
-                        <a href="profil.html">Pseudo</a>
+            {% if questions|length > 0 %}
+                {% for question in questions %}
+                    <section>
+                        <div class="informationsProblem">
+                            <div>
+                                <div>
+                                    <p><a href="question.html">{{ question.getQuestionTitle() }}</a></p>
+                                </div>
+                                <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                                <a href="profil.html">{{ question.getQuestionAuthor() }}</a>
 
-                    </div>
-                    <div>
-                        <p>10/19/2020</p>
-                    </div>
-                </div>
-                <div class="informationsProblemMobile">
-                    <div>
-                        <p><a href="question.html">Titre du problème</a></p>
-                        <a href="profil.html">Pseudo</a>
-                    </div>
-                    <div>
-                        <p>10/19/2020</p>
-                        <div>
-                            <p>Résolu</p>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <p>{{ question.getQuestionDate()|date("m/d/Y", "Europe/Paris") }}</p>
+                            </div>
                         </div>
-                        <div>
-                            <i class="fa fa-html5" aria-hidden="true"></i>
-                            <i class="fa fa-css3" aria-hidden="true"></i>
+                        <div class="informationsProblemMobile">
+                            <div>
+                                <p><a href="question.html">{{ question.getQuestionTitle() }}</a></p>
+                                <a href="profil.html">{{ question.getQuestionAuthor() }}</a>
+                            </div>
+                            <div>
+                                {# <p>{{ question.getQuestionDate() }}</p> #}
+                                <div>
+                                    <p>{{ question.getQuestionIsResolved()|date("m/d/Y", "Europe/Paris") }}</p>
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <i class="fa fa-html5" aria-hidden="true"></i>
+                                    <i class="fa fa-css3" aria-hidden="true"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="descriptionProblem">
-                    <p><a href="question.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde dolor consequatur esse repudiandae error id omnis aliquam nemo facilis! Non totam ad, nulla in facere voluptas magni ab sit. Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Explicabo omnis necessitatibus maiores incidunt nostrum eum sapiente doloribus illum. Neque nostrum hic eius debitis delectus natus illo odit est beatae aliquam?</a></p>
-                </div>
-                <div class="footerProblem">
-                    <div>
-                        <div>
-                            <p>Résolu</p>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        <div class="descriptionProblem">
+                            <p><a href="question.html">{{ question.getQuestionDescription() }}</a></p>
                         </div>
-                        <div>
-                            <i class="fa fa-comment" aria-hidden="true"></i>
-                            <p>68</p>
+                        <div class="footerProblem">
+                            <div>
+                                <div>
+                                    <p>{{ question.getQuestionIsResolved() }}</p>
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    <p>{{ question.getQuestionAnswers() }}</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-html5" aria-hidden="true"></i>
+                                <i class="fa fa-css3" aria-hidden="true"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <i class="fa fa-html5" aria-hidden="true"></i>
-                        <i class="fa fa-css3" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="informationsProblem">
-                    <div>
-                        <div>
-                            <p><a href="question.html">Titre du problème</a></p>
-                        </div>
-                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
-                        <a href="profil.html">Pseudo</a>
-
-                    </div>
-                    <div>
-                        <p>10/19/2020</p>
-                    </div>
-                </div>
-                <div class="informationsProblemMobile">
-                    <div>
-                        <p><a href="question.html">Titre du problème</a></p>
-                        <a href="profil.html">Pseudo</a>
-                    </div>
-                    <div>
-                        <p>10/19/2020</p>
-                        <div>
-                            <p>Résolu</p>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <i class="fa fa-html5" aria-hidden="true"></i>
-                            <i class="fa fa-css3" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="descriptionProblem">
-                    <p><a href="question.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde dolor consequatur esse repudiandae error id omnis aliquam nemo facilis! Non totam ad, nulla in facere voluptas magni ab sit. Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Explicabo omnis necessitatibus maiores incidunt nostrum eum sapiente doloribus illum. Neque nostrum hic eius debitis delectus natus illo odit est beatae aliquam?</a></p>
-                </div>
-                <div class="footerProblem">
-                    <div>
-                        <div>
-                            <p>Résolu</p>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <i class="fa fa-comment" aria-hidden="true"></i>
-                            <p>68</p>
-                        </div>
-                    </div>
-                    <div>
-                        <i class="fa fa-html5" aria-hidden="true"></i>
-                        <i class="fa fa-css3" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="informationsProblem">
-                    <div>
-                        <div>
-                            <p><a href="question.html">Titre du problème</a></p>
-                        </div>
-                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
-                        <a href="profil.html">Pseudo</a>
-
-                    </div>
-                    <div>
-                        <p>10/19/2020</p>
-                    </div>
-                </div>
-                <div class="informationsProblemMobile">
-                    <div>
-                        <p><a href="question.html">Titre du problème</a></p>
-                        <a href="profil.html">Pseudo</a>
-                    </div>
-                    <div>
-                        <p>10/19/2020</p>
-                        <div>
-                            <p>Résolu</p>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <i class="fa fa-html5" aria-hidden="true"></i>
-                            <i class="fa fa-css3" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="descriptionProblem">
-                    <p><a href="question.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde dolor consequatur esse repudiandae error id omnis aliquam nemo facilis! Non totam ad, nulla in facere voluptas magni ab sit. Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Explicabo omnis necessitatibus maiores incidunt nostrum eum sapiente doloribus illum. Neque nostrum hic eius debitis delectus natus illo odit est beatae aliquam?</a></p>
-                </div>
-                <div class="footerProblem">
-                    <div>
-                        <div>
-                            <p>Résolu</p>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <i class="fa fa-comment" aria-hidden="true"></i>
-                            <p>68</p>
-                        </div>
-                    </div>
-                    <div>
-                        <i class="fa fa-html5" aria-hidden="true"></i>
-                        <i class="fa fa-css3" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="informationsProblem">
-                    <div>
-                        <div>
-                            <p><a href="question.html">Titre du problème</a></p>
-                        </div>
-                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
-                        <a href="profil.html">Pseudo</a>
-
-                    </div>
-                    <div>
-                        <p>10/19/2020</p>
-                    </div>
-                </div>
-                <div class="informationsProblemMobile">
-                    <div>
-                        <p><a href="question.html">Titre du problème</a></p>
-                        <a href="profil.html">Pseudo</a>
-                    </div>
-                    <div>
-                        <p>10/19/2020</p>
-                        <div>
-                            <p>Résolu</p>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <i class="fa fa-html5" aria-hidden="true"></i>
-                            <i class="fa fa-css3" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="descriptionProblem">
-                    <p><a href="question.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde dolor consequatur esse repudiandae error id omnis aliquam nemo facilis! Non totam ad, nulla in facere voluptas magni ab sit. Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Explicabo omnis necessitatibus maiores incidunt nostrum eum sapiente doloribus illum. Neque nostrum hic eius debitis delectus natus illo odit est beatae aliquam?</a></p>
-                </div>
-                <div class="footerProblem">
-                    <div>
-                        <div>
-                            <p>Résolu</p>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <i class="fa fa-comment" aria-hidden="true"></i>
-                            <p>68</p>
-                        </div>
-                    </div>
-                    <div>
-                        <i class="fa fa-html5" aria-hidden="true"></i>
-                        <i class="fa fa-css3" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="informationsProblem">
-                    <div>
-                        <div>
-                            <p><a href="question.html">Titre du problème</a></p>
-                        </div>
-                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
-                        <a href="profil.html">Pseudo</a>
-
-                    </div>
-                    <div>
-                        <p>10/19/2020</p>
-                    </div>
-                </div>
-                <div class="informationsProblemMobile">
-                    <div>
-                        <p><a href="question.html">Titre du problème</a></p>
-                        <a href="profil.html">Pseudo</a>
-                    </div>
-                    <div>
-                        <p>10/19/2020</p>
-                        <div>
-                            <p>Résolu</p>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <i class="fa fa-html5" aria-hidden="true"></i>
-                            <i class="fa fa-css3" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="descriptionProblem">
-                    <p><a href="question.html">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde dolor consequatur esse repudiandae error id omnis aliquam nemo facilis! Non totam ad, nulla in facere voluptas magni ab sit. Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Explicabo omnis necessitatibus maiores incidunt nostrum eum sapiente doloribus illum. Neque nostrum hic eius debitis delectus natus illo odit est beatae aliquam?</a></p>
-                </div>
-                <div class="footerProblem">
-                    <div>
-                        <div>
-                            <p>Résolu</p>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <i class="fa fa-comment" aria-hidden="true"></i>
-                            <p>68</p>
-                        </div>
-                    </div>
-                    <div>
-                        <i class="fa fa-html5" aria-hidden="true"></i>
-                        <i class="fa fa-css3" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </section>
-
-            <div class="informationsProblemMobile">
-                <div>
-                    <p><a href="question.html">Titre du problème</a></p>
-                    <a href="profil.html">Pseudo</a>
-                </div>
-                <div>
-                    <p>10/19/2020</p>
-                    <div>
-                        <p>Résolu</p>
-                        <i class="fa fa-check-circle" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <i class="fa fa-html5" aria-hidden="true"></i>
-                        <i class="fa fa-css3" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-
-
-
+                    </section>
+                {% endfor %}
+            {% else %}
+            <p>Sorry, no questions yet.</p>
+            {% endif %}
         </article>
     </main>
 {% endblock %}

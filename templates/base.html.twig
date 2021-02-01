@@ -86,10 +86,10 @@
 
             <div class="lowerNavMobile">
                 <div>
-                    <a>Voir les problèmes</a>
+                    <a href="{{ path('look_questions') }}">Voir les problèmes</a>
                 </div>
                 <div>
-                    <a>Poser une question</a>
+                    <a href="{{ path('ask_question') }}">Poser une question</a>
                 </div>
             </div>
 
@@ -116,7 +116,7 @@
             </nav>
         </header>
 
-        {% block mainContent %}
+        {% block body %}
         {% endblock %}
 
             <!-- footer desktop -->
