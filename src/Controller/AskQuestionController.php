@@ -34,13 +34,13 @@ class AskQuestionController extends AbstractController
             $question->setQuestionAuthor( $user->getUsername());
             $question->setQuestionDate(new \DateTime());
 
-
-
             $em->persist($question);
             $em->flush();
+
+            return $this->redirectToRoute("look_questions");
+
         }
 
-        return $this->redirectToRoute("look_questions");
 
 
         return $this->render('ask_question/ask_question.html.twig', [
