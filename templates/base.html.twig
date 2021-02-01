@@ -20,15 +20,14 @@
 
 
                 <div>
-                    {% set currentRoute = app.request.attributes.get('_route') %}
                     
-                    {% if app.session.get('user').user_name is defined %}
-                        <a href="{{ currentRoute }}/deconnection">Deconnexion</a>
-                        <a>{{ app.session.get('user').user_name }}</a>
+                    {% if app.user.username is defined %}
+                        <a href="{{ path('app_logout') }}">Deconnexion</a>
+                        <a>{{ app.user.username }}</a>
 
                     {% else %}
-                        <a id="myBtn2" href="{{ currentRoute }}/sign_in">Connexion</a>
-                        <a id="myBtn" href="{{ currentRoute }}/sign_up">Inscription</a>  
+                        <a id="myBtn2" href="{{ path('app_login') }}">Connexion</a>
+                        <a id="myBtn" href="{{ path('user_registration') }}">Inscription</a>  
                     {% endif %}
    
                     {% if userForm is defined %}
