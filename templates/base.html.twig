@@ -29,42 +29,6 @@
                         <a id="myBtn2" href="{{ path('app_login') }}">Connexion</a>
                         <a id="myBtn" href="{{ path('user_registration') }}">Inscription</a>  
                     {% endif %}
-   
-                    {% if userForm is defined %}
-                        <!-- Fond gris du popup -->
-                        <div id="myModal" class="Hmodal">
-                            <!-- Contenu du popup -->
-                            <div class="modal-content">
-                                <a href="../{{ path }}"><span class="close">&times;</span></a>
-        
-                                {{ form_start(userForm) }} 
-                                {{ form_widget(userForm) }}    
-                                <input type="submit" value="Sign Up">
-                                {{ form_end(userForm) }}     
-                                <a href="../{{ path }}/sign_in">Go sign In</a>  
-                                           
-                            </div>
-
-                        </div>
-                    {% endif %}
-            
-                    {% if userFormToConnect is defined %}
-                    <!-- Fond gris du popup -->
-                    <div id="myModal" class="Hmodal2">
-                        <!-- Contenu du popup -->
-                        <div class="modal-content2">
-                            <a href="../{{ path }}"><span class="close">&times;</span></a>
-                            <div>
-                                {{ form_start(userFormToConnect) }} 
-                                {{ form_widget(userFormToConnect) }}    
-                                <input type="submit" value="Sign In">
-                                {{ form_end(userFormToConnect) }} 
-                                <a href="../{{ path }}/sign_up ">Go sign Up</a>  
-
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
                 
                     <a href="{{ path('profile') }}"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                 </div>
