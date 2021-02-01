@@ -15,58 +15,66 @@
             <nav>
             <div class="upperNav">
                 <div>
-                    <a href="index.html">LOGO</a>
+                    <a href="{{ path('home') }}">LOGO</a>
                 </div>
+
+
                 <div>
-                    <a id="myBtn" href="#">Connexion</a>
-                    <!-- Fond gris du popup -->
-                    <div id="myModal" class="Hmodal">
+                    {% set currentRoute = app.request.attributes.get('_route') %}
+                    
+                    {% if app.session.get('user').user_name is defined %}
+                        <a href="{{ currentRoute }}/deconnection">Deconnexion</a>
+                        <a>{{ app.session.get('user').user_name }}</a>
 
-                        <!-- Contenu du popup -->
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <form action="#">
-                                <input type="text" id="email" name="email" placeholder="Email or username"><br>
-                                <input type="text" id="password" name="password" placeholder="Password"><br>
-                                <input type="submit" id="envoyer" value="Sign up"><br>
-                                <input type="submit" id="envoyer" value="Sign in">
+                    {% else %}
+                        <a id="myBtn2" href="{{ currentRoute }}/sign_in">Connexion</a>
+                        <a id="myBtn" href="{{ currentRoute }}/sign_up">Inscription</a>  
+                    {% endif %}
+   
+                    {% if userForm is defined %}
+                        <!-- Fond gris du popup -->
+                        <div id="myModal" class="Hmodal">
+                            <!-- Contenu du popup -->
+                            <div class="modal-content">
+                                <a href="../{{ path }}"><span class="close">&times;</span></a>
+        
+                                {{ form_start(userForm) }} 
+                                {{ form_widget(userForm) }}    
+                                <input type="submit" value="Sign Up">
+                                {{ form_end(userForm) }}     
+                                <a href="../{{ path }}/sign_in">Go sign In</a>  
+                                           
+                            </div>
 
-                            </form>
                         </div>
-
-                    </div>
-                    <a id="myBtn2" href="#">Inscription</a>
+                    {% endif %}
+            
+                    {% if userFormToConnect is defined %}
                     <!-- Fond gris du popup -->
                     <div id="myModal" class="Hmodal2">
-
                         <!-- Contenu du popup -->
                         <div class="modal-content2">
-                            <span class="close">&times;</span>
+                            <a href="../{{ path }}"><span class="close">&times;</span></a>
                             <div>
-                                <form action="#">
-                                    <input type="text" id="email" name="email" placeholder="Email or username"><br>
+                                {{ form_start(userFormToConnect) }} 
+                                {{ form_widget(userFormToConnect) }}    
+                                <input type="submit" value="Sign In">
+                                {{ form_end(userFormToConnect) }} 
+                                <a href="../{{ path }}/sign_up ">Go sign Up</a>  
 
-                                    <input type="text" id="password" name="password" placeholder="Password"><br>
-
-                                    <input type="text" id="password" name="password" placeholder="Confirm your password..."><br>
-
-
-                                    <input type="submit" id="envoyer" value="Sign up"><br>
-                                    <input type="submit" id="envoyer" value="Sign in">
-                                </form>
                             </div>
                         </div>
-
                     </div>
-                    <a href="profil.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                    {% endif %}
+                
+                    <a href="{{ path('profile') }}"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                 </div>
-            </div>
             </div>
 
             <div class="lowerNavDesktop">
                 <div>
-                    <a href="lookQuestions.html">Voir les problèmes</a>
-                    <a href="askQuestion.html">Poser une question</a>
+                    <a href="{{ path('look_questions') }}">Voir les problèmes</a>
+                    <a href="{{ path('ask_question') }}">Poser une question</a>
                 </div>
                 <form class="search">
                     <input type="search" placeholder="Rechercher" />
@@ -78,10 +86,10 @@
 
             <div class="lowerNavMobile">
                 <div>
-                    <a>Voir les problèmes</a>
+                    <a href="{{ path('look_questions') }}">Voir les problèmes</a>
                 </div>
                 <div>
-                    <a>Poser une question</a>
+                    <a href="{{ path('ask_question') }}">Poser une question</a>
                 </div>
             </div>
 
@@ -108,7 +116,7 @@
             </nav>
         </header>
 
-        {% block mainContent %}
+        {% block body %}
         {% endblock %}
 
             <!-- footer desktop -->

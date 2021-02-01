@@ -193,21 +193,21 @@ $(document).ready(function() {
 
     // Quand click sur la croix close le popup
 
-    span.click(function() {
-        $(".Hmodal").css({
-            "display": "none"
-        });
-    })
-    span.click(function() {
-        $(".Hmodal2").css({
-            "display": "none"
-        });
-    })
-    span.click(function() {
-        $(".HmodalAnsw").css({
-            "display": "none"
-        });
-    })
+    // span.click(function() {
+    //     $(".Hmodal").css({
+    //         "display": "none"
+    //     });
+    // })
+    // span.click(function() {
+    //     $(".Hmodal2").css({
+    //         "display": "none"
+    //     });
+    // })
+    // span.click(function() {
+    //     $(".HmodalAnsw").css({
+    //         "display": "none"
+    //     });
+    // })
 
 
     /*POPUP RESPONSIVE*/
