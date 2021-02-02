@@ -2,7 +2,7 @@
 
 {% block title %}Devcoin{% endblock %}
 
-{% block mainContent %}
+{% block body %}
     <main class="mainLookQuestions container">
         <section class="filters">
             <h3>Filtres</h3>
@@ -46,10 +46,10 @@
                         <div class="informationsProblem">
                             <div>
                                 <div>
-                                    <p><a href="question.html">{{ question.getQuestionTitle() }}</a></p>
+                                    <p><a href="{{ path('question') }}">{{ question.getQuestionTitle() }}</a></p>
                                 </div>
                                 <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
-                                <a href="profil.html">{{ question.getQuestionAuthor() }}</a>
+                                <a href="{{ path('profile') }}">{{ question.getQuestionAuthor() }}</a>
 
                             </div>
                             <div>
@@ -58,8 +58,8 @@
                         </div>
                         <div class="informationsProblemMobile">
                             <div>
-                                <p><a href="question.html">{{ question.getQuestionTitle() }}</a></p>
-                                <a href="profil.html">{{ question.getQuestionAuthor() }}</a>
+                                <p><a href="{{ path('question') }}">{{ question.getQuestionTitle() }}</a></p>
+                                <a href="{{ path('profile') }}">{{ question.getQuestionAuthor() }}</a>
                             </div>
                             <div>
                                 {# <p>{{ question.getQuestionDate() }}</p> #}
@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="descriptionProblem">
-                            <p><a href="question.html">{{ question.getQuestionDescription() }}</a></p>
+                            <p><a href="{{ path('question') }}">{{ question.getQuestionDescription() }}</a></p>
                         </div>
                         <div class="footerProblem">
                             <div>
