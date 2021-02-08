@@ -46,7 +46,7 @@
                         <div class="informationsProblem">
                             <div>
                                 <div>
-                                    <p><a href="{{ path('question') }}">{{ question.getQuestionTitle() }}</a></p>
+                                    <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionTitle() }}</a></p>
                                 </div>
                                 <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
                                 <a href="{{ path('profile') }}">{{ question.getQuestionAuthor() }}</a>
@@ -58,13 +58,13 @@
                         </div>
                         <div class="informationsProblemMobile">
                             <div>
-                                <p><a href="{{ path('question') }}">{{ question.getQuestionTitle() }}</a></p>
+                                <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionTitle() }}</a></p>
                                 <a href="{{ path('profile') }}">{{ question.getQuestionAuthor() }}</a>
                             </div>
                             <div>
-                                {# <p>{{ question.getQuestionDate() }}</p> #}
+                                <p>{{ question.getQuestionDate()|date("m/d/Y", "Europe/Paris") }}</p>
                                 <div>
-                                    <p>{{ question.getQuestionIsResolved()|date("m/d/Y", "Europe/Paris") }}</p>
+                                    <p>{{ question.getQuestionIsResolved()}}</p>
                                     <i class="fa fa-check-circle" aria-hidden="true"></i>
                                 </div>
                                 <div>
@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="descriptionProblem">
-                            <p><a href="{{ path('question') }}">{{ question.getQuestionDescription() }}</a></p>
+                            <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionDescription() }}</a></p>
                         </div>
                         <div class="footerProblem">
                             <div>

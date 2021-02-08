@@ -20,21 +20,21 @@
             <div class="introBlockQuestion">
                 <div>
                     <div>
-                        <p>Titre du problème</p>
+                        <p>{{ question.getQuestionTitle() }}</p>
                     </div>
                     <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
                     <a href="{{ path('profile') }}">
-                        <p>Pseudo</p>
+                        <p>{{ question.getQuestionAuthor() }}</p>
                     </a>
                     <div>
-                        <p>Résolu</p>
+                        <p>{{ question.getQuestionIsResolved()}}</p>
                         <i class="fa fa-check-circle" aria-hidden="true"></i>
                     </div>
                     <div>
                         <i class="fa fa-comment" aria-hidden="true"></i>
-                        <p>68</p>
+                        <p>{{ question.getQuestionAnswers()}}</p>
                     </div>
-                    <p>10/19/2020</p>
+                    <p>{{ question.getQuestionDate()|date("m/d/Y", "Europe/Paris")}}</p>
 
                 </div>
                 <div>
@@ -44,8 +44,7 @@
             </div>
 
             <div class="descriptionBlockQuestion">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum tenetur quia odio ducimus, aliquam voluptatibus assumenda pariatur? Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi soluta?</p>
+                <p>{{ question.getQuestionDescription()}}</p>
             </div>
 
             <div class="codeBlockQuestion">
@@ -214,16 +213,16 @@ function initValidateBet() {
         <section class="blockQuestionMobile blockQuestion">
             <div class="introBlockQuestion">
                 <div>
-                    <p>Titre du problème</p>
+                    <p>{{ question.getQuestionTitle() }}</p>
                     <a href="{{ path('profile') }}">
-                        <p>Pseudo</p>
+                        <p>{{ question.getQuestionAuthor() }}</p>
                     </a>
                 </div>
 
                 <div>
-                    <p>10/19/2020</p>
+                    <p>{{ question.getQuestionDate()|date("m/d/Y", "Europe/Paris")}}</p>
                     <div>
-                        <p>Résolu<i class="fa fa-check-circle" aria-hidden="true"></i>
+                        <p>{{ question.getQuestionIsResolved() }}<i class="fa fa-check-circle" aria-hidden="true"></i>
                         </p>
                     </div>
                     <div>
@@ -234,8 +233,7 @@ function initValidateBet() {
             </div>
 
             <div class="descriptionBlockQuestion">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum reiciendis iste officia nemo libero assumenda quibusdam excepturi nisi. Quis fuga nesciunt eos quisquam, explicabo reprehenderit voluptas eaque quasi blanditiis!
-                    Assumenda reprehenderit eum ut nemo aperiam quibusdam reiciendis quod suscipit commodi soluta?</p>
+                <p>{{ question.getQuestionDescription() }}</p>
             </div>
             <div class="codeBlockQuestion">
                 <div>
