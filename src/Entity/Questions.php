@@ -46,6 +46,11 @@ class Questions
      */
     private $question_date;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $question_likes;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +124,18 @@ class Questions
     public function setQuestionDate(\DateTimeInterface $question_date): self
     {
         $this->question_date = $question_date;
+
+        return $this;
+    }
+
+    public function getQuestionLikes(): ?int
+    {
+        return $this->question_likes;
+    }
+
+    public function setQuestionLikes(int $question_likes): self
+    {
+        $this->question_likes = $question_likes;
 
         return $this;
     }

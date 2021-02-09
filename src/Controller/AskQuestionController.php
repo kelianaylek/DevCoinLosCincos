@@ -23,29 +23,34 @@ class AskQuestionController extends AbstractController
     {
 
         $user = $this->getUser();
-        $question = new Questions;
 
-        $form = $this->createForm(AskQuestionsType::class, $question);
-        $form->handleRequest($request);
+        if ($user !== null) {
+            $question = new Questions;
 
-        if($form -> isSubmitted() && $form->isValid()){
-            $question->setQuestionIsResolved(0);
-            $question->setQuestionAnswers(0);
-            $question->setQuestionAuthor( $user->getUsername());
-            $question->setQuestionDate(new \DateTime());
+            $form = $this->createForm(AskQuestionsType::class, $question);
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid()) {
+                $question->setQuestionIsResolved(0);
+                $question->setQuestionAnswers(0);
+                $question->setQuestionLikes(0);
+                $question->setQuestionAuthor($user->getUsername());
+                $question->setQuestionDate(new \DateTime());
+
+                $em->persist($question);
+                $em->flush();
+
+                return $this->redirectToRoute("look_questions");
+            }
 
 
 
-            $em->persist($question);
-            $em->flush();
+            return $this->render('ask_question/ask_question.html.twig', [
+                'controller_name' => 'AskQuestionController',
+                "newQuestion" => $form->createView(),
+            ]);
+        } else {
+            return $this->redirectToRoute("app_login");
         }
-
-        return $this->redirectToRoute("look_questions");
-
-
-        return $this->render('ask_question/ask_question.html.twig', [
-            'controller_name' => 'AskQuestionController',
-            "newQuestion" => $form->createView(),
-        ]);
     }
 }

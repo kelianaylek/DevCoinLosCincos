@@ -6,15 +6,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use App\Repository\QuestionsRepository;
+
 class QuestionController extends AbstractController
 {
     /**
-     * @Route("/question", name="question")
+     * @Route("question/{id}", name="question", defaults={"id" = 0})
      */
-    public function index(): Response
+    public function index(QuestionsRepository $questionsRepository, $id): Response
     {
-        return $this->render('question/question.html.twig', [
-            'controller_name' => 'QuestionController',
-        ]);
+        $question = $questionsRepository->find($id);
+
+        return $this->render('question/question.html.twig', compact("question"));
     }
 }
