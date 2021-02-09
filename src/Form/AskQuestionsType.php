@@ -16,8 +16,15 @@ class AskQuestionsType extends AbstractType
         $builder
             ->add('question_title')
             ->add('question_description')
-            ->add("envoyer", SubmitType::class)
-        ;
+            ->add('question_code_1')
+            ->add('question_code_2')
+            ->add('question_code_3')
+            ->add('question_code_4')
+            ->add('question_code_5')
+
+
+
+            ->add("envoyer", SubmitType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)
