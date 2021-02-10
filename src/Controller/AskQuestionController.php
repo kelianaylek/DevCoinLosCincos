@@ -48,7 +48,6 @@ class AskQuestionController extends AbstractController
 
 
             return $this->render('ask_question/ask_question.html.twig', [
-                'controller_name' => 'AskQuestionController',
                 "newQuestion" => $form->createView(),
             ]);
         } else {

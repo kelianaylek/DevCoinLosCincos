@@ -225,9 +225,7 @@
 .blockResponse form input {
     width: 98%;
     background-color: transparent;
-    border: none;
     outline: none;
-    color: #fff;
 }
 
 .blockResponse form>::-webkit-input-placeholder {
