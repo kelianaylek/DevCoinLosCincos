@@ -25,6 +25,7 @@ class AskQuestionController extends AbstractController
         $user = $this->getUser();
 
         if ($user !== null) {
+
             $question = new Questions;
 
             $form = $this->createForm(AskQuestionsType::class, $question);
@@ -36,6 +37,7 @@ class AskQuestionController extends AbstractController
                 $question->setQuestionLikes(0);
                 $question->setQuestionAuthor($user->getUsername());
                 $question->setQuestionDate(new \DateTime());
+
 
                 $em->persist($question);
                 $em->flush();

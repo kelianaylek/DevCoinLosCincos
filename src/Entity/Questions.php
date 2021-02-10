@@ -51,6 +51,31 @@ class Questions
      */
     private $question_likes;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $question_code_1;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $question_code_2;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $question_code_3;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $question_code_4;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $question_code_5;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -136,6 +161,66 @@ class Questions
     public function setQuestionLikes(int $question_likes): self
     {
         $this->question_likes = $question_likes;
+
+        return $this;
+    }
+
+    public function getQuestionCode1(): ?string
+    {
+        return $this->question_code_1;
+    }
+
+    public function setQuestionCode1(?string $question_code_1): self
+    {
+        $this->question_code_1 = $question_code_1;
+
+        return $this;
+    }
+
+    public function getQuestionCode2(): ?string
+    {
+        return $this->question_code_2;
+    }
+
+    public function setQuestionCode2(?string $question_code_2): self
+    {
+        $this->question_code_2 = $question_code_2;
+
+        return $this;
+    }
+
+    public function getQuestionCode3(): ?string
+    {
+        return $this->question_code_3;
+    }
+
+    public function setQuestionCode3(?string $question_code_3): self
+    {
+        $this->question_code_3 = $question_code_3;
+
+        return $this;
+    }
+
+    public function getQuestionCode4(): ?string
+    {
+        return $this->question_code_4;
+    }
+
+    public function setQuestionCode4(?string $question_code_4): self
+    {
+        $this->question_code_4 = $question_code_4;
+
+        return $this;
+    }
+
+    public function getQuestionCode5(): ?string
+    {
+        return $this->question_code_5;
+    }
+
+    public function setQuestionCode5(?string $question_code_5): self
+    {
+        $this->question_code_5 = $question_code_5;
 
         return $this;
     }
