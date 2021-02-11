@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet" />
+        {% block stylesheets %}{% endblock %}
+        <script src="https://kit.fontawesome.com/9bcfa8c000.js" defer crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <nav>
+            <div class="upperNav">
+                <div>
+                    <a href="{{ path('home') }}">LOGO</a>
+                </div>
+
+
+                <div>
+                    
+                    {% if app.user.username is defined %}
+                        <a href="{{ path('app_logout') }}">Deconnexion</a>
+                        <a>{{ app.user.username }}</a>
+
+                    {% else %}
+                        <a id="myBtn2" href="{{ path('app_login') }}">Connexion</a>
+                        <a id="myBtn" href="{{ path('user_registration') }}">Inscription</a>  
+                    {% endif %}
+                
+                    <a href="{{ path('profile') }}"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="lowerNavDesktop">
+                <div>
+                    <a href="{{ path('look_questions') }}">Voir les problèmes</a>
+                    <a href="{{ path('ask_question') }}">Poser une question</a>
+                </div>
+                <form class="search">
+                    <input type="search" placeholder="Rechercher" />
+                    <button type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="lowerNavMobile">
+                <div>
+                    <a href="{{ path('look_questions') }}">Voir les problèmes</a>
+                </div>
+                <div>
+                    <a href="{{ path('ask_question') }}">Poser une question</a>
+                </div>
+            </div>
+
+            <!-- Menu au click sur "voir les probèmes" -->
+            <div class="burger">
+                <div>
+                    <button>Les plus populaires</button>
+                    <button>Les plus récents</button>
+                    <button>Sans réponse</button>
+                    <button>Langages</button>
+                    <form class="search">
+                        <input type="search" placeholder="Rechercher" />
+                    </form>
+                </div>
+                <!-- Menu au click sur "Langages" -->
+                <div class="langagesBurger">
+                    <button>HTML</button>
+                    <button>CSS</button>
+                    <button>JS</button>
+                    <button>php</button>
+                </div>
+                <div></div>
+            </div>
+            </nav>
+        </header>
+
+        {% block body %}
+        {% endblock %}
+
+            <!-- footer desktop -->
+            <footer class="footerDesktop">
+                <div>
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    <a href=""><i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+                </div>
+                <div>
+                    <a href="">Mentions légales</a>
+                    <a href="">Contact Admin</a>
+                    <a href="">F.A.Q</a>
+                </div>
+            </footer>
+            <!-- footer mobile -->
+            <footer class="footerMobile">
+                <div>
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    <a href="">Mentions légales</a>
+                </div>
+                <div>
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+                    <a href="">F.A.Q</a>
+                </div>
+                <div>
+                    <a href=""><i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                    <a href="">Contact Admin</a>
+                </div>
+
+            </footer>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="{{ asset('js/main.js') }}"></script>
+            {% block javascripts %}{% endblock %}
+
+    </body>
+</html>

@@ -1,0 +1,105 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Devcoin{% endblock %}
+
+{% block body %}
+    <main class="mainLookQuestions container">
+        <section class="filters">
+            <h3>Filtres</h3>
+            <hr>
+            <div>
+                <p>Les plus récents</p>
+                <input type="checkbox" checked="checked">
+            </div>
+            <div>
+                <p>Les plus populaires</p>
+                <input type="checkbox">
+            </div>
+            <div>
+                <p>Non résolus</p>
+                <input type="checkbox">
+            </div>
+            <hr>
+            <h4>Langages</h4>
+            <div>
+                <p>HTML</p>
+                <input type="checkbox">
+            </div>
+            <div>
+                <p>CSS</p>
+                <input type="checkbox">
+            </div>
+            <div>
+                <p>Javascript</p>
+                <input type="checkbox">
+            </div>
+            <div>
+                <p>PHP</p>
+                <input type="checkbox">
+            </div>
+        </section>
+
+        <article class="allQuestions">
+            {% if questions|length > 0 %}
+                {% for question in questions %}
+                    <section>
+                        <div class="informationsProblem">
+                            <div>
+                                <div>
+                                    <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionTitle() }}</a></p>
+                                </div>
+                                <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                                <a href="{{ path('profile') }}">{{ question.getQuestionAuthor() }}</a>
+
+                            </div>
+                            <div>
+                                <p>{{ question.getQuestionDate()|date("m/d/Y", "Europe/Paris") }}</p>
+                            </div>
+                        </div>
+                        <div class="informationsProblemMobile">
+                            <div>
+                                <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionTitle() }}</a></p>
+                                <a href="{{ path('profile') }}">{{ question.getQuestionAuthor() }}</a>
+                            </div>
+                            <div>
+                                <p>{{ question.getQuestionDate()|date("m/d/Y", "Europe/Paris") }}</p>
+                                <div>
+                                    <p>{{ question.getQuestionIsResolved()}}</p>
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <i class="fa fa-html5" aria-hidden="true"></i>
+                                    <i class="fa fa-css3" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="descriptionProblem">
+                            <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionDescription() }}</a></p>
+                        </div>
+                        <div class="footerProblem">
+                            <div>
+                                <div>
+                                    <p>{{ question.getQuestionIsResolved() }}</p>
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    <p>{{ question.getQuestionAnswers() }}</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-html5" aria-hidden="true"></i>
+                                <i class="fa fa-css3" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </section>
+                {% endfor %}
+            {% else %}
+            <p>Sorry, no questions yet.</p>
+            {% endif %}
+        </article>
+    </main>
+{% endblock %}
+
+

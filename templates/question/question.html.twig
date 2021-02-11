@@ -1,0 +1,287 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Devcoin{% endblock %}
+
+{% block javascripts %}
+  <link href="{{ asset('js/highlight/styles/atom-one-dark.css') }}" type="text/css" rel="stylesheet" />
+
+  <script src="{{ asset('js/highlight/highlight.pack.js') }}"></script>
+  <script>
+      hljs.initHighlightingOnLoad();
+  </script> 
+
+  <script src="{{ asset('js/displayCode.js') }}"></script>
+
+{% endblock %}
+
+{% block body %}
+    <main class="questionPage container">
+        <section class="blockQuestion">
+            <div class="introBlockQuestion">
+                <div>
+                    <div>
+                        <p>{{ question.getQuestionTitle() }}</p>
+                    </div>
+                    <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                    <a href="{{ path('profile') }}">
+                        <p>{{ question.getQuestionAuthor() }}</p>
+                    </a>
+                    <div>
+                        <p>{{ question.getQuestionIsResolved()}}</p>
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <p>{{ question.getQuestionAnswers()}}</p>
+                    </div>
+                    <p>{{ question.getQuestionDate()|date("m/d/Y", "Europe/Paris")}}</p>
+
+                </div>
+                <div>
+                    <i class="fa fa-html5" aria-hidden="true"></i>
+                    <i class="fa fa-css3" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="descriptionBlockQuestion">
+                <p>{{ question.getQuestionDescription()}}</p>
+            </div>
+
+            <div class="codeBlockQuestion">
+                {% if question.getQuestionCode1() is not null %}
+                  <div>
+                      <pre><code>
+                        {{ question.getQuestionCode1()}}
+                      </code></pre>
+
+                  </div>
+                {% endif %}
+
+                {% if question.getQuestionCode2() is not null%}
+                  <div>
+                      <pre><code>
+                        {{ question.getQuestionCode2()}}
+
+                      </code></pre>
+                  </div>
+                {% endif %}
+
+                {% if question.getQuestionCode3() is not null %}
+                  <div>
+                      <pre><code>
+                        {{ question.getQuestionCode3()}}
+
+                        </code></pre>
+                  </div>
+                {% endif %}
+
+                 {% if question.getQuestionCode4() is not null %}
+                  <div>
+                      <pre><code>
+                        {{ question.getQuestionCode4()}}
+
+                        </code></pre>
+                  </div>
+                {% endif %}
+
+                 {% if question.getQuestionCode5() is not null %}
+                  <div>
+                      <pre><code>
+                        {{ question.getQuestionCode5()}}
+
+                        </code></pre>
+                  </div>
+                {% endif %}
+
+            </div>
+
+        </section>
+        <!-- Meme section pour le mobile -->
+        <section class="blockQuestionMobile blockQuestion">
+            <div class="introBlockQuestion">
+                <div>
+                    <p>{{ question.getQuestionTitle() }}</p>
+                    <a href="{{ path('profile') }}">
+                        <p>{{ question.getQuestionAuthor() }}</p>
+                    </a>
+                </div>
+
+                <div>
+                    <p>{{ question.getQuestionDate()|date("m/d/Y", "Europe/Paris")}}</p>
+                    <div>
+                        <p>{{ question.getQuestionIsResolved() }}<i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                    <div>
+                        <i class="fa fa-html5" aria-hidden="true"></i>
+                        <i class="fa fa-css3" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="descriptionBlockQuestion">
+                <p>{{ question.getQuestionDescription() }}</p>
+            </div>
+            {# <div class="codeBlockQuestion">
+                <div>
+                    <button name="html">LOOK HTML</button>
+                </div>
+                <div>
+                    <button name="css">LOOK CSS</button>
+                </div>
+                <div>
+                    <button name="js">LOOK JS</button>
+                </div>
+            </div> #}
+        </section>
+
+        <article>
+
+        {% if answers|length > 0 %}
+            {% for answer in answers %}
+
+                 <section class="blockAnswers">
+                <div class="introBlockQuestion">
+                    <div>
+                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                        <a href="{{ path('profile') }}">
+                            <p>{{ answer.getAnswerAuthor() }}</p>
+                        </a>
+                        <p>Re : {{ answer.getAnswerTitle() }}</p>
+                        <p>{{ answer.getAnswerDate()|date("m/d/Y", "Europe/Paris") }}</p>
+                    </div>
+                    <div>
+                        <p>{{ answer.getAnswerLikes() }}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+
+                    </div>
+                </div>
+
+                <div class="descriptionBlockQuestion">
+                    <p>{{ answer.getAnswerDescription() }}
+                    </p>
+                </div>
+
+                <div class="codeBlockQuestion">
+                    {% if answer.getAnswerCode1() is not null %}
+                        <div>
+                            <pre><code>
+                            {{ answer.getAnswerCode1() }}
+                            </code></pre>
+                        </div>
+                    {% endif %}
+                     {% if answer.getAnswerCode2() is not null %}
+                        <div>
+                            <pre><code>
+                            {{ answer.getAnswerCode2() }}
+                            </code></pre>
+                        </div>
+                    {% endif %}
+                     {% if answer.getAnswerCode3() is not null %}
+                        <div>
+                            <pre><code>
+                            {{ answer.getAnswerCode3() }}
+                            </code></pre>
+                        </div>
+                    {% endif %}
+                     {% if answer.getAnswerCode4() is not null %}
+                        <div>
+                            <pre><code>
+                            {{ answer.getAnswerCode4() }}
+                            </code></pre>
+                        </div>
+                    {% endif %}
+                     {% if answer.getAnswerCode5() is not null %}
+                        <div>
+                            <pre><code>
+                            {{ answer.getAnswerCode5() }}
+                            </code></pre>
+                        </div>
+                    {% endif %}
+                </div>
+            </section>
+            {% endfor %}
+        {% else %}
+        <p>Sorry, no answers yet.</p>
+        {% endif %}
+
+        </article>
+
+
+
+        <article>
+         {% if answers|length > 0 %}
+            {% for answer in answers %}
+            <section class="blockAnswers blockAnswersMobile">
+                <div class="introBlockQuestion">
+                    <div>
+                        <p>Re : {{ answer.getAnswerTitle() }}</p>
+                        <a href="{{ path('profile') }}">
+                            <p>{{ answer.getAnswerAuthor() }}</p>
+                        </a>
+                    </div>
+                    <div>
+                        <p>{{ answer.getAnswerDate()|date("m/d/Y", "Europe/Paris") }}</p>
+                        <p>{{ answer.getAnswerLikes() }}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+
+                <div class="descriptionBlockQuestion">
+                    <p>{{ answer.getAnswerDescription() }}
+                    </p>
+                </div>
+  
+            </section>
+          
+            {% endfor %}
+        {% else %}
+        <p>Sorry, no answers yet.</p>
+        {% endif %}
+        </article>
+
+
+        <!-- Pop up code en responsive mobile -->
+
+        {# <div class="htmlCodeResponsive">
+            <div>
+                <button>HTML <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+                <i class="fa fa-times fa-2x popupCloseHtml" aria-hidden="true"></i>
+            </div>
+            <pre><code>
+
+        </code></pre>
+        </div>
+        <div class="cssCodeResponsive">
+            <div>
+                <button>CSS <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+                <i class="fa fa-times fa-2x popupCloseCss" aria-hidden="true"></i>
+            </div>
+            <pre><code>
+               
+        </code></pre>
+        </div>
+        <div class="jsCodeResponsive">
+            <div>
+                <button>JS <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+                <i class="fa fa-times fa-2x popupCloseJs" aria-hidden="true"></i>
+            </div>
+            <pre><code>
+        </code></pre>
+        </div> #}
+
+
+
+        <section class="blockResponse">
+            {{ form_start(newAnswer) }} 
+            {{ form_end(newAnswer) }} 
+        </section>
+
+    </main>
+{% endblock %}
+
+
+
+
+
