@@ -24,10 +24,7 @@ class QuestionController extends AbstractController
     {
         $question = $questionsRepository->find($id);
         $questionAnswers = $question->getQuestionAnswers();
-
         $answers = $question->getAnswers();
-
-        // dd($questionAnswers);
         $user = $this->getUser();
 
 
@@ -42,17 +39,12 @@ class QuestionController extends AbstractController
             $answer->setAnswerAuthor($user->getUsername());
             $answer->setAnswerDate(new \DateTime());
             $answer->setQuestionId($question->addAnswer($answer));
-
             $question->setQuestionAnswers($questionAnswers + 1);
-
-
             $em->persist($answer);
             $em->flush();
 
             return $this->redirectToRoute("look_questions");
         }
-
-
 
         return $this->render(
             'question/question.html.twig',
