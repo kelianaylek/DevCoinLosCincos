@@ -39,6 +39,8 @@ class AskQuestionController extends AbstractController
                 $question->setQuestionDate(new \DateTime());
 
 
+
+
                 $em->persist($question);
                 $em->flush();
 

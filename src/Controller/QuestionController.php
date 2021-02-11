@@ -23,12 +23,11 @@ class QuestionController extends AbstractController
     public function index(QuestionsRepository $questionsRepository, $id, AnswersRepository $answersRepository, EntityManagerInterface $em, Request $request): Response
     {
         $question = $questionsRepository->find($id);
+        $questionAnswers = $question->getQuestionAnswers();
 
         $answers = $question->getAnswers();
-        // $answers = $answersRepository->findAll();
 
-        // dd($answers);
-
+        // dd($questionAnswers);
         $user = $this->getUser();
 
 
@@ -43,6 +42,9 @@ class QuestionController extends AbstractController
             $answer->setAnswerAuthor($user->getUsername());
             $answer->setAnswerDate(new \DateTime());
             $answer->setQuestionId($question->addAnswer($answer));
+
+            $question->setQuestionAnswers($questionAnswers + 1);
+
 
             $em->persist($answer);
             $em->flush();
