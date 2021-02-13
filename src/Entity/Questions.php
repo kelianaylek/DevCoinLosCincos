@@ -49,11 +49,6 @@ class Questions
     private $question_date;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $question_likes;
-
-    /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $question_code_1;
@@ -165,17 +160,6 @@ class Questions
         return $this;
     }
 
-    public function getQuestionLikes(): ?int
-    {
-        return $this->question_likes;
-    }
-
-    public function setQuestionLikes(int $question_likes): self
-    {
-        $this->question_likes = $question_likes;
-
-        return $this;
-    }
 
     public function getQuestionCode1(): ?string
     {

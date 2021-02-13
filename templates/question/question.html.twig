@@ -151,7 +151,16 @@
                         <p>{{ answer.getAnswerDate()|date("m/d/Y", "Europe/Paris") }}</p>
                     </div>
                     <div>
-                        <p>{{ answer.getAnswerLikes() }}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+                     
+                      <a href="{{ ('../question/'~ question.getId)}}" id="answer-like"
+                        data-entity-id="{{ answer.id }}"
+                        data-csrf-token=" {{ csrf_token('answers' ~ answer.id)}}"
+                        data-liked="{{ isAnswerAlreadyLiked == true ? '1' : '0' }}"
+                        class="btn-like">&nbsp;
+                          <i class="far fa-thumbs-up {{ isAnswerAlreadyLiked == true ? 'liked' : '' }}">
+                              {{ isAnswerAlreadyLiked == true ? 'Unlike' : 'Like' }}
+                          </i>
+                        </a> 
 
                     </div>
                 </div>
@@ -206,7 +215,14 @@
 
         </article>
 
-
+  <style type="text/css">
+  .btn-like{
+    color:black;
+  }
+  .liked{
+    color:royalblue;
+  }
+  </style>
 
         <article>
          {% if answers|length > 0 %}
@@ -221,7 +237,7 @@
                     </div>
                     <div>
                         <p>{{ answer.getAnswerDate()|date("m/d/Y", "Europe/Paris") }}</p>
-                        <p>{{ answer.getAnswerLikes() }}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+                        {# <p>{{ answer.getAnswerLikes() }}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p> #}
                     </div>
                 </div>
 
@@ -279,7 +295,47 @@
         </section>
 
     </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+  $(document).on("click", "#answer-like", function(e){
+    e.preventDefault();
+
+    var url = $(this).attr("href");
+    var entityId = $(this).attr("data-entity-id");
+    var csrfToken = $(this).attr("data-csrf-token");
+    var isLiked = $(this).attr("data-liked");
+
+    if(isLiked === "0"){
+      $(this).attr('data-liked', 1)
+      $('.fa-thumbs-up').addClass('liked').text('Unlike')
+    }else{
+      $(this).attr('data-liked', 0)
+      $('.fa-thumbs-up').removeClass('liked').text('Like')
+    }
+
+    $.ajax({
+      type: 'POST',
+      data: {'entityId': entityId, 'csrfToken': csrfToken},
+      url: url,
+      success: function(){
+        console.log("Success")
+      },
+      error: function(){
+        console.log("Error")
+
+      }
+    })
+
+  })
+</script>
+
 {% endblock %}
+
+
+
+
 
 
 

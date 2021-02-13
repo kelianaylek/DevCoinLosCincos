@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -15,7 +17,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class User implements UserInterface
 {
-        /**
+    /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -54,9 +56,15 @@ class User implements UserInterface
      */
     private $roles;
 
+    /**
+     * @ORM\OneToMany(targetEntity=AnswersLikes::class, mappedBy="user")
+     */
+    private $answersLikes;
+
     public function __construct()
     {
         $this->roles = array('ROLE_USER');
+        $this->answersLikes = new ArrayCollection();
     }
 
     // other properties and methods
@@ -113,5 +121,35 @@ class User implements UserInterface
 
     public function eraseCredentials()
     {
+    }
+
+    /**
+     * @return Collection|AnswersLikes[]
+     */
+    public function getAnswersLikes(): Collection
+    {
+        return $this->answersLikes;
+    }
+
+    public function addAnswersLike(AnswersLikes $answersLike): self
+    {
+        if (!$this->answersLikes->contains($answersLike)) {
+            $this->answersLikes[] = $answersLike;
+            $answersLike->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAnswersLike(AnswersLikes $answersLike): self
+    {
+        if ($this->answersLikes->removeElement($answersLike)) {
+            // set the owning side to null (unless already changed)
+            if ($answersLike->getUser() === $this) {
+                $answersLike->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }

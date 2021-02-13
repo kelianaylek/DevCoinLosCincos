@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\AnswersRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -38,11 +40,6 @@ class Answers
     private $answer_date;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $answer_likes;
-
-    /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $answer_code_1;
@@ -72,6 +69,16 @@ class Answers
      * @ORM\JoinColumn(nullable=false)
      */
     private $question_id;
+
+    /**
+     * @ORM\OneToMany(targetEntity=AnswersLikes::class, mappedBy="answers")
+     */
+    private $answersLikes;
+
+    public function __construct()
+    {
+        $this->answersLikes = new ArrayCollection();
+    }
 
 
     public function getId(): ?int
@@ -123,18 +130,6 @@ class Answers
     public function setAnswerDate(\DateTimeInterface $answer_date): self
     {
         $this->answer_date = $answer_date;
-
-        return $this;
-    }
-
-    public function getAnswerLikes(): ?int
-    {
-        return $this->answer_likes;
-    }
-
-    public function setAnswerLikes(int $answer_likes): self
-    {
-        $this->answer_likes = $answer_likes;
 
         return $this;
     }
@@ -207,6 +202,36 @@ class Answers
     public function setQuestionId(?Questions $question_id): self
     {
         $this->question_id = $question_id;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|AnswersLikes[]
+     */
+    public function getAnswersLikes(): Collection
+    {
+        return $this->answersLikes;
+    }
+
+    public function addAnswersLike(AnswersLikes $answersLike): self
+    {
+        if (!$this->answersLikes->contains($answersLike)) {
+            $this->answersLikes[] = $answersLike;
+            $answersLike->setAnswers($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAnswersLike(AnswersLikes $answersLike): self
+    {
+        if ($this->answersLikes->removeElement($answersLike)) {
+            // set the owning side to null (unless already changed)
+            if ($answersLike->getAnswers() === $this) {
+                $answersLike->setAnswers(null);
+            }
+        }
 
         return $this;
     }
