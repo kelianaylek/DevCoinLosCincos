@@ -37,10 +37,6 @@ class Answers
      */
     private $answer_date;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $answer_likes;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -127,17 +123,6 @@ class Answers
         return $this;
     }
 
-    public function getAnswerLikes(): ?int
-    {
-        return $this->answer_likes;
-    }
-
-    public function setAnswerLikes(int $answer_likes): self
-    {
-        $this->answer_likes = $answer_likes;
-
-        return $this;
-    }
 
     public function getAnswerCode1(): ?string
     {
