@@ -271,11 +271,14 @@
         </code></pre>
         </div> #}
 
-
-
         <section class="blockResponse">
-            {{ form_start(newAnswer) }} 
-            {{ form_end(newAnswer) }} 
+
+            {{ render(controller(
+                'App\\Controller\\AnswersController::create', {id: question.getId()}
+            )) }}
+
+{#            {{ render(path('test', {id: question.getId()})) }}#}
+
         </section>
 
     </main>

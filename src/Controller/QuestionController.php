@@ -42,30 +42,11 @@ class QuestionController extends AbstractController
         $user = $this->getUser();
 
 
-        $answer = new Answers;
-        $form = $this->createForm(AnswersType::class, $answer);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            $answer->setAnswerTitle($question->getQuestionTitle());
-//            $answer->setAnswerLikes(0);
-            $answer->setAnswerAuthor($user->getUsername());
-            $answer->setAnswerDate(new \DateTime());
-            $answer->setQuestionId($question->addAnswer($answer));
-            $question->setQuestionAnswers($questionAnswers + 1);
-            $em->persist($answer);
-            $em->flush();
-
-            return $this->redirectToRoute("look_questions");
-        }
-
         return $this->render(
             'question/question.html.twig',
             [
                 "question" => $question,
                 "answers" => $answers,
-                "newAnswer" => $form->createView(),
             ]
         );
     }
