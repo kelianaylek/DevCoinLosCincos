@@ -8,7 +8,7 @@
             <div class="pseudocercle">
                 <div id="cercle">
                 </div>
-                <p>Pseudo</p>
+                <p>{{ app.user.username }}</p>
             </div>
 
             <div class="annee">
@@ -36,7 +36,7 @@
             <div id="cercle">
 
             </div>
-            <div class="pseudo">Pseudo</div>
+            <div class="pseudo">{{ app.user.username }}</div>
             <div class="annee">
                 <p>Année d'étude: 4</p>
                 <div class="discord">
@@ -58,7 +58,7 @@
         <div class="partright">
             <section>
                 <div class="propos">
-                    <p class="titreapropos">A propos de pseudo :</p>
+                    <p class="titreapropos">Statut :</p>
                     <p class="moretexte">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                         no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
                     <a href=""><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>
@@ -252,146 +252,61 @@
                     </div>
                 </div>
             </article>
+
+
             <section class="mobileSesquestions">
                 <div>
                     <p class="size">Mes questions: </p>
 
+                    {% if myQuestions|length > 0 %}
+                    {% for question in myQuestions %}
+
                     <div class="probleme">
-                        <p><a href="question.html"> Titre du problème</a></p>
+                        <p><a href="question.html">{{ question.getQuestionTitle() }}</a></p>
                     </div>
                     <div class="flex">
                         <div class="like">
                             <a href=""><i class="fas fa-comment"></i></a>
-                            <p>12</p>
+                            <p>{{ question.getQuestionAnswers() }}</p>
                         </div>
                         <div class="resolu">
-                            <p>Résolu</p>
-                            <a href=""><i class="fas fa-check-circle"></i></a>
-                        </div>
-                    </div>
-                    <div class="probleme">
-                        <p><a href="question.html"> Titre du problème</a></p>
-                    </div>
-                    <div class="flex">
-                        <div class="like">
-                            <a href=""><i class="fas fa-comment"></i></a>
-                            <p>12</p>
-                        </div>
-                        <div class="resolu">
-                            <p>Résolu</p>
-                            <a href=""><i class="fas fa-check-circle"></i></a>
-                        </div>
-                    </div>
-                    <div class="probleme">
-                        <p><a href="question.html"> Titre du problème</a></p>
-                    </div>
-                    <div class="flex">
-                        <div class="like">
-                            <a href=""><i class="fas fa-comment"></i></a>
-                            <p>12</p>
-                        </div>
-                        <div class="resolu">
-                            <p>Résolu</p>
-                            <a href=""><i class="fas fa-check-circle"></i></a>
-                        </div>
-                    </div>
-                    <div class="probleme">
-                        <p><a href="question.html"> Titre du problème</a></p>
-                    </div>
-                    <div class="flex">
-                        <div class="like">
-                            <a href=""><i class="fas fa-comment"></i></a>
-                            <p>12</p>
-                        </div>
-                        <div class="resolu">
-                            <p>Résolu</p>
-                            <a href=""><i class="fas fa-check-circle"></i></a>
-                        </div>
-                    </div>
-                    <div class="probleme">
-                        <p><a href="question.html"> Titre du problème</a></p>
-                    </div>
-                    <div class="flex">
-                        <div class="like">
-                            <a href=""><i class="fas fa-comment"></i></a>
-                            <p>12</p>
-                        </div>
-                        <div class="resolu">
-                            <p>Résolu</p>
+                            <p>{{ question.getQuestionIsResolved() }}</p>
                             <a href=""><i class="fas fa-check-circle"></i></a>
                         </div>
                     </div>
 
+                    {% endfor %}
+                    {% else %}
+                        <p>Sorry, no questions yet.</p>
+                    {% endif %}
                 </div>
             </section>
             <section class="Sesquestions">
                 <div>
-                    <p class="size">Ses questions: </p>
+                    <p class="size">Mes questions: </p>
+
+                    {% if myQuestions|length > 0 %}
+                    {% for question in myQuestions %}
+
                     <div class="flex">
                         <div class="probleme">
-                            <p><a href="question.html">Titre du problème</a></p>
+                            <p><a href="question.html">{{ question.getQuestionTitle() }}</a></p>
                         </div>
                         <div class="like">
                             <a href=""><i class="fas fa-comment"></i></a>
-                            <p>12</p>
+                            <p>{{ question.getQuestionAnswers() }}</p>
                         </div>
                         <div class="resolu">
-                            <p>Résolu</p>
+                            <p>{{ question.getQuestionIsResolved() }}</p>
                             <a href=""><i class="fas fa-check-circle"></i></a>
                         </div>
                     </div>
-                    <div class="flex">
-                        <div class="probleme">
-                            <p><a href="question.html">Titre du problème</a></p>
-                        </div>
-                        <div class="like">
-                            <a href=""><i class="fas fa-comment"></i></a>
-                            <p>12</p>
-                        </div>
-                        <div class="resolu">
-                            <p>Résolu</p>
-                            <a href=""><i class="fas fa-check-circle"></i></a>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="probleme">
-                            <p><a href="question.html">Titre du problème</a></p>
-                        </div>
-                        <div class="like">
-                            <a href=""><i class="fas fa-comment"></i></a>
-                            <p>12</p>
-                        </div>
-                        <div class="resolu">
-                            <p>Résolu</p>
-                            <a href=""><i class="fas fa-check-circle"></i></a>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="probleme">
-                            <p><a href="question.html">Titre du problème</a></p>
-                        </div>
-                        <div class="like">
-                            <a href=""><i class="fas fa-comment"></i></a>
-                            <p>12</p>
-                        </div>
-                        <div class="resolu">
-                            <p>Résolu</p>
-                            <a href=""><i class="fas fa-check-circle"></i></a>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="probleme">
-                            <p><a href="question.html">Titre du problème</a></p>
-                        </div>
-                        <div class="like">
-                            <a href=""><i class="fas fa-comment"></i></a>
-                            <p>12</p>
-                        </div>
-                        <div class="resolu">
-                            <p>Résolu</p>
-                            <a href=""><i class="fas fa-check-circle"></i></a>
-                        </div>
-                    </div>
+
+                    {% endfor %}
+                    {% else %}
+                        <p>Sorry, no questions yet.</p>
+                    {% endif %}
+
                 </div>
             </section>
         </div>
