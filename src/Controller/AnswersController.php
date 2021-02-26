@@ -11,6 +11,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\RequestStack;
+
 
 class AnswersController extends AbstractController
 {
@@ -25,23 +27,19 @@ class AnswersController extends AbstractController
 //    }
 
     /**
-     * @Route("answer/{id}", name="test", defaults={"id" = 0},  methods={"POST"})
+     * @Route("answer/{id}", name="test", defaults={"id" = 0})
      */
-    public function create(QuestionsRepository $questionsRepository, $id, AnswersRepository $answersRepository, EntityManagerInterface $em, Request $request): Response
+    public function create(RequestStack $requestStack, QuestionsRepository $questionsRepository, $id,  EntityManagerInterface $em): Response
     {
         $question = $questionsRepository->find($id);
         $questionAnswers = $question->getQuestionAnswers();
-        $answers = $question->getAnswers();
         $user = $this->getUser();
 
 
-
         $answer = new Answers;
-        $form = $this->createForm(AnswersType::class, $answer, array(
-            'method' => 'post'
-        ));
-        $form->handleRequest($request);
+        $form = $this->createForm(AnswersType::class, $answer);
 
+        $form->handleRequest($requestStack->getParentRequest());
 
         if ($form->isSubmitted() && $form->isValid()) {
             $answer->setAnswerTitle($question->getQuestionTitle());
@@ -54,6 +52,7 @@ class AnswersController extends AbstractController
             $em->flush();
 
             return $this->redirectToRoute("look_questions");
+//            return $this->redirect($request->getUri());
 
         }
 

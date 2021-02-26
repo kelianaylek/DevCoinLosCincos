@@ -34,12 +34,10 @@ class QuestionController extends AbstractController
     /**
      * @Route("question/{id}", name="question", defaults={"id" = 0})
      */
-    public function show(QuestionsRepository $questionsRepository, $id, AnswersRepository $answersRepository, EntityManagerInterface $em, Request $request): Response
+    public function show(QuestionsRepository $questionsRepository, $id): Response
     {
         $question = $questionsRepository->find($id);
-        $questionAnswers = $question->getQuestionAnswers();
         $answers = $question->getAnswers();
-        $user = $this->getUser();
 
 
         return $this->render(

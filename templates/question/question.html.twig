@@ -275,7 +275,7 @@
 
             {{ render(controller(
                 'App\\Controller\\AnswersController::create', {id: question.getId()}
-            )) }}
+            ), {'request' : app.request}) }}
 
 {#            {{ render(path('test', {id: question.getId()})) }}#}
 

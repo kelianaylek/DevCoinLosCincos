@@ -41,7 +41,7 @@
 
         <article class="allQuestions">
             {% if questions|length > 0 %}
-                {% for question in questions %}
+                {% for question in questions|sort((b, a) => a.id <=> b.id) %}
                     <section>
                         <div class="informationsProblem">
                             <div>
