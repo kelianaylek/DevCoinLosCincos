@@ -24,13 +24,13 @@
                     {% if app.user.username is defined %}
                         <a href="{{ path('app_logout') }}">Deconnexion</a>
                         <a>{{ app.user.username }}</a>
+                        <a href="{{ path('myProfile') }}"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
 
                     {% else %}
                         <a id="myBtn2" href="{{ path('app_login') }}">Connexion</a>
                         <a id="myBtn" href="{{ path('user_registration') }}">Inscription</a>  
                     {% endif %}
                 
-                    <a href="{{ path('myProfile') }}"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                 </div>
             </div>
 

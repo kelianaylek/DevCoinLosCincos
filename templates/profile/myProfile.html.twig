@@ -272,6 +272,10 @@
                             <p>{{ question.getQuestionIsResolved() }}</p>
                             <a href=""><i class="fas fa-check-circle"></i></a>
                         </div>
+                        <div>
+                            <p><a href="">Editer</a>
+                            </p>
+                        </div>
                     </div>
 
                     {% endfor %}
@@ -298,6 +302,9 @@
                         <div class="resolu">
                             <p>{{ question.getQuestionIsResolved() }}</p>
                             <a href=""><i class="fas fa-check-circle"></i></a>
+                        </div>
+                        <div>
+                            <a href="{{ path('question_edit', {'id': question.getId() }) }}">Editer</a>
                         </div>
                     </div>
 

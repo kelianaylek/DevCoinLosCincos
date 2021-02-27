@@ -82,4 +82,47 @@ class QuestionController extends AbstractController
             return $this->redirectToRoute("app_login");
         }
     }
+
+    /**
+     * @Route("question/edit/{id}", name="question_edit")
+     */
+    public function edit(Request $request, EntityManagerInterface $em, QuestionsRepository $questionsRepository, $id): Response
+    {
+        $user = $this->getUser();
+
+        $question = $questionsRepository->find($id);
+
+        $form = $this->createForm(AskQuestionsType::class, $question, ['method' => 'PUT',
+        ]);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $question->setQuestionIsResolved($question->getQuestionIsResolved());
+            $question->setQuestionAnswers($question->getQuestionAnswers());
+            $question->setQuestionAuthor($user->getUsername());
+            $question->setQuestionDate($question->getQuestionDate());
+
+            $question->setQuestionTitle($question->getQuestionTitle());
+            $question->setQuestionDescription($question->getQuestionDescription());
+            $question->setQuestionCode1($question->getQuestionCode1());
+            $question->setQuestionCode2($question->getQuestionCode2());
+            $question->setQuestionCode3($question->getQuestionCode3());
+            $question->setQuestionCode4($question->getQuestionCode4());
+            $question->setQuestionCode5($question->getQuestionCode5());
+
+            $em->persist($question);
+            $em->flush();
+
+            return $this->redirectToRoute("myProfile");
+        }
+
+        return $this->render(
+            'question/edit.html.twig',
+            [
+                "question" => $question,
+                "editQuestion" => $form->createView(),
+
+            ]
+        );
+    }
 }
