@@ -67,7 +67,7 @@ class QuestionController extends AbstractController
             if ($form->isSubmitted() && $form->isValid()) {
                 $question->setQuestionIsResolved(0);
                 $question->setQuestionAnswers(0);
-//                $question->setQuestionLikes(0);
+                //                $question->setQuestionLikes(0);
                 $question->setQuestionAuthor($user->getUsername());
                 $question->setQuestionDate(new \DateTime());
                 $em->persist($question);
