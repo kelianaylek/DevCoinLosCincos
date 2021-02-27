@@ -152,7 +152,7 @@
 
                         {% if answer.getAnswerAuthor() == app.user.username%}
                             <a href="{{ path('edit_answer', {'id': answer.getId() }) }}">Edit</a>
-                            <a href="{{ path('delete_answer', {'id': answer.getId() }) }}">Delete</a>
+                            <a href="{{ path('delete_answer', {'id': answer.getId(), "question": question.getId() }) }}">Delete</a>
 
                         {% endif %}
 
@@ -278,15 +278,22 @@
         </code></pre>
         </div> #}
 
-        <section class="blockResponse">
+        {% if question.getQuestionIsResolved() == false %}
+            <section class="blockResponse">
 
-            {{ render(controller(
-                'App\\Controller\\AnswersController::create', {id: question.getId()}
-            ), {'request' : app.request}) }}
+                {{ render(controller(
+                    'App\\Controller\\AnswersController::create', {id: question.getId()}
+                ), {'request' : app.request}) }}
 
-{#            {{ render(path('test', {id: question.getId()})) }}#}
+                {#            {{ render(path('test', {id: question.getId()})) }}#}
 
-        </section>
+            </section>
+        {% else %}
+            <p>Cette question est déjà résolue</p>
+        {% endif %}
+
+
+
 
     </main>
 {% endblock %}

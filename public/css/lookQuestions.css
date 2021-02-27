@@ -134,8 +134,11 @@ main .allQuestions {
     margin-right: 20px;
 }
 
-.allQuestions section .footerProblem>div:first-child div:first-child {
+.allQuestions section .footerProblem>div:first-child .fa-check-circle {
     color: var(--green-color);
+}
+.allQuestions section .footerProblem>div:first-child .fa-times {
+    color: var(--red-color);
 }
 
 .allQuestions section .footerProblem>div:first-child div:last-child {

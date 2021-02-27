@@ -268,13 +268,20 @@
                             <a href=""><i class="fas fa-comment"></i></a>
                             <p>{{ question.getQuestionAnswers() }}</p>
                         </div>
-                        <div class="resolu">
-                            <p>{{ question.getQuestionIsResolved() }}</p>
-                            <a href=""><i class="fas fa-check-circle"></i></a>
-                        </div>
+{#                        <div class="resolu">#}
+{#                            <p>{{ question.getQuestionIsResolved() }}</p>#}
+{#                            <a href=""><i class="fas fa-check-circle"></i></a>#}
+{#                        </div>#}
                         <div>
                             <p><a href="">Editer</a>
                             </p>
+                        </div>
+                        <div>
+                            {% if question.getQuestionIsResolved() == false %}
+                                <a href="{{ path('question_is_resolved', {'id': question.getId() }) }}">Marquer comme résolue</a>
+                            {% else %}
+                                <a href="{{ path('question_is_resolved', {'id': question.getId() }) }}">Marquer comme non résolue</a>
+                            {% endif %}
                         </div>
                     </div>
 
@@ -299,12 +306,20 @@
                             <a href=""><i class="fas fa-comment"></i></a>
                             <p>{{ question.getQuestionAnswers() }}</p>
                         </div>
-                        <div class="resolu">
-                            <p>{{ question.getQuestionIsResolved() }}</p>
-                            <a href=""><i class="fas fa-check-circle"></i></a>
-                        </div>
+{#                        <div class="resolu">#}
+{#                            <p>{{ question.getQuestionIsResolved() }}</p>#}
+{#                            <a href=""><i class="fas fa-check-circle"></i></a>#}
+{#                        </div>#}
                         <div>
                             <a href="{{ path('question_edit', {'id': question.getId() }) }}">Editer</a>
+                        </div>
+
+                        <div>
+                            {% if question.getQuestionIsResolved() == false %}
+                                <a href="{{ path('question_is_resolved', {'id': question.getId() }) }}">Marquer comme résolue</a>
+                            {% else %}
+                                <a href="{{ path('question_is_resolved', {'id': question.getId() }) }}">Marquer comme non résolue</a>
+                            {% endif %}
                         </div>
                     </div>
 

@@ -58,11 +58,21 @@ class AnswersController extends AbstractController
     }
 
     /**
-     * @Route("answer/delete/{id}", name="delete_answer")
+     * @Route("answer/delete/{question}/{id}", name="delete_answer")
      */
-    public function delete(RequestStack $requestStack, AnswersRepository $answerRepository, $id,  EntityManagerInterface $em): Response
+    public function delete(Request $request, $question, RequestStack $requestStack, QuestionsRepository $questionsRepository, AnswersRepository $answerRepository, $id,  EntityManagerInterface $em): Response
     {
         $answer = $answerRepository->find($id);
+
+        $question = $questionsRepository->find($question);
+
+        $form = $this->createForm(AskQuestionsType::class, $question, ['method' => 'PUT',
+        ]);
+        $form->handleRequest($request);
+        $question->setQuestionAnswers($question->getQuestionAnswers() - 1);
+        $em->persist($question);
+        $em->flush();
+
         $em->remove($answer);
         $em->flush();
 

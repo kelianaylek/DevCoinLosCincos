@@ -125,4 +125,35 @@ class QuestionController extends AbstractController
             ]
         );
     }
+
+
+    /**
+     * @Route("question/isResolved/{id}", name="question_is_resolved")
+     */
+    public function isResolved(Request $request, EntityManagerInterface $em, QuestionsRepository $questionsRepository, $id): Response
+    {
+        $question = $questionsRepository->find($id);
+
+        if($question->getQuestionIsResolved() ==  false){
+            $form = $this->createForm(AskQuestionsType::class, $question, ['method' => 'PUT',
+            ]);
+            $form->handleRequest($request);
+            $question->setQuestionIsResolved(true);
+            $em->persist($question);
+            $em->flush();
+            return $this->redirectToRoute("myProfile");
+        }
+
+        else{
+            $form = $this->createForm(AskQuestionsType::class, $question, ['method' => 'PUT',
+            ]);
+            $form->handleRequest($request);
+            $question->setQuestionIsResolved(false);
+            $em->persist($question);
+            $em->flush();
+            return $this->redirectToRoute("myProfile");
+        }
+
+
+    }
 }
