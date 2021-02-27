@@ -23,7 +23,7 @@
                         <p>{{ question.getQuestionTitle() }}</p>
                     </div>
                     <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
-                    <a href="{{ path('profile') }}">
+                    <a href="{{ path('profile', {'user': question.getQuestionAuthor() }) }}">
                         <p>{{ question.getQuestionAuthor() }}</p>
                     </a>
                     <div>
@@ -101,7 +101,7 @@
             <div class="introBlockQuestion">
                 <div>
                     <p>{{ question.getQuestionTitle() }}</p>
-                    <a href="{{ path('profile') }}">
+                    <a href="{{ path('profile', {'user': question.getQuestionAuthor() }) }}">
                         <p>{{ question.getQuestionAuthor() }}</p>
                     </a>
                 </div>
@@ -144,7 +144,7 @@
                 <div class="introBlockQuestion">
                     <div>
                         <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
-                        <a href="{{ path('profile') }}">
+                        <a href="{{ path('profile', {'user': answer.getAnswerAuthor() }) }}">
                             <p>{{ answer.getAnswerAuthor() }}</p>
                         </a>
                         <p>Re : {{ answer.getAnswerTitle() }}</p>
@@ -215,7 +215,7 @@
                 <div class="introBlockQuestion">
                     <div>
                         <p>Re : {{ answer.getAnswerTitle() }}</p>
-                        <a href="{{ path('profile') }}">
+                        <a href="{{ path('profile', {'user': answer.getAnswerAuthor() }) }}">
                             <p>{{ answer.getAnswerAuthor() }}</p>
                         </a>
                     </div>

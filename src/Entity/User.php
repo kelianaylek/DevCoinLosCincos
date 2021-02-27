@@ -54,6 +54,21 @@ class User implements UserInterface
      */
     private $roles;
 
+    /**
+     * @ORM\Column(type="string", length=1000, nullable=true)
+     */
+    private $status;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $study_year;
+
+    /**
+     * @ORM\Column(type="string", length=20, nullable=true)
+     */
+    private $discord_tag;
+
     public function __construct()
     {
         $this->roles = array('ROLE_USER');
@@ -113,5 +128,41 @@ class User implements UserInterface
 
     public function eraseCredentials()
     {
+    }
+
+    public function getStatus(): ?string
+    {
+        return $this->status;
+    }
+
+    public function setStatus(?string $status): self
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    public function getStudyYear(): ?int
+    {
+        return $this->study_year;
+    }
+
+    public function setStudyYear(?int $study_year): self
+    {
+        $this->study_year = $study_year;
+
+        return $this;
+    }
+
+    public function getDiscordTag(): ?string
+    {
+        return $this->discord_tag;
+    }
+
+    public function setDiscordTag(?string $discord_tag): self
+    {
+        $this->discord_tag = $discord_tag;
+
+        return $this;
     }
 }

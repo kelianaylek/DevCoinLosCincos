@@ -49,7 +49,7 @@
                                     <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionTitle() }}</a></p>
                                 </div>
                                 <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
-                                <a href="{{ path('profile') }}">{{ question.getQuestionAuthor() }}</a>
+                                <a href="{{ path('profile', {'user': question.getQuestionAuthor() }) }}">{{ question.getQuestionAuthor() }}</a>
 
                             </div>
                             <div>
@@ -59,7 +59,7 @@
                         <div class="informationsProblemMobile">
                             <div>
                                 <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionTitle() }}</a></p>
-                                <a href="{{ path('profile') }}">{{ question.getQuestionAuthor() }}</a>
+                                <a href="{{ path('profile', {'user': question.getQuestionAuthor() }) }}">{{ question.getQuestionAuthor() }}</a>
                             </div>
                             <div>
                                 <p>{{ question.getQuestionDate()|date("m/d/Y", "Europe/Paris") }}</p>

@@ -12,9 +12,9 @@
             </div>
 
             <div class="annee">
-                <p>Année d'étude: 4</p>
+                <p>Année d'étude: {{ app.user.getStudyYear() }}</p>
                 <div class="discord">
-                    <p>Discord</p>
+                    <p>Discord : {{ app.user.getDiscordTag() }}</p>
                     <a href=""><i class="fab fa-discord"></i></a>
                 </div>
                 <div class="compte">
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="buttonmobile">
-            <button>Modifier</button>
+            <a href="{{ path('edit_profile') }}">Modifier</a>
             <div class="darkMode">
                 <!-- bouton pour le dark mode -->
                 <button class="darkModeBtn">DARK MODE</button>
@@ -38,9 +38,9 @@
             </div>
             <div class="pseudo">{{ app.user.username }}</div>
             <div class="annee">
-                <p>Année d'étude: 4</p>
+                <p>Année d'étude: {{ app.user.getStudyYear() }}</p>
                 <div class="discord">
-                    <p>Discord</p>
+                    <p>Discord : {{ app.user.getDiscordTag() }}</p>
                     <a href=""><i class="fab fa-discord"></i></a>
                 </div>
                 <div class="compte">
@@ -48,7 +48,7 @@
                     <a href=""><i class="fas fa-user-check"></i></a>
                 </div>
             </div>
-            <button>Modifier</button>
+            <a href="{{ path('edit_profile') }}">Modifier</a>
 
             <!-- bouton pour le dark mode -->
 
@@ -59,8 +59,7 @@
             <section>
                 <div class="propos">
                     <p class="titreapropos">Statut :</p>
-                    <p class="moretexte">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
+                    <p class="moretexte">{{ app.user.getStatus() }}</p>
                     <a href=""><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>
 
                 </div>
@@ -290,7 +289,7 @@
 
                     <div class="flex">
                         <div class="probleme">
-                            <p><a href="question.html">{{ question.getQuestionTitle() }}</a></p>
+                            <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionTitle() }}</a></p>
                         </div>
                         <div class="like">
                             <a href=""><i class="fas fa-comment"></i></a>
