@@ -149,6 +149,13 @@
                         </a>
                         <p>Re : {{ answer.getAnswerTitle() }}</p>
                         <p>{{ answer.getAnswerDate()|date("m/d/Y", "Europe/Paris") }}</p>
+
+                        {% if answer.getAnswerAuthor() == app.user.username%}
+                            <a href="{{ path('edit_answer', {'id': answer.getId() }) }}">Edit</a>
+                            <a href="{{ path('delete_answer', {'id': answer.getId() }) }}">Delete</a>
+
+                        {% endif %}
+
                     </div>
                     <div>
 {#                        <p>{{ answer.getAnswerLikes() }}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>#}

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Answers;
 use App\Form\AnswersType;
+use App\Form\AskQuestionsType;
 use App\Repository\AnswersRepository;
 use App\Repository\QuestionsRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -16,15 +17,6 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class AnswersController extends AbstractController
 {
-//    /**
-//     * @Route("question/{id}", name="question", defaults={"id" = 0})
-//     */
-//    public function index(): Response
-//    {
-//        return $this->render('answers/index.html.twig', [
-//            'controller_name' => 'AnswersController',
-//        ]);
-//    }
 
     /**
      * @Route("answer/{id}", name="test", defaults={"id" = 0})
@@ -63,5 +55,56 @@ class AnswersController extends AbstractController
 
             ]
         );
+    }
+
+    /**
+     * @Route("answer/delete/{id}", name="delete_answer")
+     */
+    public function delete(RequestStack $requestStack, AnswersRepository $answerRepository, $id,  EntityManagerInterface $em): Response
+    {
+        $answer = $answerRepository->find($id);
+        $em->remove($answer);
+        $em->flush();
+
+        return $this->redirectToRoute("look_questions");
+
+    }
+
+    /**
+     * @Route("answer/edit/{id}", name="edit_answer")
+     */
+    public function edit(Request $request, AnswersRepository $answerRepository, $id,  EntityManagerInterface $em): Response
+    {
+        $answer = $answerRepository->find($id);
+
+
+        $form = $this->createForm(AnswersType::class, $answer, ['method' => 'PUT',
+        ]);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $answer->setAnswerDescription($answer->getAnswerDescription());
+            $answer->setAnswerCode1($answer->getAnswerCode1());
+            $answer->setAnswerCode2($answer->getAnswerCode2());
+            $answer->setAnswerCode3($answer->getAnswerCode3());
+            $answer->setAnswerCode4($answer->getAnswerCode4());
+            $answer->setAnswerCode5($answer->getAnswerCode5());
+
+            $em->persist($answer);
+            $em->flush();
+
+            return $this->redirectToRoute("look_questions");
+        }
+
+        return $this->render(
+            'answers/edit.html.twig',
+            [
+                "question" => $answer,
+                "editAnswer" => $form->createView(),
+
+            ]
+        );
+
     }
 }

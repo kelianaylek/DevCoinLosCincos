@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b11a15d-53c7-45d6-86e3-902399a3cb4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/question/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/answers/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/QuestionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile/myProfile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/myProfile.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AnswersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AnswersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/question/question.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/question/question.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +151,7 @@
       <workItem from="1614249256557" duration="2148000" />
       <workItem from="1614267477962" duration="9100000" />
       <workItem from="1614349311070" duration="5967000" />
-      <workItem from="1614422180954" duration="6900000" />
+      <workItem from="1614422180954" duration="9128000" />
     </task>
     <servers />
   </component>
@@ -170,5 +169,20 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/src/Controller/AnswersController.php</url>
+          <line>23</line>
+          <properties>
+            <option name="className" value="\App\Controller\AnswersController" />
+            <option name="methodName" value="create" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
