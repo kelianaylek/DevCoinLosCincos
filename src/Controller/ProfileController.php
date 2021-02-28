@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\ProfileType;
 use App\Repository\QuestionsRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,9 +34,11 @@ class ProfileController extends AbstractController
     /**
      * @Route("/profile/{user}", name="profile")
      */
-    public function showProfile($user, QuestionsRepository $questionsRepository): Response
+    public function showProfile(UserRepository $userRepository, $user, QuestionsRepository $questionsRepository): Response
     {
         $questions = $questionsRepository->findUserQuestions($user);
+        $user = $userRepository->findUserByName($user);
+        $user = $user[0];
 
         return $this->render('profile/profile.html.twig', [
             "user" => $user,
@@ -64,6 +67,8 @@ class ProfileController extends AbstractController
             $user->setStudyYear($user->getStudyYear());
             $user->setDiscordTag($user->getDiscordTag());
 
+//            $user->setImage($user->getImage());
+//            dd($user->getImage());
 
             $em->persist($user);
             $em->flush();

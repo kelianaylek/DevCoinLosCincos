@@ -69,6 +69,11 @@ class User implements UserInterface
      */
     private $discord_tag;
 
+//    /**
+//     * @ORM\Column(type="string", length=100, nullable=true)
+//     */
+//    private $image;
+
     public function __construct()
     {
         $this->roles = array('ROLE_USER');
@@ -165,4 +170,14 @@ class User implements UserInterface
 
         return $this;
     }
+
+//    public function setImage(File $file = null)
+//    {
+//        $this->image = $file;
+//    }
+//
+//    public function getImage()
+//    {
+//        return $this->image;
+//    }
 }

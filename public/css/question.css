@@ -70,7 +70,7 @@
 }
 
 .blockQuestion .introBlockQuestion div:last-child {
-    color: var(--red-color);
+    /*color: var(--red-color);*/
 }
 
 .blockAnswers .introBlockQuestion div:last-child {
