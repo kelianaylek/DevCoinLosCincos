@@ -3,40 +3,41 @@
 {% block title %}Devcoin{% endblock %}
 
 {% block body %}
+
     <main class="mainLookQuestions container">
         <section class="filters">
             <h3>Filtres</h3>
             <hr>
             <div>
-                <p>Les plus récents</p>
-                <input type="checkbox" checked="checked">
+                <a href="{{ path('look_questions') }}">Les plus récents</a>
             </div>
             <div>
-                <p>Les plus populaires</p>
-                <input type="checkbox">
+                <a href="{{ path('look_questions_most_answered') }}">Les plus répondues</a>
             </div>
             <div>
-                <p>Non résolus</p>
-                <input type="checkbox">
+                <a href="{{ path('look_questions_unresolved') }}">Non résolues</a>
+            </div>
+            <div>
+                <a href="{{ path('look_questions_resolved') }}">Résolues</a>
             </div>
             <hr>
-            <h4>Langages</h4>
-            <div>
-                <p>HTML</p>
-                <input type="checkbox">
-            </div>
-            <div>
-                <p>CSS</p>
-                <input type="checkbox">
-            </div>
-            <div>
-                <p>Javascript</p>
-                <input type="checkbox">
-            </div>
-            <div>
-                <p>PHP</p>
-                <input type="checkbox">
-            </div>
+{#            <h4>Langages</h4>#}
+{#            <div>#}
+{#                <p>HTML</p>#}
+{#                <input type="radio" id="" name="filter">#}
+{#            </div>#}
+{#            <div>#}
+{#                <p>CSS</p>#}
+{#                <input type="radio" id="" name="filter">#}
+{#            </div>#}
+{#            <div>#}
+{#                <p>Javascript</p>#}
+{#                <input type="radio" id="" name="filter">#}
+{#            </div>#}
+{#            <div>#}
+{#                <p>PHP</p>#}
+{#                <input type="radio" id="" name="filter">#}
+{#            </div>#}
         </section>
 
         <article class="allQuestions">

@@ -57,4 +57,31 @@ class QuestionsRepository extends ServiceEntityRepository
             ->getResult()
             ;
     }
+
+    public function findMostAnsweredQuestions()
+    {
+        return $this->createQueryBuilder('q')
+            ->orderBy('q.question_answers', 'ASC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+    public function findUnresolvedQuestions()
+    {
+        return $this->createQueryBuilder('q')
+            ->andWhere('q.question_is_resolved = false')
+            ->orderBy('q.question_date', 'ASC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+    public function findResolvedQuestions()
+    {
+        return $this->createQueryBuilder('q')
+            ->andWhere('q.question_is_resolved = true')
+            ->orderBy('q.question_date', 'ASC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

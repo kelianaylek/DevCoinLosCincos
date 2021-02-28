@@ -24,9 +24,34 @@ class QuestionController extends AbstractController
      */
     public function index(QuestionsRepository $questionsRepository): Response
     {
-
         $questions = $questionsRepository->findAll();
+        return $this->render('look_questions/look_questions.html.twig', compact("questions"));
+    }
 
+    /**
+     * @Route("/look_questions/mostAnswered", name="look_questions_most_answered")
+     */
+    public function mostAnswered(QuestionsRepository $questionsRepository): Response
+    {
+        $questions = $questionsRepository->findMostAnsweredQuestions();
+        return $this->render('look_questions/look_questions.html.twig', compact("questions"));
+    }
+
+    /**
+     * @Route("/look_questions/unresolved", name="look_questions_unresolved")
+     */
+    public function unresolved(QuestionsRepository $questionsRepository): Response
+    {
+        $questions = $questionsRepository->findUnresolvedQuestions();
+        return $this->render('look_questions/look_questions.html.twig', compact("questions"));
+    }
+
+    /**
+     * @Route("/look_questions/resolved", name="look_questions_resolved")
+     */
+    public function resolved(QuestionsRepository $questionsRepository): Response
+    {
+        $questions = $questionsRepository->findResolvedQuestions();
         return $this->render('look_questions/look_questions.html.twig', compact("questions"));
     }
 
@@ -125,7 +150,6 @@ class QuestionController extends AbstractController
             ]
         );
     }
-
 
     /**
      * @Route("question/isResolved/{id}", name="question_is_resolved")
