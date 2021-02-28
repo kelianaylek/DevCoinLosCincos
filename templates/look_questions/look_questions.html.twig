@@ -42,7 +42,7 @@
 
         <article class="allQuestions">
             {% if questions|length > 0 %}
-                {% for question in questions|sort((b, a) => a.id <=> b.id) %}
+                {% for question in questions %}
                     <section>
                         <div class="informationsProblem">
                             <div>
@@ -50,7 +50,6 @@
                                     <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionTitle() }}</a></p>
                                 </div>
                                 {% set hasImage = false %}
-
                                 {% for author in authors %}
                                     {% if (question.getQuestionAuthor() == author.getUsername) and (hasImage != true) %}
                                         {% set hasImage = true %}

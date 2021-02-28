@@ -61,7 +61,15 @@ class QuestionsRepository extends ServiceEntityRepository
     public function findMostAnsweredQuestions()
     {
         return $this->createQueryBuilder('q')
-            ->orderBy('q.question_answers', 'ASC')
+            ->orderBy('q.question_answers', 'DESC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+    public function findByDate()
+    {
+        return $this->createQueryBuilder('q')
+            ->orderBy('q.question_date', 'DESC')
             ->getQuery()
             ->getResult()
             ;

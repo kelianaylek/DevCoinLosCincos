@@ -25,7 +25,7 @@ class QuestionController extends AbstractController
      */
     public function index(UserRepository $userRepository, QuestionsRepository $questionsRepository): Response
     {
-        $questions = $questionsRepository->findAll();
+        $questions = $questionsRepository->findByDate();
         $authors = [];
         foreach ($questions as $question)
         {
