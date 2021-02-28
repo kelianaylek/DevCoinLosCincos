@@ -8,9 +8,12 @@ use App\Repository\QuestionsRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
+
 
 class ProfileController extends AbstractController
 {
@@ -50,7 +53,7 @@ class ProfileController extends AbstractController
     /**
      * @Route("/profile_edit", name="edit_profile")
      */
-    public function edit(Request $request, EntityManagerInterface $em): Response
+    public function edit(SluggerInterface $slugger,Request $request, EntityManagerInterface $em): Response
     {
         $user = $this->getUser();
 
@@ -67,8 +70,30 @@ class ProfileController extends AbstractController
             $user->setStudyYear($user->getStudyYear());
             $user->setDiscordTag($user->getDiscordTag());
 
-//            $user->setImage($user->getImage());
-//            dd($user->getImage());
+            $imageFile = $form->get('image')->getData();
+
+            if ($imageFile) {
+                $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$imageFile->guessExtension();
+
+                // Move the file to the directory where brochures are stored
+                try {
+                    $imageFile->move(
+                        $this->getParameter('profile'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... handle exception if something happens during file upload
+                }
+
+                // updates the 'brochureFilename' property to store the PDF file name
+                // instead of its contents
+                $user->setImage($newFilename);
+            }
+
+//            $user->setImage($form->get('image')->getData("filename"));
 
             $em->persist($user);
             $em->flush();

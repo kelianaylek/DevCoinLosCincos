@@ -49,7 +49,15 @@
                                 <div>
                                     <p><a href="{{ path('question', {'id': question.getId() }) }}">{{ question.getQuestionTitle() }}</a></p>
                                 </div>
-                                <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                                {% set hasImage = false %}
+
+                                {% for author in authors %}
+                                    {% if (question.getQuestionAuthor() == author.getUsername) and (hasImage != true) %}
+                                        {% set hasImage = true %}
+                                        <img src="{{ asset('img/profile/' ~ author.getImage()) }}" alt="">
+                                    {% endif %}
+                                {% endfor %}
+
                                 <a href="{{ path('profile', {'user': question.getQuestionAuthor() }) }}">{{ question.getQuestionAuthor() }}</a>
 
                             </div>

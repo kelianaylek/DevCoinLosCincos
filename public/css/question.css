@@ -72,6 +72,10 @@
 .blockQuestion .introBlockQuestion div:last-child {
     /*color: var(--red-color);*/
 }
+.blockQuestion .introBlockQuestion div:last-child img{
+    width: 100px;
+    height: 100px;
+}
 
 .blockAnswers .introBlockQuestion div:last-child {
     color: var(--blue-color);
@@ -89,6 +93,12 @@
 
 .introBlockQuestion>div:first-child i {
     margin: 0px 5px;
+}
+.introBlockQuestion>div:first-child .fa-times {
+    color: var(--red-color);
+}
+.introBlockQuestion>div:first-child .fa-check-circle {
+    color: var(--green-color);
 }
 
 .descriptionBlockQuestion {

@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Serializable;
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -69,10 +71,10 @@ class User implements UserInterface
      */
     private $discord_tag;
 
-//    /**
-//     * @ORM\Column(type="string", length=100, nullable=true)
-//     */
-//    private $image;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $image;
 
     public function __construct()
     {
@@ -171,13 +173,32 @@ class User implements UserInterface
         return $this;
     }
 
-//    public function setImage(File $file = null)
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+//    public function serialize(): array
 //    {
-//        $this->image = $file;
+//        return [
+//            'id' => $this->id,
+//            'image' => $this->image,
+//            //......
+//        ];
 //    }
-//
-//    public function getImage()
+
+//    public function __unserialize(array $serialized): User
 //    {
-//        return $this->image;
+//        $this->id = $serialized['id'];
+//        $this->image = $serialized['image'];
+//        // .....
+//        return $this;
 //    }
 }

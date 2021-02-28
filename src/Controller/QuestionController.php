@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Questions;
 use App\Form\AskQuestionsType;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,54 +23,96 @@ class QuestionController extends AbstractController
     /**
      * @Route("/look_questions", name="look_questions")
      */
-    public function index(QuestionsRepository $questionsRepository): Response
+    public function index(UserRepository $userRepository, QuestionsRepository $questionsRepository): Response
     {
         $questions = $questionsRepository->findAll();
-        return $this->render('look_questions/look_questions.html.twig', compact("questions"));
+        $authors = [];
+        foreach ($questions as $question)
+        {
+            $author = $question->getQuestionAuthor();
+            $author = $userRepository->findUserByName($author);
+            $author = $author[0];
+            array_push($authors, $author);
+
+        }
+
+
+        return $this->render('look_questions/look_questions.html.twig', compact("questions", "authors"));
     }
 
     /**
      * @Route("/look_questions/mostAnswered", name="look_questions_most_answered")
      */
-    public function mostAnswered(QuestionsRepository $questionsRepository): Response
+    public function mostAnswered(UserRepository $userRepository, QuestionsRepository $questionsRepository): Response
     {
         $questions = $questionsRepository->findMostAnsweredQuestions();
-        return $this->render('look_questions/look_questions.html.twig', compact("questions"));
+        $authors = [];
+        foreach ($questions as $question)
+        {
+            $author = $question->getQuestionAuthor();
+            $author = $userRepository->findUserByName($author);
+            $author = $author[0];
+            array_push($authors, $author);
+
+        }
+        return $this->render('look_questions/look_questions.html.twig', compact("questions", "authors"));
     }
 
     /**
      * @Route("/look_questions/unresolved", name="look_questions_unresolved")
      */
-    public function unresolved(QuestionsRepository $questionsRepository): Response
+    public function unresolved(UserRepository $userRepository, QuestionsRepository $questionsRepository): Response
     {
         $questions = $questionsRepository->findUnresolvedQuestions();
-        return $this->render('look_questions/look_questions.html.twig', compact("questions"));
+        $authors = [];
+        foreach ($questions as $question)
+        {
+            $author = $question->getQuestionAuthor();
+            $author = $userRepository->findUserByName($author);
+            $author = $author[0];
+            array_push($authors, $author);
+
+        }
+        return $this->render('look_questions/look_questions.html.twig', compact("questions", "authors"));
     }
 
     /**
      * @Route("/look_questions/resolved", name="look_questions_resolved")
      */
-    public function resolved(QuestionsRepository $questionsRepository): Response
+    public function resolved(UserRepository $userRepository, QuestionsRepository $questionsRepository): Response
     {
         $questions = $questionsRepository->findResolvedQuestions();
-        return $this->render('look_questions/look_questions.html.twig', compact("questions"));
+        $authors = [];
+        foreach ($questions as $question)
+        {
+            $author = $question->getQuestionAuthor();
+            $author = $userRepository->findUserByName($author);
+            $author = $author[0];
+            array_push($authors, $author);
+
+        }
+        return $this->render('look_questions/look_questions.html.twig', compact("questions", "authors"));
     }
 
 
     /**
      * @Route("question/{id}", name="question", defaults={"id" = 0})
      */
-    public function show(QuestionsRepository $questionsRepository, $id): Response
+    public function show(UserRepository $userRepository, QuestionsRepository $questionsRepository, $id): Response
     {
         $question = $questionsRepository->find($id);
         $answers = $question->getAnswers();
 
+        $author = $question->getQuestionAuthor();
+        $author = $userRepository->findUserByName($author);
+        $author = $author[0];
 
         return $this->render(
             'question/question.html.twig',
             [
                 "question" => $question,
                 "answers" => $answers,
+                "author" => $author,
             ]
         );
     }

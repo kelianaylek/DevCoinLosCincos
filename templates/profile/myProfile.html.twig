@@ -7,6 +7,8 @@
         <div class="partleftmobile">
             <div class="pseudocercle">
                 <div id="cercle">
+                    <img src="{{ asset('img/profile/' ~ user.getImage()) }}" alt="">
+
                 </div>
                 <p>{{ app.user.username }}</p>
             </div>
@@ -34,7 +36,7 @@
 
         <div class="Partleft">
             <div id="cercle">
-
+                <img src="{{ asset('img/profile/' ~ user.getImage()) }}" alt="">
             </div>
             <div class="pseudo">{{ app.user.username }}</div>
             <div class="annee">

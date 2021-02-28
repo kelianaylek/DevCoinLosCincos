@@ -110,6 +110,10 @@ main .allQuestions {
     display: flex;
     align-items: center;
 }
+.allQuestions section .informationsProblem div img{
+    width: 100px;
+    height: 100px;
+}
 
 .allQuestions section .informationsProblem div p:nth-child(2) {
     padding: 0 20px;

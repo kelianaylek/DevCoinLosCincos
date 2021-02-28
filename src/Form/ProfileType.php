@@ -28,7 +28,7 @@ class ProfileType extends AbstractType
             ->add('status')
             ->add('study_year')
             ->add('discord_tag')
-//            ->add('image', FileType::class)
+            ->add('image', FileType::class, array('data_class' => null,'required' => false))
             ->add("envoyer", SubmitType::class);
 
         ;

@@ -22,13 +22,19 @@
                     <div>
                         <p>{{ question.getQuestionTitle() }}</p>
                     </div>
-                    <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                    {% if author.getImage() is not null %}
+                        <img src="{{ asset('img/profile/' ~ author.getImage()) }}" alt="">
+                    {% endif %}
+
                     <a href="{{ path('profile', {'user': question.getQuestionAuthor() }) }}">
                         <p>{{ question.getQuestionAuthor() }}</p>
                     </a>
                     <div>
-                        <p>{{ question.getQuestionIsResolved()}}</p>
-                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        {% if question.getQuestionIsResolved() == false %}
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        {% else %}
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        {% endif %}
                     </div>
                     <div>
                         <i class="fa fa-comment" aria-hidden="true"></i>
@@ -109,9 +115,11 @@
                 <div>
                     <p>{{ question.getQuestionDate()|date("m/d/Y", "Europe/Paris")}}</p>
                     <div>
-                        <p>{{ question.getQuestionIsResolved() }}<i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </p>
-                    </div>
+                        {% if question.getQuestionIsResolved() == false %}
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        {% else %}
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        {% endif %}                    </div>
 {#                    <div>#}
 {#                        <i class="fa fa-html5" aria-hidden="true"></i>#}
 {#                        <i class="fa fa-css3" aria-hidden="true"></i>#}
