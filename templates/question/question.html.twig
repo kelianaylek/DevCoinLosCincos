@@ -151,7 +151,15 @@
                  <section class="blockAnswers">
                 <div class="introBlockQuestion">
                     <div>
-                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+
+                        {% set hasImage = false %}
+                        {% for author in authors %}
+                            {% if (answer.getAnswerAuthor() == author.getUsername) and (hasImage != true) %}
+                                {% set hasImage = true %}
+                                <img src="{{ asset('img/profile/' ~ author.getImage()) }}" alt="">
+                            {% endif %}
+                        {% endfor %}
+
                         <a href="{{ path('profile', {'user': answer.getAnswerAuthor() }) }}">
                             <p>{{ answer.getAnswerAuthor() }}</p>
                         </a>

@@ -32,6 +32,11 @@
     align-items: center;
 }
 
+.blockAnswers .introBlockQuestion img{
+    width: 100px;
+    height: 100px;
+}
+
 .blockQuestion .introBlockQuestion div:first-child>div:first-child,
 .blockAnswers .introBlockQuestion div:first-child>div:first-child {
     background-color: var(--black-color);

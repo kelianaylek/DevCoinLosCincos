@@ -36,7 +36,6 @@ class QuestionController extends AbstractController
 
         }
 
-
         return $this->render('look_questions/look_questions.html.twig', compact("questions", "authors"));
     }
 
@@ -107,12 +106,23 @@ class QuestionController extends AbstractController
         $author = $userRepository->findUserByName($author);
         $author = $author[0];
 
+        $authors = [];
+        foreach ($answers as $answer)
+        {
+            $author = $answer->getAnswerAuthor();
+            $author = $userRepository->findUserByName($author);
+            $author = $author[0];
+            array_push($authors, $author);
+
+        }
+
         return $this->render(
             'question/question.html.twig',
             [
                 "question" => $question,
                 "answers" => $answers,
                 "author" => $author,
+                "authors" => $authors,
             ]
         );
     }
