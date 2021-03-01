@@ -93,7 +93,6 @@ class QuestionController extends AbstractController
         return $this->render('look_questions/look_questions.html.twig', compact("questions", "authors"));
     }
 
-
     /**
      * @Route("question/{id}", name="question", defaults={"id" = 0})
      */

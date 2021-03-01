@@ -167,8 +167,8 @@
                         <p>{{ answer.getAnswerDate()|date("m/d/Y", "Europe/Paris") }}</p>
 
                         {% if answer.getAnswerAuthor() == app.user.username%}
-                            <a href="{{ path('edit_answer', {'id': answer.getId() }) }}">Edit</a>
-                            <a href="{{ path('delete_answer', {'id': answer.getId(), "question": question.getId() }) }}">Delete</a>
+                            <a href="{{ path('edit_answer', {'id': answer.getId(), "questionId": question.getId() }) }}">Edit</a>
+                            <a href="{{ path('delete_answer', {'id': answer.getId(), "questionId": question.getId() }) }}">Delete</a>
 
                         {% endif %}
 
@@ -229,8 +229,6 @@
 
         </article>
 
-
-
         <article>
          {% if answers|length > 0 %}
             {% for answer in answers %}
@@ -245,7 +243,13 @@
                     <div>
                         <p>{{ answer.getAnswerDate()|date("m/d/Y", "Europe/Paris") }}</p>
 {#                        <p>{{ answer.getAnswerLikes() }}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>#}
+                        {% if answer.getAnswerAuthor() == app.user.username%}
+                            <a href="{{ path('edit_answer', {'id': answer.getId(), "questionId": question.getId() }) }}">Edit</a>
+                            <a href="{{ path('delete_answer', {'id': answer.getId(), "questionId": question.getId() }) }}">Delete</a>
+
+                        {% endif %}
                     </div>
+
                 </div>
 
                 <div class="descriptionBlockQuestion">
@@ -305,7 +309,7 @@
 
             </section>
         {% else %}
-            <p>Cette question est déjà résolue</p>
+            <p>Cette question est déjà résolue.</p>
         {% endif %}
 
 

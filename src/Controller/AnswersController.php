@@ -43,8 +43,9 @@ class AnswersController extends AbstractController
             $em->persist($answer);
             $em->flush();
 
-            return $this->redirectToRoute("look_questions");
+//            return $this->redirectToRoute("look_questions");
 //            return $this->redirect($request->getUri());
+            return $this->redirectToRoute('question', ['id' => $id]);
 
         }
 
@@ -58,13 +59,13 @@ class AnswersController extends AbstractController
     }
 
     /**
-     * @Route("answer/delete/{question}/{id}", name="delete_answer")
+     * @Route("answer/delete/{questionId}/{id}", name="delete_answer")
      */
-    public function delete(Request $request, $question, RequestStack $requestStack, QuestionsRepository $questionsRepository, AnswersRepository $answerRepository, $id,  EntityManagerInterface $em): Response
+    public function delete(Request $request, $questionId, RequestStack $requestStack, QuestionsRepository $questionsRepository, AnswersRepository $answerRepository, $id,  EntityManagerInterface $em): Response
     {
         $answer = $answerRepository->find($id);
 
-        $question = $questionsRepository->find($question);
+        $question = $questionsRepository->find($questionId);
 
         $form = $this->createForm(AskQuestionsType::class, $question, ['method' => 'PUT',
         ]);
@@ -76,14 +77,14 @@ class AnswersController extends AbstractController
         $em->remove($answer);
         $em->flush();
 
-        return $this->redirectToRoute("look_questions");
+        return $this->redirectToRoute('question', ['id' => $questionId]);
 
     }
 
     /**
-     * @Route("answer/edit/{id}", name="edit_answer")
+     * @Route("answer/edit/{questionId}/{id}", name="edit_answer")
      */
-    public function edit(Request $request, AnswersRepository $answerRepository, $id,  EntityManagerInterface $em): Response
+    public function edit(Request $request, $questionId, AnswersRepository $answerRepository, $id,  EntityManagerInterface $em): Response
     {
         $answer = $answerRepository->find($id);
 
@@ -104,7 +105,7 @@ class AnswersController extends AbstractController
             $em->persist($answer);
             $em->flush();
 
-            return $this->redirectToRoute("look_questions");
+            return $this->redirectToRoute('question', ['id' => $questionId]);
         }
 
         return $this->render(
