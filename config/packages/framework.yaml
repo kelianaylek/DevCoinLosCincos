@@ -15,3 +15,8 @@ framework:
     #fragments: true
     php_errors:
         log: true
+
+#    esi: { enabled: true }
+#    fragments: { path: /_fragment }
+
+#    fragments: { path: '/_fragment/question/{id}' }

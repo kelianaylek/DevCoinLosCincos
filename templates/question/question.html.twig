@@ -22,8 +22,8 @@
                     <div>
                         <p>{{ question.getQuestionTitle() }}</p>
                     </div>
-                    {% if author.getImage() is not null %}
-                        <img src="{{ asset('img/profile/' ~ author.getImage()) }}" alt="">
+                    {% if questionAuthor.getImage() is not null %}
+                        <img src="{{ asset('img/profile/' ~ questionAuthor.getImage()) }}" alt="">
                     {% endif %}
 
                     <a href="{{ path('profile', {'user': question.getQuestionAuthor() }) }}">

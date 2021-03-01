@@ -51,7 +51,7 @@
                                 </div>
                                 {% set hasImage = false %}
                                 {% for author in authors %}
-                                    {% if (question.getQuestionAuthor() == author.getUsername) and (hasImage != true) %}
+                                    {% if (question.getQuestionAuthor() == author.getUsername) and (hasImage != true) and author.getImage() != null %}
                                         {% set hasImage = true %}
                                         <img src="{{ asset('img/profile/' ~ author.getImage()) }}" alt="">
                                     {% endif %}

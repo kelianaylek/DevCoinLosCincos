@@ -29,7 +29,7 @@ class AnswersController extends AbstractController
 
 
         $answer = new Answers;
-        $form = $this->createForm(AnswersType::class, $answer);
+        $form = $this->createForm(AnswersType::class, $answer, array('action' => $this->generateUrl('question', ['id' => $id])));
 
         $form->handleRequest($requestStack->getParentRequest());
 
@@ -45,7 +45,8 @@ class AnswersController extends AbstractController
 
 //            return $this->redirectToRoute("look_questions");
 //            return $this->redirect($request->getUri());
-            return $this->redirectToRoute('question', ['id' => $id]);
+//            return $this->redirectToRoute('question', ['id' => $id]);
+
 
         }
 

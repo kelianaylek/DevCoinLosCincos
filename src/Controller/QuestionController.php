@@ -98,12 +98,15 @@ class QuestionController extends AbstractController
      */
     public function show(UserRepository $userRepository, QuestionsRepository $questionsRepository, $id): Response
     {
+
         $question = $questionsRepository->find($id);
         $answers = $question->getAnswers();
 
         $author = $question->getQuestionAuthor();
         $author = $userRepository->findUserByName($author);
         $author = $author[0];
+
+        $questionAuthor = $author;
 
         $authors = [];
         foreach ($answers as $answer)
@@ -122,6 +125,7 @@ class QuestionController extends AbstractController
                 "answers" => $answers,
                 "author" => $author,
                 "authors" => $authors,
+                "questionAuthor" => $questionAuthor,
             ]
         );
     }
