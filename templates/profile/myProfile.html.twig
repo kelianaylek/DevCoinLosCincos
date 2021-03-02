@@ -66,7 +66,7 @@
 
                 </div>
             </section>
-{#            <div class="languagessuccesmobile">#}
+            <div class="languagessuccesmobile">
 {#                <section class="languagesmobile">#}
 {#                    <div>#}
 {#                        <p>Langages favoris: </p>#}
@@ -88,9 +88,9 @@
 {#                        </div>#}
 {#                    </div>#}
 {#                </section>#}
-{#                <section class="Succesmobile">#}
-{#                    <div>#}
-{#                        <p>Succès: </p>#}
+                <section class="Succesmobile">
+                    <div>
+                        <p>Succès: </p>
 {#                        <div class="trophy">#}
 {#                            <a href=""><i class="fas fa-trophy"></i></a>#}
 {#                            <p>42</p>#}
@@ -100,13 +100,13 @@
 {#                            <a href=""><i class="fas fa-heart"></i></a>#}
 {#                            <p>32</p>#}
 {#                        </div>#}
-{#                        <div class="comment">#}
-{#                            <a href=""><i class="fas fa-comment"></i></a>#}
-{#                            <p>68</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </section>#}
-{#            </div>#}
+                        <div class="comment">
+                            <a href=""><i class="fas fa-comment"></i></a>
+                            <p>{{ answersCount }}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
 {#            <section class="languages">#}
 {#                <div>#}
 {#                    <p>Langages favoris: </p>#}
@@ -126,9 +126,9 @@
 {#                    </div>#}
 {#                </div>#}
 {#            </section>#}
-{#            <section class="Succes">#}
-{#                <div>#}
-{#                    <p>Succès: </p>#}
+            <section class="Succes">
+                <div>
+                    <p>Succès: </p>
 {#                    <a href=""><i class="fas fa-trophy"></i></a>#}
 {#                    <p>42</p>#}
 
@@ -136,16 +136,15 @@
 {#                        <a href=""><i class="fas fa-heart"></i></a>#}
 {#                        <p>32</p>#}
 {#                    </div>#}
-{#                    <div class="comment">#}
-{#                        <a href=""><i class="fas fa-comment"></i></a>#}
-{#                        <p>68</p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </section>#}
-{#            <article>#}
-{#                <div class="hfmobile">#}
-{#                    <div class="hf">#}
-
+                    <div class="comment">
+                        <a href=""><i class="fas fa-comment"></i></a>
+                        <p>{{ answersCount }}</p>
+                    </div>
+                </div>
+            </section>
+            <article>
+                <div class="hfmobile">
+                    <div class="hf">
 
 {#                        <div class="defis">#}
 {#                            <ul>#}
@@ -169,19 +168,25 @@
 {#                                <p>75%</p>#}
 {#                            </div>#}
 {#                        </div>#}
-{#                        <div class="displayblock">#}
-{#                            <div class="badges">#}
-{#                                <p>Mes badges</p>#}
-{#                                <div class="groupicons">#}
-{#                                    <div class="icons">#}
-{#                                        <div>#}
+                        <div class="displayblock">
+                            <div class="badges">
+                                <p>Mes badges</p>
+                                <div class="groupicons">
+                                    <div class="icons">
+
+                                        {% if answersCount > 3  %}
+                                            <div>
+                                                <i class="fas fa-comment"></i>
+                                            </div>
+                                        {% endif %}
+
+                                        {#                                        <div>#}
 {#                                            <a href=""><i class="fa fa-shield fa-3x" aria-hidden="true"></i></a>#}
 {#                                        </div>#}
 {#                                        <div>#}
-{#                                            <a href=""><i class="fa fa-heart fa-3x" aria-hidden="true"></i>#}
-{#                                </i></a>#}
+{#                                            <a href=""><i class="fa fa-heart fa-3x" aria-hidden="true"></i></a>#}
 {#                                        </div>#}
-{#                                    </div>#}
+                                    </div>
 {#                                    <div class="icons2">#}
 {#                                        <div>#}
 {#                                            <a href=""><i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i></a>#}
@@ -190,16 +195,16 @@
 {#                                            <a href=""><i class="fa fa-question fa-3x" aria-hidden="true"></i></a>#}
 {#                                        </div>#}
 {#                                    </div>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
+                                </div>
+                            </div>
+                        </div>
 
-{#                    </div>#}
-{#                </div>#}
-{#            </article>#}
-{#            <article>#}
-{#                <div class="hfweb">#}
-{#                    <div class="hf">#}
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="hfweb">
+                    <div class="hf">
 {#                        <div class="parse">#}
 {#                            <div class="half-circle"></div>#}
 {#                            <div>#}
@@ -223,16 +228,21 @@
 {#                                </li>#}
 {#                            </ul>#}
 {#                        </div>#}
-{#                        <div class="badges">#}
-{#                            <p>Mes badges</p>#}
-{#                            <div class="icons">#}
+                        <div class="badges">
+                            <p>Mes badges</p>
+                            <div class="icons">
+                                {% if answersCount > 1  %}
+                                    <div>
+                                        <i class="fas fa-comment"></i>
+                                    </div>
+                                {% endif %}
 {#                                <div>#}
 {#                                    <a href=""><i class="fa fa-shield fa-3x" aria-hidden="true"></i></a>#}
 {#                                    <p>Sauveur</p>#}
 {#                                </div>#}
 {#                                <div>#}
 {#                                    <a href=""><i class="fa fa-heart fa-3x" aria-hidden="true"></i>#}
-{#                                </i></a>#}
+{#                                </a>#}
 {#                                    <p>Loveur</p>#}
 {#                                </div>#}
 
@@ -244,15 +254,15 @@
 {#                                    <a href=""><i class="fa fa-question fa-3x" aria-hidden="true"></i></a>#}
 {#                                    <p>Inspecteur</p>#}
 {#                                </div>#}
-{#                            </div>#}
+                            </div>
 
 
 
-{#                        </div>#}
+                        </div>
 
-{#                    </div>#}
-{#                </div>#}
-{#            </article>#}
+                    </div>
+                </div>
+            </article>
 
 
             <section class="mobileSesquestions">

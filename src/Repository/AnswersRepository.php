@@ -47,4 +47,14 @@ class AnswersRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findUserAnswers($value)
+    {
+        return $this->createQueryBuilder('q')
+            ->andWhere('q.answer_author = :val')
+            ->setParameter('val', $value)
+            ->orderBy('q.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

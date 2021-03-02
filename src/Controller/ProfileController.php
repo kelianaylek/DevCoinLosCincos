@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\ProfileType;
+use App\Repository\AnswersRepository;
 use App\Repository\QuestionsRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -20,7 +21,7 @@ class ProfileController extends AbstractController
     /**
      * @Route("/myProfile", name="myProfile")
      */
-    public function showMyProfile(QuestionsRepository $questionsRepository): Response
+    public function showMyProfile(AnswersRepository $answersRepository, QuestionsRepository $questionsRepository): Response
     {
 
         $user = $this->getUser();
@@ -28,24 +29,35 @@ class ProfileController extends AbstractController
 
         $questions = $questionsRepository->findUserQuestions($userName);
 
+        $myAnswers = $answersRepository->findUserAnswers($userName);
+        $answersCount = count($myAnswers);
+
         return $this->render('profile/myProfile.html.twig', [
             "user" => $user,
             "myQuestions" => $questions,
+            "answersCount" => $answersCount,
 
         ]);
     }
     /**
      * @Route("/profile/{user}", name="profile")
      */
-    public function showProfile(UserRepository $userRepository, $user, QuestionsRepository $questionsRepository): Response
+    public function showProfile(AnswersRepository $answersRepository, UserRepository $userRepository, $user, QuestionsRepository $questionsRepository): Response
     {
+        $myAnswers = $answersRepository->findUserAnswers($user);
+        $answersCount = count($myAnswers);
+
         $questions = $questionsRepository->findUserQuestions($user);
         $user = $userRepository->findUserByName($user);
         $user = $user[0];
 
+
+
+
         return $this->render('profile/profile.html.twig', [
             "user" => $user,
             "myQuestions" => $questions,
+            "answersCount" => $answersCount,
 
         ]);
     }
