@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Serializable;
 use Symfony\Component\HttpFoundation\File\File;
@@ -76,9 +78,15 @@ class User implements UserInterface
      */
     private $image;
 
+    /**
+     * @ORM\OneToMany(targetEntity=AnswerLike::class, mappedBy="user")
+     */
+    private $answerLikes;
+
     public function __construct()
     {
         $this->roles = array('ROLE_USER');
+        $this->answerLikes = new ArrayCollection();
     }
 
     // other properties and methods
@@ -201,4 +209,34 @@ class User implements UserInterface
 //        // .....
 //        return $this;
 //    }
+
+/**
+ * @return Collection|AnswerLike[]
+ */
+public function getAnswerLikes(): Collection
+{
+    return $this->answerLikes;
+}
+
+public function addAnswerLike(AnswerLike $answerLike): self
+{
+    if (!$this->answerLikes->contains($answerLike)) {
+        $this->answerLikes[] = $answerLike;
+        $answerLike->setUser($this);
+    }
+
+    return $this;
+}
+
+public function removeAnswerLike(AnswerLike $answerLike): self
+{
+    if ($this->answerLikes->removeElement($answerLike)) {
+        // set the owning side to null (unless already changed)
+        if ($answerLike->getUser() === $this) {
+            $answerLike->setUser(null);
+        }
+    }
+
+    return $this;
+}
 }

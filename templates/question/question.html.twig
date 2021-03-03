@@ -174,6 +174,16 @@
 
                     </div>
                     <div>
+                        <a href="{{ path('answer_like', {'id': answer.getId()}) }}" class="btn js-like">
+                            {%  if app.user and answer.isLikedByUser(app.user) %}
+                                <i class="fas fa-thumbs-up"></i>
+                            {% else %}
+                                <i class="far fa-thumbs-up"></i>
+                            {% endif %}
+                            <span class="js-likes">{{ answer.answerLikes | length }}</span>
+                            <span class="js-label">J'aime</span>
+
+                        </a>
 {#                        <p>{{ answer.getAnswerLikes() }}<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>#}
 
                     </div>
@@ -318,7 +328,33 @@
     </main>
 {% endblock %}
 
+{% block javascriptAjax %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    <script>
+        function onClickBtnLike(event){
+            event.preventDefault();
+            const url = this.href;
+            const spanCount = this.querySelector("span.js-likes");
+            const icone = this.querySelector('.fa-thumbs-up')
+            axios.get(url).then(function (response){
+                spanCount.textContent = response.data.likes;
 
-
-
+                if(icone.classList.contains("fas")){
+                    icone.classList.replace("fas", 'far')
+                }else{
+                    icone.classList.replace("far", 'fas')
+                }
+            }).catch(function(error){
+                if(error.response.status === 403){
+                    window.alert("Vous devez être connetcé pour liker une réponse")
+                }else{
+                    window.alert("Une erreur s'est produite, réessayez plus tard.")
+                }
+            })
+        }
+        document.querySelectorAll("a.js-like").forEach(function(link){
+            link.addEventListener('click', onClickBtnLike);
+        })
+    </script>
+{% endblock %}

@@ -130,6 +130,7 @@ class QuestionController extends AbstractController
         );
     }
 
+
     /**
      * @Route("/ask_question", name="ask_question")
      */

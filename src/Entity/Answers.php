@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\AnswersRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -68,6 +70,16 @@ class Answers
      * @ORM\JoinColumn(nullable=false)
      */
     private $question_id;
+
+    /**
+     * @ORM\OneToMany(targetEntity=AnswerLike::class, mappedBy="answer")
+     */
+    private $answerLikes;
+
+    public function __construct()
+    {
+        $this->answerLikes = new ArrayCollection();
+    }
 
 
     public function getId(): ?int
@@ -194,5 +206,42 @@ class Answers
         $this->question_id = $question_id;
 
         return $this;
+    }
+
+    /**
+     * @return Collection|AnswerLike[]
+     */
+    public function getAnswerLikes(): Collection
+    {
+        return $this->answerLikes;
+    }
+
+    public function addAnswerLike(AnswerLike $answerLike): self
+    {
+        if (!$this->answerLikes->contains($answerLike)) {
+            $this->answerLikes[] = $answerLike;
+            $answerLike->setAnswer($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAnswerLike(AnswerLike $answerLike): self
+    {
+        if ($this->answerLikes->removeElement($answerLike)) {
+            // set the owning side to null (unless already changed)
+            if ($answerLike->getAnswer() === $this) {
+                $answerLike->setAnswer(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function isLikedByUser(User $user):bool {
+        foreach ($this->answerLikes as $answerLike){
+            if($answerLike->getUser() === $user) return true;
+        }
+        return false;
     }
 }

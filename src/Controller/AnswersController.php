@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\AnswerLike;
 use App\Entity\Answers;
 use App\Form\AnswersType;
 use App\Form\AskQuestionsType;
+use App\Repository\AnswerLikeRepository;
 use App\Repository\AnswersRepository;
 use App\Repository\QuestionsRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -35,18 +37,12 @@ class AnswersController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $answer->setAnswerTitle($question->getQuestionTitle());
-//            $answer->setAnswerLikes(0);
             $answer->setAnswerAuthor($user->getUsername());
             $answer->setAnswerDate(new \DateTime());
             $answer->setQuestionId($question->addAnswer($answer));
             $question->setQuestionAnswers($questionAnswers + 1);
             $em->persist($answer);
             $em->flush();
-
-//            return $this->redirectToRoute("look_questions");
-//            return $this->redirect($request->getUri());
-//            return $this->redirectToRoute('question', ['id' => $id]);
-
 
         }
 
@@ -118,5 +114,51 @@ class AnswersController extends AbstractController
             ]
         );
 
+    }
+
+    /**
+     * @Route("answer/{id}/like", name="answer_like")
+     */
+    public function like($id, AnswerLikeRepository $likeRepository, AnswersRepository $answerRepository, EntityManagerInterface $em): Response
+    {
+        $user = $this->getUser();
+
+        $answer = $answerRepository->find($id);
+
+
+        if(!$user) return $this->json([
+            "code" => 403,
+            "message" => "Unauthorized"
+        ], 403);
+
+        if($answer->isLikedByUser($user)){
+            $like = $likeRepository->findOneBy([
+                "answer" => $answer,
+                "user" => $user
+            ]);
+
+            $em->remove($like);
+            $em->flush();
+
+            return $this->json([
+                "code" => 200,
+                "message" => "Like supprimé",
+                "likes" => $likeRepository->count(["answer" => $answer])
+            ], 200);
+
+        }
+
+        $like = new AnswerLike();
+        $like->setAnswer($answer);
+        $like->setUser($user);
+
+        $em->persist($like);
+        $em->flush();
+
+        return $this->json([
+            "code =>200",
+            "message" => "Like bien ajouté",
+            "likes" => $likeRepository->count(["answer" => $answer])
+            ], 200);
     }
 }
