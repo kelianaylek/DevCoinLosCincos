@@ -47,4 +47,13 @@ class AnswerLikeRepository extends ServiceEntityRepository
         ;
     }
     */
+//    public function findUserAnswersLiked($value)
+//    {
+//        return $this->createQueryBuilder('u')
+//            ->andWhere('u.answer_id = :val')
+//            ->setParameter('val', $value)
+//            ->getQuery()
+//            ->getResult()
+//            ;
+//    }
 }

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\ProfileType;
+use App\Repository\AnswerLikeRepository;
 use App\Repository\AnswersRepository;
 use App\Repository\QuestionsRepository;
 use App\Repository\UserRepository;
@@ -21,7 +22,7 @@ class ProfileController extends AbstractController
     /**
      * @Route("/myProfile", name="myProfile")
      */
-    public function showMyProfile(AnswersRepository $answersRepository, QuestionsRepository $questionsRepository): Response
+    public function showMyProfile(AnswerLikeRepository $answerLikeRepository, AnswersRepository $answersRepository, QuestionsRepository $questionsRepository): Response
     {
 
         $user = $this->getUser();
@@ -32,10 +33,29 @@ class ProfileController extends AbstractController
         $myAnswers = $answersRepository->findUserAnswers($userName);
         $answersCount = count($myAnswers);
 
+        $myLikes = $user->getAnswerLikes();
+
+        $likedAnswers = $answerLikeRepository->findAll();
+
+        $likesOnMe = 0;
+
+        foreach($likedAnswers as $likedAnswer){
+            $likedAnswerUser = $likedAnswer->getAnswer();
+            foreach($myAnswers as $myAnswer) {
+                $myAnswerId = $myAnswer->getId();
+
+                if($myAnswerId == $likedAnswerUser->getId()){
+                    $likesOnMe = $likesOnMe + 1;
+                }
+            }
+        }
+
         return $this->render('profile/myProfile.html.twig', [
             "user" => $user,
             "myQuestions" => $questions,
             "answersCount" => $answersCount,
+            "myLikes" => $myLikes,
+            "likesOnMe" => $likesOnMe
 
         ]);
     }
