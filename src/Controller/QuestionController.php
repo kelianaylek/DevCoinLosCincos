@@ -130,6 +130,40 @@ class QuestionController extends AbstractController
         );
     }
 
+    /**
+     * @Route("question_by_likes/{id}", name="question_by_likes", defaults={"id" = 0})
+     */
+    public function showByLikes(UserRepository $userRepository, QuestionsRepository $questionsRepository, $id): Response
+    {
+
+        $question = $questionsRepository->find($id);
+        $answers = $question->getAnswers();
+
+        $author = $question->getQuestionAuthor();
+        $author = $userRepository->findUserByName($author);
+        $author = $author[0];
+        $questionAuthor = $author;
+        $authors = [];
+        foreach ($answers as $answer)
+        {
+            $author = $answer->getAnswerAuthor();
+            $author = $userRepository->findUserByName($author);
+            $author = $author[0];
+            array_push($authors, $author);
+
+        }
+        return $this->render(
+            'question/question.html.twig',
+            [
+                "question" => $question,
+                "answers" => $answers,
+                "author" => $author,
+                "authors" => $authors,
+                "questionAuthor" => $questionAuthor,
+            ]
+        );
+    }
+
 
     /**
      * @Route("/ask_question", name="ask_question")

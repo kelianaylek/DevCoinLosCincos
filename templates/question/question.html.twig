@@ -16,6 +16,10 @@
 
 {% block body %}
     <main class="questionPage container">
+        <a href="{{ path('question', {'id': question.getId() }) }}">Par date</a>
+        <br>
+        <a href="{{ path('question_by_likes', {'id': question.getId() }) }}">Par nombre de likes</a>
+
         <section class="blockQuestion">
             <div class="introBlockQuestion">
                 <div>
@@ -145,9 +149,102 @@
 
         <article>
 
-        {% if answers|length > 0 %}
-            {% for answer in answers %}
+        {% set current_path = app.request.get('_route') %}
 
+        {% if current_path == 'question_by_likes' %}
+            {% if answers|length > 0 %}
+                {% for answer in answers|sort((b, a) => a.getAnswerLikes()|length <=> b.getAnswerLikes()|length) %}
+                    <section class="blockAnswers">
+                <div class="introBlockQuestion">
+                    <div>
+
+                        {% set hasImage = false %}
+                        {% for author in authors %}
+                            {% if (answer.getAnswerAuthor() == author.getUsername) and (hasImage != true) %}
+                                {% set hasImage = true %}
+                                <img src="{{ asset('img/profile/' ~ author.getImage()) }}" alt="">
+                            {% endif %}
+                        {% endfor %}
+
+                        <a href="{{ path('profile', {'user': answer.getAnswerAuthor() }) }}">
+                            <p>{{ answer.getAnswerAuthor() }}</p>
+                        </a>
+                        <p>Re : {{ answer.getAnswerTitle() }}</p>
+                        <p>{{ answer.getAnswerDate()|date("m/d/Y", "Europe/Paris") }}</p>
+
+                        {% if answer.getAnswerAuthor() == app.user.username%}
+                            <a href="{{ path('edit_answer', {'id': answer.getId(), "questionId": question.getId() }) }}">Edit</a>
+                            <a href="{{ path('delete_answer', {'id': answer.getId(), "questionId": question.getId() }) }}">Delete</a>
+
+                        {% endif %}
+
+                    </div>
+                    <div>
+                        <a href="{{ path('answer_like', {'id': answer.getId()}) }}" class="btn js-like">
+                            {%  if app.user and answer.isLikedByUser(app.user) %}
+                                <i class="fas fa-thumbs-up"></i>
+                            {% else %}
+                                <i class="far fa-thumbs-up"></i>
+                            {% endif %}
+                            <span class="js-likes">{{ answer.answerLikes | length }}</span>
+                            <span class="js-label">J'aime</span>
+
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="descriptionBlockQuestion">
+                    <p>{{ answer.getAnswerDescription() }}
+                    </p>
+                </div>
+
+                <div class="codeBlockQuestion">
+                    {% if answer.getAnswerCode1() is not null %}
+                        <div>
+                            <pre><code>
+                            {{ answer.getAnswerCode1() }}
+                            </code></pre>
+                        </div>
+                    {% endif %}
+                    {% if answer.getAnswerCode2() is not null %}
+                        <div>
+                            <pre><code>
+                            {{ answer.getAnswerCode2() }}
+                            </code></pre>
+                        </div>
+                    {% endif %}
+                    {% if answer.getAnswerCode3() is not null %}
+                        <div>
+                            <pre><code>
+                            {{ answer.getAnswerCode3() }}
+                            </code></pre>
+                        </div>
+                    {% endif %}
+                    {% if answer.getAnswerCode4() is not null %}
+                        <div>
+                            <pre><code>
+                            {{ answer.getAnswerCode4() }}
+                            </code></pre>
+                        </div>
+                    {% endif %}
+                    {% if answer.getAnswerCode5() is not null %}
+                        <div>
+                            <pre><code>
+                            {{ answer.getAnswerCode5() }}
+                            </code></pre>
+                        </div>
+                    {% endif %}
+                </div>
+            </section>
+                {% endfor %}
+            {% else %}
+                <p>Sorry, no answers yet.</p>
+            {% endif %}
+
+        {% else %}
+            {% if answers|length > 0 %}
+                {% for answer in answers %}
                  <section class="blockAnswers">
                 <div class="introBlockQuestion">
                     <div>
@@ -234,13 +331,16 @@
             {% endfor %}
         {% else %}
         <p>Sorry, no answers yet.</p>
-        {% endif %}
+            {% endif %}
 
+        {% endif %}
         </article>
 
+
         <article>
-         {% if answers|length > 0 %}
-            {% for answer in answers %}
+            {% if current_path == 'question_by_likes' %}
+            {% if answers|length > 0 %}
+                {% for answer in answers|sort((b, a) => a.getAnswerLikes()|length <=> b.getAnswerLikes()|length) %}
             <section class="blockAnswers blockAnswersMobile">
                 <div class="introBlockQuestion">
                     <div>
@@ -275,11 +375,55 @@
                 </div>
   
             </section>
-          
+                {% endfor %}
+            {% else %}
+                <p>Sorry, no answers yet.</p>
+            {% endif %}
+
+
+            {% else %}
+            {% if answers|length > 0 %}
+            {% for answer in answers %}
+            <section class="blockAnswers blockAnswersMobile">
+                <div class="introBlockQuestion">
+                    <div>
+                        <p>Re : {{ answer.getAnswerTitle() }}</p>
+                        <a href="{{ path('profile', {'user': answer.getAnswerAuthor() }) }}">
+                            <p>{{ answer.getAnswerAuthor() }}</p>
+                        </a>
+                    </div>
+                    <div>
+                        <p>{{ answer.getAnswerDate()|date("m/d/Y", "Europe/Paris") }}</p>
+                        <a href="{{ path('answer_like', {'id': answer.getId()}) }}" class="btn js-like">
+                            {%  if app.user and answer.isLikedByUser(app.user) %}
+                                <i class="fas fa-thumbs-up"></i>
+                            {% else %}
+                                <i class="far fa-thumbs-up"></i>
+                            {% endif %}
+                            <span class="js-likes">{{ answer.answerLikes | length }}</span>
+                            <span class="js-label">J'aime</span>
+
+                        </a>                        {% if answer.getAnswerAuthor() == app.user.username%}
+                            <a href="{{ path('edit_answer', {'id': answer.getId(), "questionId": question.getId() }) }}">Edit</a>
+                            <a href="{{ path('delete_answer', {'id': answer.getId(), "questionId": question.getId() }) }}">Delete</a>
+
+                        {% endif %}
+                    </div>
+
+                </div>
+
+                <div class="descriptionBlockQuestion">
+                    <p>{{ answer.getAnswerDescription() }}
+                    </p>
+                </div>
+
+            </section>
             {% endfor %}
-        {% else %}
-        <p>Sorry, no answers yet.</p>
-        {% endif %}
+            {% else %}
+                <p>Sorry, no answers yet.</p>
+            {% endif %}
+
+            {% endif %}
         </article>
 
 
