@@ -93,17 +93,17 @@
                         <p>Succès: </p>
 
                         {%  if app.user.getImage() != null %}
-                        <div>
-                            Profil avec photo validé
-                        </div>
+                            <div>
+                                Profil avec photo validé
+                            </div>
                         {% endif %}
 
                         <div class="comment">
                             <div>
                                 <p>Réponses données : {{ answersCount }}</p>
-                                {%  if answersCount > 1 %}
+                                {%  if answersCount > 1 and answersCount < 5 %}
                                     <p>Niveau 1</p>
-                                {%  elseif answersCount > 5 %}
+                                {%  elseif answersCount > 5 and answersCount < 10 %}
                                     <p>Niveau 2</p>
                                 {%  elseif answersCount > 10 %}
                                     <p>Niveau 3</p>
@@ -113,9 +113,9 @@
 
                         <div>
                             <p>Questions posées : {{ myQuestions | length }}</p>
-                            {%  if myQuestions | length > 1 %}
+                            {%  if myQuestions | length > 1 and myQuestions | length < 5 %}
                                 <p>Niveau 1</p>
-                            {%  elseif myQuestions | length > 5 %}
+                            {%  elseif myQuestions | length > 5 and myQuestions | length < 10 %}
                                 <p>Niveau 2</p>
                             {%  elseif myQuestions | length > 10 %}
                                 <p>Niveau 3</p>
@@ -125,9 +125,9 @@
                         <div>
                             <p>Likes donnés : {{ myLikes | length }}</p>
 
-                            {%  if myLikes | length > 1 %}
+                            {%  if myLikes | length > 1 and myLikes | length < 5 %}
                                 <p>Niveau 1</p>
-                            {%  elseif myLikes | length > 5 %}
+                            {%  elseif myLikes | length > 5 and myLikes | length < 10 %}
                                 <p>Niveau 2</p>
                             {%  elseif myLikes | length > 10 %}
                                 <p>Niveau 3</p>
@@ -137,9 +137,9 @@
                         <div>
                             <p>Likes reçus : {{ likesOnMe }}</p>
 
-                            {%  if likesOnMe > 1 %}
+                            {%  if likesOnMe > 1 and likesOnMe < 5 %}
                                 <p>Niveau 1</p>
-                            {%  elseif likesOnMe > 5 %}
+                            {%  elseif likesOnMe > 5 and likesOnMe < 10 %}
                                 <p>Niveau 2</p>
                             {%  elseif likesOnMe > 10 %}
                                 <p>Niveau 3</p>
@@ -181,9 +181,9 @@
                     <div class="comment">
                         <div>
                             <p>Réponses données : {{ answersCount }}</p>
-                            {%  if answersCount > 1 %}
+                            {%  if answersCount > 1 and answersCount < 5 %}
                                 <p>Niveau 1</p>
-                            {%  elseif answersCount > 5 %}
+                            {%  elseif answersCount > 5 and answersCount < 10 %}
                                 <p>Niveau 2</p>
                             {%  elseif answersCount > 10 %}
                                 <p>Niveau 3</p>
@@ -193,9 +193,9 @@
 
                     <div>
                         <p>Questions posées : {{ myQuestions | length }}</p>
-                        {%  if myQuestions | length > 1 %}
+                        {%  if myQuestions | length > 1 and myQuestions | length < 5 %}
                             <p>Niveau 1</p>
-                        {%  elseif myQuestions | length > 5 %}
+                        {%  elseif myQuestions | length > 5 and myQuestions | length < 10 %}
                             <p>Niveau 2</p>
                         {%  elseif myQuestions | length > 10 %}
                             <p>Niveau 3</p>
@@ -205,9 +205,9 @@
                     <div>
                         <p>Likes donnés : {{ myLikes | length }}</p>
 
-                        {%  if myLikes | length > 1 %}
+                        {%  if myLikes | length > 1 and myLikes | length < 5 %}
                             <p>Niveau 1</p>
-                        {%  elseif myLikes | length > 5 %}
+                        {%  elseif myLikes | length > 5 and myLikes | length < 10 %}
                             <p>Niveau 2</p>
                         {%  elseif myLikes | length > 10 %}
                             <p>Niveau 3</p>
@@ -217,9 +217,9 @@
                     <div>
                         <p>Likes reçus : {{ likesOnMe }}</p>
 
-                        {%  if likesOnMe > 1 %}
+                        {%  if likesOnMe > 1 and likesOnMe < 5%}
                             <p>Niveau 1</p>
-                        {%  elseif likesOnMe > 5 %}
+                        {%  elseif likesOnMe > 5 and likesOnMe < 10 %}
                             <p>Niveau 2</p>
                         {%  elseif likesOnMe > 10 %}
                             <p>Niveau 3</p>
@@ -228,8 +228,8 @@
                 </div>
             </section>
             <article>
-                <div class="hfmobile">
-                    <div class="hf">
+{#                <div class="hfmobile">#}
+{#                    <div class="hf">#}
 
 {#                        <div class="defis">#}
 {#                            <ul>#}
@@ -253,17 +253,17 @@
 {#                                <p>75%</p>#}
 {#                            </div>#}
 {#                        </div>#}
-                        <div class="displayblock">
-                            <div class="badges">
-                                <p>Mes badges</p>
-                                <div class="groupicons">
-                                    <div class="icons">
+{#                        <div class="displayblock">#}
+{#                            <div class="badges">#}
+{#                                <p>Mes badges</p>#}
+{#                                <div class="groupicons">#}
+{#                                    <div class="icons">#}
 
-                                        {% if answersCount > 3  %}
-                                            <div>
-                                                <i class="fas fa-comment"></i>
-                                            </div>
-                                        {% endif %}
+{#                                        {% if answersCount > 3  %}#}
+{#                                            <div>#}
+{#                                                <i class="fas fa-comment"></i>#}
+{#                                            </div>#}
+{#                                        {% endif %}#}
 
                                         {#                                        <div>#}
 {#                                            <a href=""><i class="fa fa-shield fa-3x" aria-hidden="true"></i></a>#}
@@ -271,7 +271,7 @@
 {#                                        <div>#}
 {#                                            <a href=""><i class="fa fa-heart fa-3x" aria-hidden="true"></i></a>#}
 {#                                        </div>#}
-                                    </div>
+{#                                    </div>#}
 {#                                    <div class="icons2">#}
 {#                                        <div>#}
 {#                                            <a href=""><i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i></a>#}
@@ -280,16 +280,16 @@
 {#                                            <a href=""><i class="fa fa-question fa-3x" aria-hidden="true"></i></a>#}
 {#                                        </div>#}
 {#                                    </div>#}
-                                </div>
-                            </div>
-                        </div>
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
 
-                    </div>
-                </div>
+{#                    </div>#}
+{#                </div>#}
             </article>
             <article>
-                <div class="hfweb">
-                    <div class="hf">
+{#                <div class="hfweb">#}
+{#                    <div class="hf">#}
 {#                        <div class="parse">#}
 {#                            <div class="half-circle"></div>#}
 {#                            <div>#}
@@ -313,14 +313,14 @@
 {#                                </li>#}
 {#                            </ul>#}
 {#                        </div>#}
-                        <div class="badges">
-                            <p>Mes badges</p>
-                            <div class="icons">
-                                {% if answersCount > 1  %}
-                                    <div>
-                                        <i class="fas fa-comment"></i>
-                                    </div>
-                                {% endif %}
+{#                        <div class="badges">#}
+{#                            <p>Mes badges</p>#}
+{#                            <div class="icons">#}
+{#                                {% if answersCount > 1  %}#}
+{#                                    <div>#}
+{#                                        <i class="fas fa-comment"></i>#}
+{#                                    </div>#}
+{#                                {% endif %}#}
 {#                                <div>#}
 {#                                    <a href=""><i class="fa fa-shield fa-3x" aria-hidden="true"></i></a>#}
 {#                                    <p>Sauveur</p>#}
@@ -339,14 +339,14 @@
 {#                                    <a href=""><i class="fa fa-question fa-3x" aria-hidden="true"></i></a>#}
 {#                                    <p>Inspecteur</p>#}
 {#                                </div>#}
-                            </div>
+{#                            </div>#}
 
 
 
-                        </div>
+{#                        </div>#}
 
-                    </div>
-                </div>
+{#                    </div>#}
+{#                </div>#}
             </article>
 
 

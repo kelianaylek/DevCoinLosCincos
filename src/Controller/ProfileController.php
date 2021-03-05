@@ -62,7 +62,7 @@ class ProfileController extends AbstractController
     /**
      * @Route("/profile/{user}", name="profile")
      */
-    public function showProfile(AnswersRepository $answersRepository, UserRepository $userRepository, $user, QuestionsRepository $questionsRepository): Response
+    public function showProfile(AnswerLikeRepository  $answerLikeRepository, AnswersRepository $answersRepository, UserRepository $userRepository, $user, QuestionsRepository $questionsRepository): Response
     {
         $myAnswers = $answersRepository->findUserAnswers($user);
         $answersCount = count($myAnswers);
@@ -72,13 +72,29 @@ class ProfileController extends AbstractController
         $user = $user[0];
 
 
+        $myLikes = $user->getAnswerLikes();
 
+        $likedAnswers = $answerLikeRepository->findAll();
+
+        $likesOnMe = 0;
+
+        foreach($likedAnswers as $likedAnswer){
+            $likedAnswerUser = $likedAnswer->getAnswer();
+            foreach($myAnswers as $myAnswer) {
+                $myAnswerId = $myAnswer->getId();
+
+                if($myAnswerId == $likedAnswerUser->getId()){
+                    $likesOnMe = $likesOnMe + 1;
+                }
+            }
+        }
 
         return $this->render('profile/profile.html.twig', [
             "user" => $user,
             "myQuestions" => $questions,
             "answersCount" => $answersCount,
-
+            "myLikes" => $myLikes,
+            "likesOnMe" => $likesOnMe
         ]);
     }
 

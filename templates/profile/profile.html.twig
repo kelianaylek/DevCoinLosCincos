@@ -92,18 +92,59 @@
                             <section class="Succesmobile">
                                 <div>
                                     <p>Succès: </p>
-{#                                    <div class="trophy">#}
-{#                                        <a href=""><i class="fas fa-trophy"></i></a>#}
-{#                                        <p>42</p>#}
-{#                                    </div>#}
 
-{#                                    <div class="heart">#}
-{#                                        <a href=""><i class="fas fa-heart"></i></a>#}
-{#                                        <p>32</p>#}
-{#                                    </div>#}
+                                    {%  if app.user.getImage() != null %}
+                                        <div>
+                                            Profil avec photo validé
+                                        </div>
+                                    {% endif %}
+
                                     <div class="comment">
-                                        <a href=""><i class="fas fa-comment"></i></a>
-                                        <p>{{ answersCount }}</p>
+                                        <div>
+                                            <p>Réponses données : {{ answersCount }}</p>
+                                            {%  if answersCount > 1 and answersCount < 5 %}
+                                                <p>Niveau 1</p>
+                                            {%  elseif answersCount > 5 and answersCount < 10 %}
+                                                <p>Niveau 2</p>
+                                            {%  elseif answersCount > 10 %}
+                                                <p>Niveau 3</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p>Questions posées : {{ myQuestions | length }}</p>
+                                        {%  if myQuestions | length > 1 and myQuestions | length < 5 %}
+                                            <p>Niveau 1</p>
+                                        {%  elseif myQuestions | length > 5 and myQuestions | length < 10 %}
+                                            <p>Niveau 2</p>
+                                        {%  elseif myQuestions | length > 10 %}
+                                            <p>Niveau 3</p>
+                                        {% endif %}
+                                    </div>
+
+                                    <div>
+                                        <p>Likes donnés : {{ myLikes | length }}</p>
+
+                                        {%  if myLikes | length > 1 and myLikes | length < 5 %}
+                                            <p>Niveau 1</p>
+                                        {%  elseif myLikes | length > 5 and myLikes | length < 10 %}
+                                            <p>Niveau 2</p>
+                                        {%  elseif myLikes | length > 10 %}
+                                            <p>Niveau 3</p>
+                                        {% endif %}
+                                    </div>
+
+                                    <div>
+                                        <p>Likes reçus : {{ likesOnMe }}</p>
+
+                                        {%  if likesOnMe > 1 and likesOnMe < 5 %}
+                                            <p>Niveau 1</p>
+                                        {%  elseif likesOnMe > 5 and likesOnMe < 10 %}
+                                            <p>Niveau 2</p>
+                                        {%  elseif likesOnMe > 10 %}
+                                            <p>Niveau 3</p>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </section>
@@ -130,16 +171,59 @@
                         <section class="Succes">
                             <div>
                                 <p>Succès: </p>
-{#                                <a href=""><i class="fas fa-trophy"></i></a>#}
-{#                                <p>42</p>#}
 
-{#                                <div class="heart">#}
-{#                                    <a href=""><i class="fas fa-heart"></i></a>#}
-{#                                    <p>32</p>#}
-{#                                </div>#}
+                                {%  if app.user.getImage() != null %}
+                                    <div>
+                                        Profil avec photo validé
+                                    </div>
+                                {% endif %}
+
                                 <div class="comment">
-                                    <a href=""><i class="fas fa-comment"></i></a>
-                                    <p>{{ answersCount }}</p>
+                                    <div>
+                                        <p>Réponses données : {{ answersCount }}</p>
+                                        {%  if answersCount > 1 and answersCount < 5 %}
+                                            <p>Niveau 1</p>
+                                        {%  elseif answersCount > 5 and answersCount < 10 %}
+                                            <p>Niveau 2</p>
+                                        {%  elseif answersCount > 10 %}
+                                            <p>Niveau 3</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p>Questions posées : {{ myQuestions | length }}</p>
+                                    {%  if myQuestions | length > 1 and myQuestions | length < 5 %}
+                                        <p>Niveau 1</p>
+                                    {%  elseif myQuestions | length > 5 and myQuestions | length < 10 %}
+                                        <p>Niveau 2</p>
+                                    {%  elseif myQuestions | length > 10 %}
+                                        <p>Niveau 3</p>
+                                    {% endif %}
+                                </div>
+
+                                <div>
+                                    <p>Likes donnés : {{ myLikes | length }}</p>
+
+                                    {%  if myLikes | length > 1 and myLikes | length < 5 %}
+                                        <p>Niveau 1</p>
+                                    {%  elseif myLikes | length > 5 and myLikes | length < 10 %}
+                                        <p>Niveau 2</p>
+                                    {%  elseif myLikes | length > 10 %}
+                                        <p>Niveau 3</p>
+                                    {% endif %}
+                                </div>
+
+                                <div>
+                                    <p>Likes reçus : {{ likesOnMe }}</p>
+
+                                    {%  if likesOnMe > 1 and likesOnMe < 5%}
+                                        <p>Niveau 1</p>
+                                    {%  elseif likesOnMe > 5 and likesOnMe < 10 %}
+                                        <p>Niveau 2</p>
+                                    {%  elseif likesOnMe > 10 %}
+                                        <p>Niveau 3</p>
+                                    {% endif %}
                                 </div>
                             </div>
                         </section>
