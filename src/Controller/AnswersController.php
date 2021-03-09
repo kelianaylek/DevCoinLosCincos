@@ -23,7 +23,7 @@ class AnswersController extends AbstractController
     /**
      * @Route("answer/{id}", name="test", defaults={"id" = 0})
      */
-    public function create(RequestStack $requestStack, QuestionsRepository $questionsRepository, $id,  EntityManagerInterface $em): Response
+    public function create(Request $request, RequestStack $requestStack, QuestionsRepository $questionsRepository, $id,  EntityManagerInterface $em): Response
     {
         $question = $questionsRepository->find($id);
         $questionAnswers = $question->getQuestionAnswers();
@@ -44,7 +44,9 @@ class AnswersController extends AbstractController
             $em->persist($answer);
             $em->flush();
 
+
         }
+
 
         return $this->render(
             'answers/answer.html.twig',

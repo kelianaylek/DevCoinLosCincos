@@ -160,7 +160,7 @@
 
                         {% set hasImage = false %}
                         {% for author in authors %}
-                            {% if (answer.getAnswerAuthor() == author.getUsername) and (hasImage != true) %}
+                            {% if (answer.getAnswerAuthor() == author.getUsername) and (hasImage != true) and (author.getImage() != null) %}
                                 {% set hasImage = true %}
                                 <img src="{{ asset('img/profile/' ~ author.getImage()) }}" alt="">
                             {% endif %}
@@ -251,7 +251,7 @@
 
                         {% set hasImage = false %}
                         {% for author in authors %}
-                            {% if (answer.getAnswerAuthor() == author.getUsername) and (hasImage != true) %}
+                            {% if (answer.getAnswerAuthor() == author.getUsername) and (hasImage != true) and (author.getImage() != null)%}
                                 {% set hasImage = true %}
                                 <img src="{{ asset('img/profile/' ~ author.getImage()) }}" alt="">
                             {% endif %}
@@ -373,7 +373,7 @@
                     <p>{{ answer.getAnswerDescription() }}
                     </p>
                 </div>
-  
+
             </section>
                 {% endfor %}
             {% else %}
