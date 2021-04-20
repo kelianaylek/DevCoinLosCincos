@@ -395,7 +395,7 @@
 
 .inscriptionForm{
     width: 50%;
-    height: 220px;
+    height: 300px;
     padding: 20px;
     margin-left: 25%;
     background-color: var(--black-color);
@@ -408,8 +408,14 @@
     align-items: center;
 }
 
+.inscriptionForm div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .inscriptionForm input{
-    width: 30%;
+    width: 100%;
     margin-bottom: 10px;
 }
 
@@ -453,6 +459,20 @@
     }
     .modal-content form {
         margin-top: 30%;
+    }
+
+
+    /* Connexion / inscription */
+
+    .connexionForm,
+    .inscriptionForm{
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .connexionForm button
+    .inscriptionForm button{
+        font-size: 18px;
     }
 }
 
@@ -572,5 +592,23 @@
     }
     .backgroundDesktop {
         display: none;
+    }
+
+    /* Connexion / inscription */
+
+    .connexionForm,
+    .inscriptionForm{
+        width: 80%;
+        margin-left: 5%;
+    }
+
+    .connexionForm button,
+    .inscriptionForm button{
+        font-size: 16px;
+        width: 40%;
+    }
+
+    .connexionForm input{
+        width: 60%;
     }
 }
