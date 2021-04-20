@@ -354,6 +354,43 @@
     cursor: pointer;
 }
 
+/* Connexion / inscription */
+/* Connexion */
+
+.connexionForm{
+    width: 50%;
+    height: 220px;
+    padding: 20px;
+    margin-left: 25%;
+    background-color: var(--black-color);
+    color: white;
+    text-align: center;
+    border-radius: 21px;
+    border: 1px solid var(--orange-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.connexionForm input{
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+.connexionForm label{
+    font-size: 18px;
+}
+
+.connexionForm button{
+    width: 25%;
+    background-color: var(--orange-color);
+    color: white;
+    border: none;
+    border-radius: 21px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
 
 /*DISPLAY NONE*/
 
