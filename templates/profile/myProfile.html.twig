@@ -19,10 +19,6 @@
                     <p>Discord : {{ app.user.getDiscordTag() }}</p>
                     <a href=""><i class="fab fa-discord"></i></a>
                 </div>
-                <div class="compte">
-                    <p>Compte</p>
-                    <a href=""><i class="fas fa-user-check"></i></a>
-                </div>
             </div>
         </div>
         <div class="buttonmobile">
@@ -45,12 +41,8 @@
                     <p>Discord : {{ app.user.getDiscordTag() }}</p>
                     <a href=""><i class="fab fa-discord"></i></a>
                 </div>
-                <div class="compte">
-                    <p>Compte</p>
-                    <a href=""><i class="fas fa-user-check"></i></a>
-                </div>
             </div>
-            <a href="{{ path('edit_profile') }}">Modifier</a>
+            <a class="editProfil" href="{{ path('edit_profile') }}">Modifier</a>
 
             <!-- bouton pour le dark mode -->
 
@@ -407,11 +399,11 @@
 {#                            <p>{{ question.getQuestionIsResolved() }}</p>#}
 {#                            <a href=""><i class="fas fa-check-circle"></i></a>#}
 {#                        </div>#}
-                        <div>
+                        <div class="editMyQuestion">
                             <a href="{{ path('question_edit', {'id': question.getId() }) }}">Editer</a>
                         </div>
 
-                        <div>
+                        <div class="editMyQuestion">
                             {% if question.getQuestionIsResolved() == false %}
                                 <a href="{{ path('question_is_resolved', {'id': question.getId() }) }}">Marquer comme résolue</a>
                             {% else %}
