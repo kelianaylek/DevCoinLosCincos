@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9b11a15d-53c7-45d6-86e3-902399a3cb4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AnswersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AnswersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/question/question.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/question/question.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +142,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../intertia-laravel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -162,6 +161,10 @@
       <workItem from="1614617657861" duration="6477000" />
       <workItem from="1614795676230" duration="12738000" />
       <workItem from="1615188509796" duration="25000" />
+      <workItem from="1615286914369" duration="1006000" />
+      <workItem from="1615304381187" duration="88000" />
+      <workItem from="1615358758116" duration="68000" />
+      <workItem from="1619004909442" duration="230000" />
     </task>
     <servers />
   </component>
