@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
     // Script pour le dark mode
@@ -12,6 +12,7 @@ $(document).ready(function() {
     var isOnLookQuestionsPage = lastWordUrl == "lookQuestions.html";
     var isOnProfilPage = lastWordUrl == "profil.html";
     var isOnQuestionPage = lastWordUrl == "question.html";
+    var isOnMyProfilPage = lastWordUrl == "myProfile.html";
 
     // On sélectionne le bouton darkMode
     let btnSwitch = $(".darkModeBtn");
@@ -34,7 +35,7 @@ $(document).ready(function() {
         if (localStorage.currentTheme == "darkMode") {
             $("header nav").addClass("borderBottomOrange")
             $("body").addClass("black")
-                // On check si on est sur la page principale
+            // On check si on est sur la page principale
             if (isOnMainPage) {
                 $(".maincontainer section").addClass("black")
                 $(".maincontainer section div").addClass("whiteColor")
@@ -72,6 +73,8 @@ $(document).ready(function() {
                 $(".footerDesktop").addClass("borderTopOrange")
                 $(".footerMobile").addClass("borderTopOrange")
                 $(".containerProfil button").addClass("buttonBlack")
+
+
             }
             // On check si on est sur la page question
             else if (isOnQuestionPage) {
@@ -86,11 +89,14 @@ $(document).ready(function() {
                 $("div:first-child>p").addClass("whiteColor")
                 $(".footerDesktop").addClass("borderTopOrange")
                 $(".footerMobile").addClass("borderTopOrange")
+            } else if (isOnMyProfilPage) {
+                $(".editProfil").addClass("editProfilDarkmode")
             }
+
         } else if (localStorage.currentTheme == "whiteMode") {
             $("header nav").removeClass("borderBottomOrange")
             $("body").removeClass("black")
-                // On check si on est sur la page principale
+            // On check si on est sur la page principale
             if (isOnMainPage) {
                 $(".maincontainer section").removeClass("black")
                 $(".maincontainer section div").removeClass("whiteColor")
@@ -145,7 +151,7 @@ $(document).ready(function() {
     }
     // Au click, déclenche la fonction updateUI() en fonction du mode dans lequel on est
     $(btnSwitch).click(
-        function() {
+        function () {
             if (localStorage.currentTheme == "darkMode") {
                 localStorage.currentTheme = "whiteMode"
                 console.log('Localstorage: ', localStorage.currentTheme)
@@ -172,17 +178,17 @@ $(document).ready(function() {
 
 
     // Ouvre le fond gris lors du click
-    btn.click(function() {
+    btn.click(function () {
         $(".Hmodal").css({
             "display": "block"
         });
     })
-    btnInsc.click(function() {
+    btnInsc.click(function () {
         $(".Hmodal2").css({
             "display": "block"
         });
     })
-    btnAnsw.click(function(e) {
+    btnAnsw.click(function (e) {
         e.preventDefault();
         $(".HmodalAnsw").css({
             "display": "block"
@@ -215,9 +221,9 @@ $(document).ready(function() {
     let textarrowdown = '<p class="textAdded">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>'
 
     let isDown = true;
-    arrow.click(function(e) {
+    arrow.click(function (e) {
         e.preventDefault()
-            // Change la flèche de sens
+        // Change la flèche de sens
         arrow.toggleClass("fa-arrow-circle-up")
 
         // En fonction du sens de la flèche, add ou suppr le paragraphe
@@ -235,9 +241,9 @@ $(document).ready(function() {
     let textsecondarrowdown = '<p class="textAdded2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore kélian</p>'
 
     let secondIsDown = true;
-    secondArrow.click(function(e) {
+    secondArrow.click(function (e) {
         e.preventDefault()
-            // Change la flèche de sens
+        // Change la flèche de sens
         secondArrow.toggleClass("fa-arrow-circle-up")
 
         // En fonction du sens de la flèche, add ou suppr le paragraphe
@@ -259,9 +265,9 @@ $(document).ready(function() {
     let textarrowdown2 = '<p class="textAdded">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>'
 
     let isDown2 = true;
-    arrow2.click(function(e) {
+    arrow2.click(function (e) {
         e.preventDefault()
-            // Change la flèche de sens
+        // Change la flèche de sens
         arrow2.toggleClass("fa-arrow-circle-up")
 
         // En fonction du sens de la flèche, add ou suppr le paragraphe
@@ -279,9 +285,9 @@ $(document).ready(function() {
     let textsecondarrowdown2 = '<p class="textAdded2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore kélian</p>'
 
     let secondIsDown2 = true;
-    secondArrow2.click(function(e) {
+    secondArrow2.click(function (e) {
         e.preventDefault()
-            // Change la flèche de sens
+        // Change la flèche de sens
         secondArrow2.toggleClass("fa-arrow-circle-up")
 
         // En fonction du sens de la flèche, add ou suppr le paragraphe

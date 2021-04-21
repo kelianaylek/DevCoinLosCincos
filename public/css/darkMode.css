@@ -25,6 +25,7 @@
     color: var(--white-color) !important;
 }
 
+
 .orangeColor{
     color: var(--orange-color) !important;
 }
@@ -33,6 +34,8 @@
     border:2px ridge var(--orange-color) !important;
     border-radius: 21px;
 }
+
+
 
 
 .bgdc {
@@ -52,6 +55,10 @@
 
 .borderOrangeDeux{
     border:2px ridge var(--orange-color) !important;
+}
+.editProfilDarkmode {
+    color: var(--white-color) !important;
+    border: 1px solid var(--white-color) !important;
 }
 
 
