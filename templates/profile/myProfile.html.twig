@@ -365,7 +365,7 @@
                             <p><a href="">Editer</a>
                             </p>
                         </div>
-                        <div>
+                        <div class="editMyQuestionMobile">
                             {% if question.getQuestionIsResolved() == false %}
                                 <a href="{{ path('question_is_resolved', {'id': question.getId() }) }}">Marquer comme résolue</a>
                             {% else %}
