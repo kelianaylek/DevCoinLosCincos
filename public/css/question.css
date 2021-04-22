@@ -33,9 +33,47 @@
 }
 
 .blockAnswers .introBlockQuestion img{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 20px;
 }
+#answers_envoyer {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: var(--orange-color);
+    border-radius: 5px;
+    border: 1px ridge var(--black-color);
+    color: var(--black-color);
+    padding: 5px 50px;
+    font-size: 16px;
+}
+form[name="answers"] {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+form[name="answers"] textarea{
+    width: 500px;
+    max-width: 500px;
+    min-width: 500px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+form[name="answers"] div input{
+    width: 500px;
+    min-width: 500px;
+    max-width: 500px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+form[name="answers"] div label{
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+  }
+  
 
 .blockQuestion .introBlockQuestion div:first-child>div:first-child,
 .blockAnswers .introBlockQuestion div:first-child>div:first-child {
@@ -78,8 +116,10 @@
     /*color: var(--red-color);*/
 }
 .blockQuestion .introBlockQuestion div:last-child img{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 20px;
 }
 
 .blockAnswers .introBlockQuestion div:last-child {
