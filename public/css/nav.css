@@ -61,6 +61,9 @@ header nav .search button {
 .burger {
     display: none;
 }
+.LogoDevcoin {
+    max-width: 70px;
+}
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
     header nav .lowerNavDesktop {
