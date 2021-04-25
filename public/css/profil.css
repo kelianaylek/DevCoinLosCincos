@@ -361,6 +361,44 @@
 
         /* EDIT PROFIL */
 
+        form[name="ask_questions"] {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 10vh;
+        }
+
+        form[name="ask_questions"] div label {
+            display: inline-block;
+            width: 166px;
+            text-align: right;
+        }
+
+        form[name="ask_questions"] div input {
+            width: 500px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        form[name="ask_questions"] div textarea {
+            width: 500px;
+            max-width: 500px;
+            min-width: 500px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        #ask_questions_envoyer {
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+            background-color: var(--orange-color);
+            border-radius: 5px;
+            border: 1px ridge var(--black-color);
+            color: var(--black-color);
+            padding: 5px 50px;
+            font-size: 16px;
+        }
+
         .Edit-Profil {
             text-align: center;
         }
@@ -516,7 +554,8 @@
             .editProfilForm label {
                 width: 139px;
             }
-            .editMyQuestionMobile a{
+
+            .editMyQuestionMobile a {
                 color: white !important;
                 text-decoration: none;
                 padding-right: 20px;
@@ -803,11 +842,44 @@
                 text-decoration: none;
                 font-size: 18px;
             }
+
             .editMyQuestionMobile a {
                 padding-right: 0px;
             }
 
-            
+            form[name="answers"] div input {
+                width: 250px !important;
+                min-width: 250px;
+                max-width: 0px;
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+            form[name="answers"] div textarea {
+                width: 250px !important;
+                min-width: 250px;
+                max-width: 0px;
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+            form[name="ask_questions"] div input {
+                width: 250px;
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+            form[name="ask_questions"] div textarea {
+                width: 250px;
+                margin-left: 0px;
+                margin-bottom: 10px;
+                min-width: 250px;
+                max-width: 0px;
+            }
+            form[name="ask_questions"] div label {
+                display: block;
+                width: 166px;
+                text-align: right;
+            }
+
+
 
             /* Responsive edit profile */
             .editProfilForm label {

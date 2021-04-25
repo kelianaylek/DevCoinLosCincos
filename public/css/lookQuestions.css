@@ -48,9 +48,14 @@ main .filters>div {
     align-items: baseline;
 }
 
+
 main .filters p,
 h4 {
     margin-bottom: 10px;
+}
+.filters a {
+    color: white;
+    text-decoration: none;
 }
 
 main .filters h4 {
