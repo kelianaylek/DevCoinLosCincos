@@ -15,12 +15,13 @@
             height: 200px;
             text-align: center;
             border-radius: 100px;
-            border: 1px ridge var(--orange-color);
+            /*border: 1px ridge var(--orange-color);*/
             line-height: 190px;
         }
 
         #cercle img {
             width: 100%;
+
         }
 
         .Partleft {

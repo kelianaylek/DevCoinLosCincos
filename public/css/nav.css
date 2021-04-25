@@ -2,6 +2,7 @@ header nav {
     color: #fff;
     z-index: 2;
     background-color: var(--black-color);
+
 }
 
 header nav .upperNav {
